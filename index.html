@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zn-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    .box{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        animation-name: fadeOut;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .open {
+        background-color: black;
+        width: 100%;
+        height: 10vh;
+    }
+
+    /* 選擇246810筆可用2n */
+    .open:nth-child(2n){
+        animation-name: RightToLeft;
+        animation-duration: 3s;
+    }
+
+    /* 選擇13579筆用=====2n-1 */
+
+/* 4/6問老師：為什麼我的動畫這麼快？這麼奇怪 */
+
+    @keyframes LeftToRight{
+        from{
+            transform: translateX(-100%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes RightToLeft{
+        from{
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeOut{
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+        }
+    }
+
+    .boxL{
+        animation-name: LeftToRight;
+        animation-duration: 3s;
+    }
+
+</style>
+
+<body>
+
+    <div class="box">
+        <div class="open boxL"></div>
+        <div class="open"></div>
+        <div class="open boxL"></div>
+        <div class="open"></div>
+        <div class="open boxL"></div>
+        <div class="open"></div>
+        <div class="open boxL"></div>
+        <div class="open"></div>
+        <div class="open boxL"></div>
+        <div class="open"></div>
+    </div>
+
+</body>
+
+</html>
