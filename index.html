@@ -18,79 +18,164 @@
     }
 
 
-    .box{
-        width: 100vw;
+    #section1{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    .box {
+        width: 100%;
         height: 100vh;
         overflow: hidden;
         animation-name: fadeOut;
         animation-duration: 1s;
         animation-fill-mode: forwards;
+        animation-delay: 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
     }
+
     .open {
         background-color: black;
         width: 100%;
         height: 10vh;
     }
 
-    /* 選擇246810筆可用2n */
-    .open:nth-child(2n){
+
+    .open:nth-child(2n) {
         animation-name: RightToLeft;
         animation-duration: 3s;
     }
 
-    /* 選擇13579筆用=====2n-1 */
 
-/* 4/6問老師：為什麼我的動畫這麼快？這麼奇怪 */
-
-    @keyframes LeftToRight{
-        from{
+    @keyframes LeftToRight {
+        from {
             transform: translateX(-100%);
         }
-        to{
+
+        to {
             transform: translateX(0);
         }
     }
 
-    @keyframes RightToLeft{
-        from{
+    @keyframes RightToLeft {
+        from {
             transform: translateX(100%);
         }
-        to{
+
+        to {
             transform: translateX(0);
         }
     }
 
-    @keyframes fadeOut{
-        from{
+    @keyframes fadeOut {
+        from {
             opacity: 1;
         }
-        to{
+
+        to {
             opacity: 0;
         }
     }
 
-    .boxL{
+    @keyframes showit {
+        from {
+            opacity: 0.3;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .boxL {
         animation-name: LeftToRight;
         animation-duration: 3s;
+    }
+
+    .pic {
+        width: 100%;
+        height: 100vh;
+        background-image: url(img/open5.jpg);
+        background-position: center;
+        background-size: cover;
+        animation-name: showit;
+        animation-duration: 3s;
+        animation-delay: 3s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    .video1{
+        width: 100%;
+        height: 100vh;
+        
     }
 
 </style>
 
 <body>
 
-    <div class="box">
-        <div class="open boxL"></div>
-        <div class="open"></div>
-        <div class="open boxL"></div>
-        <div class="open"></div>
-        <div class="open boxL"></div>
-        <div class="open"></div>
-        <div class="open boxL"></div>
-        <div class="open"></div>
-        <div class="open boxL"></div>
-        <div class="open"></div>
-    </div>
+    <section id="section1">
+        <div class="box">
+            <div class="open boxL"></div>
+            <div class="open"></div>
+            <div class="open boxL"></div>
+            <div class="open"></div>
+            <div class="open boxL"></div>
+            <div class="open"></div>
+            <div class="open boxL"></div>
+            <div class="open"></div>
+            <div class="open boxL"></div>
+            <div class="open"></div>
+        </div>
+        <div class="pic" style="background-image: url(img/open5.jpg);"></div>
+    </section>
 
+    <section id="section2">
+        <video controls id="video1" src="mp4/1.mp4" autoplay="autoplay"></video>
+        <video controls id="video2" src="mp4/2.mp4" ></video>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    
+    <!-- 換圖畫面會閃，所以是不是要改成gif檔？或又是mp4？ -->
+    <script>
+        var pic = document.querySelector('.pic')
+
+        setTimeout(function (){
+            pic.setAttribute("style","background-image: url(img/open4.jpg);");    
+        }, 5000);
+        setTimeout(function (){
+            pic.setAttribute("style","background-image: url(img/open3.jpg);");    
+        }, 6000);
+        setTimeout(function (){
+            pic.setAttribute("style","background-image: url(img/open2.jpg);");    
+        }, 7000);
+        setTimeout(function (){
+            pic.setAttribute("style","background-image: url(img/open1.jpg);");    
+        }, 8000);
+        setTimeout(function (){
+            pic.setAttribute("style","background-image: url(img/open0.jpg);");    
+        }, 9000);
+
+
+        window.addEventListener('scroll', function(){
+            var scrollval = $(window).scrollTop();
+            var document_height = $(document).height();
+            var window_height = $(window).height();
+
+            console.log = ("window-height:" , window_height)
+        })
+    </script>
 </body>
 
 </html>
