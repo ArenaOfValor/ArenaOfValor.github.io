@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>歡迎光臨~傳說對決</title>
 </head>
 
 <style>
@@ -140,8 +140,10 @@
     </section>
 
     <section id="section2">
-        <video controls id="video1" src="mp4/1.mp4" autoplay="autoplay"></video>
-        <video controls id="video2" src="mp4/2.mp4" ></video>
+
+        <!-- <video controls id="video1" src="mp4/1.mp4" autoplay="autoplay"></video>自動播放功能？？？奇怪 -->
+        <video controls id="video1" src="mp4/1.mp4" control width="100%"  height="100%" control poster="img/ala.png"></video>
+        <video controls id="video2" src="mp4/2.mp4" control width="100%"  height="100%" control poster="img/linlin.png"></video>
     </section>
 
 
@@ -167,14 +169,17 @@
             pic.setAttribute("style","background-image: url(img/open0.jpg);");    
         }, 9000);
 
+        
+        // 測試失敗中
 
-        window.addEventListener('scroll', function(){
-            var scrollval = $(window).scrollTop();
-            var document_height = $(document).height();
-            var window_height = $(window).height();
+        // var lastScrollTop = 0;
+        // window.addEventListener('scroll', function(){
+        //     var scrollval = $(window).scrollTop();
+        //     var document_height = $(document).height();
+        //     var window_height = $(window).height();
 
-            console.log = ("window-height:" , window_height)
-        })
+        //     console.log = ("window-height:" , window_height)
+        // })
     </script>
 </body>
 
