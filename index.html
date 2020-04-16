@@ -18,67 +18,10 @@
     }
 
 
-    #section1{
+    #section1 {
         width: 100%;
         height: 100vh;
         position: relative;
-    }
-
-    .box {
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        animation-name: fadeOut;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        animation-delay: 1s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 99;
-    }
-
-    .open {
-        background-color: black;
-        width: 100%;
-        height: 10vh;
-    }
-
-
-    .open:nth-child(2n) {
-        animation-name: RightToLeft;
-        animation-duration: 3s;
-    }
-
-
-    @keyframes LeftToRight {
-        from {
-            transform: translateX(-100%);
-        }
-
-        to {
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes RightToLeft {
-        from {
-            transform: translateX(100%);
-        }
-
-        to {
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes fadeOut {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
     }
 
     @keyframes showit {
@@ -91,19 +34,32 @@
         }
     }
 
-    .boxL {
-        animation-name: LeftToRight;
-        animation-duration: 3s;
+    @keyframes fadeout {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
     }
 
-    /* .picbox{
+    #player {
         width: 100%;
-        height: 100vh;
-    } */
+        height: 100%;
+        animation-name: fadeout;
+        animation-duration: 4s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
 
     .pic {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         /* background-image: url(img/open5.jpg); */
         /* 之後問老師怎麼換照片，再改回 */
         background-position: center;
@@ -111,8 +67,8 @@
         background-size: cover;
         /* background-repeat: no-repeat; */
         animation-name: showit;
-        animation-duration: 3s;
-        animation-delay: 3s;
+        animation-duration: 4s;
+        animation-delay: 5s;
         position: absolute;
         top: 0;
         left: 0;
@@ -121,82 +77,76 @@
         animation-fill-mode: forwards;
     }
 
-    @media (max-width:768px){
-        .pic{
+    @media (max-width:768px) {
+        .pic {
             background-size: contain;
             background-repeat: no-repeat;
 
         }
     }
-
-    .video1{
-        width: 100%;
-        height: 100vh;
-        
-    }
-
 </style>
 
 <body>
 
     <section id="section1">
-        <div class="box">
-            <div class="open boxL"></div>
-            <div class="open"></div>
-            <div class="open boxL"></div>
-            <div class="open"></div>
-            <div class="open boxL"></div>
-            <div class="open"></div>
-            <div class="open boxL"></div>
-            <div class="open"></div>
-            <div class="open boxL"></div>
-            <div class="open"></div>
-        </div>
-
-            <div class="pic" style="background-image: url(img/open5.jpg);"></div>
+        <div id="player"></div>
+        <div class="pic" style="background-image: url(img/open5.jpg);"></div>
+        <!-- <video controls id="video1" src="mp4/1.mp4" autoplay="autoplay" control width="100%"  height="100%"  control poster="img/linlin.png"></video>自動播放功能？？？奇怪 -->
     </section>
 
     <section id="section2">
 
-        <!-- <video controls id="video1" src="mp4/1.mp4" autoplay="autoplay"></video>自動播放功能？？？奇怪 -->
-        <video controls id="video1" src="mp4/1.mp4" control width="100%"  height="100%" control poster="img/ala.png"></video>
-        <video controls id="video2" src="mp4/2.mp4" control width="100%"  height="100%" control poster="img/linlin.png"></video>
     </section>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-    
-    <!-- 換圖畫面會閃，所以是不是要改成gif檔？或又是mp4？ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <script>
-        var pic = document.querySelector('.pic')
 
-        setTimeout(function (){
-            pic.setAttribute("style","background-image: url(img/open4.jpg);");    
-        }, 5000);
-        setTimeout(function (){
-            pic.setAttribute("style","background-image: url(img/open3.jpg);");    
-        }, 6000);
-        setTimeout(function (){
-            pic.setAttribute("style","background-image: url(img/open2.jpg);");    
-        }, 7000);
-        setTimeout(function (){
-            pic.setAttribute("style","background-image: url(img/open1.jpg);");    
-        }, 8000);
-        setTimeout(function (){
-            pic.setAttribute("style","background-image: url(img/open0.jpg);");    
-        }, 9000);
+        var tag = document.createElement('script');
 
-        
-        // 測試失敗中
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        // var lastScrollTop = 0;
-        // window.addEventListener('scroll', function(){
-        //     var scrollval = $(window).scrollTop();
-        //     var document_height = $(document).height();
-        //     var window_height = $(window).height();
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                videoId: 'cqHn-QtCzZ0',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': function (event) {
+                        if (event.data == YT.PlayerState.ENDED) {
+                            // console.log("結束了");
+                            var pic = document.querySelector('.pic')
+                            setTimeout(function () {
+                                pic.setAttribute("style", "background-image: url(img/open5.jpg);");
+                            }, 6000);
 
-        //     console.log = ("window-height:" , window_height)
-        // })
+                        }
+                    }
+                },
+                playerVars: {
+                    autoplay: 1,
+                    mute: 1,
+                    controls: 0,
+                    loop: 1,
+                    modestbranding: 1
+                }
+            });
+        }
+
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+
     </script>
 </body>
 
