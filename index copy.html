@@ -88,10 +88,10 @@
         height: 100%;
         /* background-image: url(img/open5.jpg); */
         /* 之後問老師怎麼換照片，再改回 */
-        background-position: center;
+        background-position: left;
         /* 原cover暫用contain */
         background-size: cover;
-        /* background-repeat: no-repeat; */
+        background-repeat: no-repeat;
         animation-name: showit;
         animation-duration: 2s;
         animation-delay: 5s;
@@ -99,11 +99,11 @@
         top: 0;
         left: 0;
         z-index: 1;
-        opacity: 0;
+        opacity: 1;
         animation-fill-mode: forwards;
     }
 
-    .pic span {
+    .pic #number {
         color: white;
         font-family: "Franklin Gothic Heavy";
         font-size: 5.5rem;
@@ -111,6 +111,28 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -200%);
+    }
+
+    .fullpage{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* #scroll{
+        animation-name: showit;
+        animation-duration: 2s;
+        animation-delay: 12s;
+        animation-iteration-count:infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 7;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    } */
+
+    #scene{
+        overflow: hidden;
     }
 
     @media (max-width:768px) {
@@ -128,8 +150,10 @@
         }
     }
 
+    
+
     @media (max-width:576px) {
-        .pic span {
+        .pic #number {
             font-size: 2rem;
             position: absolute;
             left: 50%;
@@ -153,10 +177,11 @@
             <div class="mask-botton"></div>
         </div>
         <div class="pic" style="background-image: url(img/openpic.jpg);">
-            <span>5</span>
+            <span id="number">5</span>
+            <span id="scroll">scroll</span>
             <div id="scene" class="fullpage">
                 <div id="avatar1" data-depth="0.1" class="fullpage"><img src="img/avatar1.png" alt="" class="fullpage"></div>
-                <div id="avatar2" data-depth="0.4"><img src="img/avatar2.jpg" alt=""></div>
+                <!-- <div id="avatar2" data-depth="0.4"><img src="img/avatar2.jpg" alt=""></div>
                 <div id="avatar3" data-depth="0.6"><img src="img/avatar3.jpg" alt=""></div>
                 <div id="avatar4" data-depth="0.8"><img src="img/avatar4.jpg" alt=""></div>
                 <div id="avatar5" data-depth="1.0"><img src="img/avatar5.jpg" alt=""></div>
@@ -164,7 +189,7 @@
                 <div id="avatar7" data-depth="1.4"><img src="img/avatar7.jpg" alt=""></div>
                 <div id="avatar8" data-depth="1.6"><img src="img/avatar8.jpg" alt=""></div>
                 <div id="avatar9" data-depth="1.8"><img src="img/avatar9.jpg" alt=""></div>
-                <div id="avatar10" data-depth="2"><img src="img/avatar10.jpg" alt=""></div>
+                <div id="avatar10" data-depth="2"><img src="img/avatar10.jpg" alt=""></div> -->
             </div>
         </div>
     </section>
@@ -180,6 +205,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
     <script>
+
         var scene = document.querySelector('#scene');
         var parallaxInstance = new Parallax(scene);
 
@@ -196,7 +222,7 @@
             player = new YT.Player('player', {
                 height: '100%',
                 width: '100%',
-                videoId: 'DLdlV1PQOZc',
+                videoId: 'OGZjX8zVoYE',
                 events: {
                     'onReady': onPlayerReady,
                     // 'onStateChange': function (event) {
