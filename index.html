@@ -103,7 +103,7 @@
         animation-fill-mode: forwards;
     }
 
-    .pic span {
+    .pic #number {
         color: white;
         font-family: "Franklin Gothic Heavy";
         font-size: 5.5rem;
@@ -113,13 +113,65 @@
         transform: translate(-50%, -200%);
     }
 
-    .fullpage{
+    .fullpage {
         width: 100%;
         height: 100%;
     }
 
-    #scene{
+    #scene {
         overflow: hidden;
+    }
+
+    #scroll {
+        color: white;
+        font-family: "Franklin Gothic Heavy";
+        font-size: 30px;
+        font-weight: 900;
+        padding: 4px;
+        position: relative;
+        left: 48%;
+        animation-name: srollDown;
+        animation-duration: 3s;
+        animation-delay: 11s;
+        animation-iteration-count: infinite;
+    }
+
+    #scroll::before {
+        content: ' ';
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        left: 15px;
+
+        transform: rotate(45deg);
+    }
+
+    #scroll::after {
+        content: ' ';
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+
+        transform: rotate(-45deg);
+
+    }
+
+
+    @keyframes srollDown {
+        from {
+            top: 810px;
+            opacity: 1;
+        }
+
+        to {
+            top: 840px;
+            opacity: 0;
+        }
     }
 
     @media (max-width:768px) {
@@ -128,7 +180,7 @@
             background-repeat: no-repeat;
         }
 
-        .pic span {
+        .pic #number {
             font-size: 3rem;
             position: absolute;
             left: 50%;
@@ -138,7 +190,7 @@
     }
 
     @media (max-width:576px) {
-        .pic span {
+        .pic #number {
             font-size: 2rem;
             position: absolute;
             left: 50%;
@@ -163,7 +215,8 @@
             <div class="mask-botton"></div>
         </div>
         <div class="pic" style="background-image: url(img/openpic.jpg);">
-            <span>5</span>
+            <span id="scroll">scroll</span>
+            <span id="number">5</span>
             <div id="scene" class="fullpage">
                 <div id="avatar1" data-depth="0.35" class="fullpage"><img src="img/avatar1.png" alt=""></div>
                 <div id="avatar2" data-depth="0.29"><img src="img/avatar2.png" alt=""></div>
@@ -231,7 +284,7 @@
 
             var mask_top = document.querySelector('.mask-top')
             var mask_bot = document.querySelector('.mask-botton')
-            var pic = document.querySelector('.pic span')
+            var pic = document.querySelector('.pic #number')
             setTimeout(function () {
                 pic.innerHTML = "4";
                 // pic.setAttribute("style", "background-image: url(img/open0.jpg);");
