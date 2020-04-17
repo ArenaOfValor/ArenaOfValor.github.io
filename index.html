@@ -73,8 +73,8 @@
         width: 100%;
         height: 100%;
         animation-name: fadeout;
-        animation-duration: 7s;
-        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-delay: 3s;
         animation-fill-mode: forwards;
         position: absolute;
         top: 0;
@@ -216,7 +216,7 @@
         </div>
         <div class="pic" style="background-image: url(img/openpic.jpg);">
             <span id="scroll">scroll</span>
-            <span id="number">5</span>
+            <span id="number">3</span>
             <div id="scene" class="fullpage">
                 <div id="avatar1" data-depth="0.35" class="fullpage"><img src="img/avatar1.png" alt=""></div>
                 <div id="avatar2" data-depth="0.29"><img src="img/avatar2.png" alt=""></div>
@@ -259,7 +259,7 @@
             player = new YT.Player('player', {
                 height: '100%',
                 width: '100%',
-                videoId: 'DLdlV1PQOZc',
+                videoId: 'OGZjX8zVoYE',
                 events: {
                     'onReady': onPlayerReady,
                     // 'onStateChange': function (event) {
@@ -286,23 +286,23 @@
             var mask_bot = document.querySelector('.mask-botton')
             var pic = document.querySelector('.pic #number')
             setTimeout(function () {
-                pic.innerHTML = "4";
+                pic.innerHTML = "2";
                 // pic.setAttribute("style", "background-image: url(img/open0.jpg);");
                 // mask_top.classList.remove("mask-top")
                 // mask_bot.classList.remove("mask-botton")
             }, 6000);
             setTimeout(function () {
-                pic.innerHTML = "3";
+                pic.innerHTML = "1";
             }, 7000);
             setTimeout(function () {
-                pic.innerHTML = "2";
-            }, 8000);
-            setTimeout(function () {
-                pic.innerHTML = "1";
-            }, 9000);
-            setTimeout(function () {
                 pic.innerHTML = "0";
-            }, 10000);
+            }, 8000);
+            // setTimeout(function () {
+            //     pic.innerHTML = "1";
+            // }, 9000);
+            // setTimeout(function () {
+            //     pic.innerHTML = "0";
+            // }, 10000);
         }
 
 
