@@ -5,17 +5,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>歡迎光臨~傳說對決</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
 
 
-<body 
->
+    #section1 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
 
-    <section id="section1" data-500="opacity: 0.5;"
-    data-1000="opacity: 0.3;">
+    @keyframes showit {
+        from {
+            opacity: 0.4;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 4;
+        opacity: 0.8;
+    }
+
+    .mask-top {
+        width: 100%;
+        height: 65px;
+        background-color: black;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .mask-botton {
+        width: 100%;
+        height: 65px;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    #player {
+        width: 100%;
+        height: 100%;
+        animation-name: fadeout;
+        animation-duration: 2s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .pic {
+        width: 100%;
+        height: 100%;
+        background-image: url("img/01-入場畫面/open-background.jpg.jpg");
+        /* 之後問老師怎麼換照片，再改回 */
+        background-position: center;
+        /* 原cover暫用contain */
+        background-size: cover;
+        /* background-repeat: no-repeat; */
+        animation-name: showit;
+        animation-duration: 2s;
+        animation-delay: 6s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    .pic #number {
+        color: white;
+        font-family: "Franklin Gothic Heavy";
+        font-size: 5.5rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -200%);
+    }
+
+    .fullpage {
+        width: 100%;
+        height: 100%;
+    }
+
+    #scene {
+        overflow: hidden;
+    }
+
+    #scroll {
+        color: white;
+        font-family: "Franklin Gothic Heavy";
+        font-size: 30px;
+        font-weight: 900;
+        padding: 4px;
+        position: relative;
+        left: 48%;
+        animation-name: srollDown;
+        animation-duration: 3s;
+        animation-delay: 9s;
+        animation-iteration-count: infinite;
+    }
+
+    #scroll::before {
+        content: ' ';
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        left: 15px;
+
+        transform: rotate(45deg);
+    }
+
+    #scroll::after {
+        content: ' ';
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+
+        transform: rotate(-45deg);
+
+    }
+
+
+    @keyframes srollDown {
+        from {
+            top: 810px;
+            opacity: 1;
+        }
+
+        to {
+            top: 840px;
+            opacity: 0;
+        }
+    }
+
+    @media (max-width:768px) {
+        .pic {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .pic #number {
+            font-size: 3rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -150%);
+        }
+    }
+
+    @media (max-width:576px) {
+        .pic #number {
+            font-size: 2rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -150%);
+        }
+
+    }
+
+    #section2 {
+        width: 100%;
+        height: 100vh;
+        background-image: url("./img/02-首頁/index.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .nav-menu-color {
+        background-color: rgb(255, 255, 255, 0.75) !important;
+    }
+
+    .w-15 {
+        width: 15% !important;
+    }
+
+    .border-none {
+        border: none !important;
+    }
+
+    .nav-click {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 200px 200px 0;
+        border-color: transparent transparent transparent;
+    }
+</style>
+
+<body>
+
+    <section id="section1">
         <div class="mask">
             <div class="mask-top"></div>
             <div id="player"></div>
@@ -25,7 +248,7 @@
             <span id="scroll">scroll</span>
             <span id="number">3</span>
             <div id="scene" class="fullpage">
-                <div id="avatar1" data-depth="0.35" class="fullpage"><img src="img/01-入場畫面/avatar1.png" alt=""></div>
+                <div id="avatar1" data-depth="0.35" class="fullpage"><img src="./img/01-入場畫面/avatar1.png" alt=""></div>
                 <div id="avatar2" data-depth="0.29"><img src="img/01-入場畫面/avatar2.png" alt=""></div>
                 <div id="avatar3" data-depth="0.51"><img src="img/01-入場畫面/avatar3.png" alt=""></div>
                 <div id="avatar4" data-depth="0.8"><img src="img/01-入場畫面/avatar4.png" alt=""></div>
@@ -39,24 +262,37 @@
         </div>
     </section>
 
-    <main id="section2">
-        <div class="nav-menu d-none"></div>
-        <div class="nav-click">
-            <div class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
+    <section id="section2" class="d-flex justify-content-end">
+        <nav class="nav-click">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="nav-menu-color p-4">
+                    <h5 class="text-white h4">Collapsed content</h5>
+                    <span class="text-muted">Toggleable via the navbar brand.</span>
+                </div>
             </div>
-        </div>
-    </main>
+            <nav class="navbar navbar-dark bg-dark">
+                <button class="navbar-toggler border-none" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </nav>
+
+    </section>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
     <script>
         var scene = document.querySelector('#scene');
@@ -75,7 +311,7 @@
             player = new YT.Player('player', {
                 height: '100%',
                 width: '100%',
-                videoId: 'miGc5eRAMWY',
+                videoId: 'OGZjX8zVoYE',
                 events: {
                     'onReady': onPlayerReady,
                     // 'onStateChange': function (event) {
@@ -121,18 +357,6 @@
             // }, 10000);
         }
 
-        var nav_click = document.querySelector('.nav-click')
-        var nav_menu = document.querySelector('.nav-menu')
-        onclick = function(){
-            nav_click.classList.add("d-none")
-            nav_menu.classList.remove("d-none")
-        }
-        
-        $(document).ready(function () {
-            $(".hamburger").click(function () {
-                $(this).toggleClass("is-active");
-            });
-        });
 
 
 
