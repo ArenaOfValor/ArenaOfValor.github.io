@@ -17,12 +17,32 @@
     background: #15181A;
     font-family: $openSans;
   }
+
+  #section4{
+      position: relative;
+      height: calc(100vh + 5000px);
+  }
   
   .skw-pages {
     overflow: hidden;
     position: relative;
     height: 100vh;
+    width: 100%;
   }
+
+  .skw-pages.fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  .skw-pages.ab{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  
   
   $skewDeg: 18deg;
   $magicVH: 32.4vh; // this number is magic and depends on skew angle

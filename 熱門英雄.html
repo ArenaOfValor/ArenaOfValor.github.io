@@ -113,7 +113,9 @@
 
 
     </section>
+    <section class="section" style="background-color: red;">
 
+    </section>
 
 
 
@@ -141,15 +143,40 @@
     <script>
 
         ////////// 這裡是section4-熱門英雄 //////////
+        $(window).scroll(function () {
+            // last = $("body").height() - $(window).height()
+            var scrollval = $(window).scrollTop();
+            var vh = $(window).height();
+
+            if(scrollval > (vh*3+5000)){
+                $('.skw-pages').addClass('ab');
+                $('.skw-pages').removeClass('fixed');
+            }else if(scrollval > vh*3){
+                //section4 fixed
+                $('.skw-pages').addClass('fixed');
+                $('.skw-pages').removeClass('ab');
+            }else{
+                $('.skw-pages').removeClass('fixed');
+                $('.skw-pages').removeClass('ab');
+            }
+
+            console.log(scrollval);
+
+            if(scrollval > vh*3+4000 ){
+                pagination(5)
+            }else if(scrollval > vh*3+3000 ){
+                pagination(4)
+            }else if(scrollval > vh*3+2000 ){
+                pagination(3)
+            }else if(scrollval > vh*3+1000 ){
+                pagination(2)
+            }else if(scrollval > vh*3 ){
+                pagination(1)
+            }
+            
+        });
 
 
-
-
-
-
-
-        
-        $(document).ready(function () {
 
             var curPage = 1;
             var numOfPages = $(".skw-page").length;
@@ -157,49 +184,28 @@
             var scrolling = false;
             var pgPrefix = ".skw-page-";
 
-            function pagination() {
+            function pagination(curPage) {
                 scrolling = true;
-
+                $('.skw-page').removeClass('active');
+                $('.skw-page').addClass('inactive');
                 $(pgPrefix + curPage).removeClass("inactive").addClass("active");
-                $(pgPrefix + (curPage - 1)).addClass("inactive");
-                $(pgPrefix + (curPage + 1)).removeClass("active");
+                
+                // $(pgPrefix + (curPage - 1)).addClass("inactive");
+                // $(pgPrefix + (curPage + 1)).removeClass("active");
 
                 setTimeout(function () {
                     scrolling = false;
                 }, animTime);
             };
 
-            function navigateUp() {
-                if (curPage === 1) return;
-                curPage--;
-                pagination();
-            };
 
-            function navigateDown() {
-                if (curPage === numOfPages) return;
-                curPage++;
-                pagination();
-            };
 
-            $(document).on("mousewheel DOMMouseScroll", function (e) {
-                if (scrolling) return;
-                if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-                    navigateUp();
-                } else {
-                    navigateDown();
-                }
-            });
 
-            $(document).on("keydown", function (e) {
-                if (scrolling) return;
-                if (e.which === 38) {
-                    navigateUp();
-                } else if (e.which === 40) {
-                    navigateDown();
-                }
-            });
 
-        });
+
+
+
+
 
 
     </script>

@@ -15,10 +15,28 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
+#section4 {
+  position: relative;
+  height: calc(100vh + 5000px);
+}
+
 .skw-pages {
   overflow: hidden;
   position: relative;
   height: 100vh;
+  width: 100%;
+}
+
+.skw-pages.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.skw-pages.ab {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .skw-page {
