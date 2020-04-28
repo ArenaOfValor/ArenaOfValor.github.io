@@ -216,7 +216,9 @@
     }
 
     .nav-menu-color {
-        background-color: rgb(255, 255, 255, 0.75) !important;
+        background-color: rgb(255, 255, 255, 0.8) !important;
+        height: 100vh;
+        width: 200px;
     }
 
     .w-15 {
@@ -232,7 +234,180 @@
         height: 0;
         border-style: solid;
         border-width: 0 200px 200px 0;
-        border-color: transparent transparent transparent;
+        border-color: transparent rgb(31, 31, 31, 0.5) transparent transparent;
+        position: relative;
+
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: -100px;
+        top: 25px;
+
+    }
+
+    .h-100 {
+        height: 100vh;
+    }
+
+    .menu-click {
+        height: 5%;
+        width: 25%;
+        cursor: pointer
+    }
+
+    .border-back {
+        width: 50px;
+        height: 1px;
+        border: black solid 2px;
+        margin-bottom: 5px;
+    }
+
+    .h4 {
+        padding: 10px;
+    }
+
+    .navbar-toggler-icon {
+        width: 3em;
+        height: 3em;
+    }
+
+    button {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 200px 200px 0;
+        border-color: transparent rgb(31, 31, 31, 0.5) transparent transparent;
+        position: relative;
+    }
+
+    .menu-logo {
+        width: 200px;
+        background-image: url("./img/logo.png");
+    }
+
+    .text-hover {
+        display: inline;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-duration: 0.7s;
+        transition-duration: 0.7s;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transition-property: color;
+        transition-property: color;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        text-decoration: none;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .text-hover:after,
+    .text-hover:before {
+        -webkit-transition-duration: 0.7s;
+        transition-duration: 0.7s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+
+    .text-hover:after {
+        background-color: rgb(94, 44, 233);
+    }
+
+    .text-hover:before {
+        background-color: rgb(94, 44, 233);
+    }
+
+    .text-hover:hover,
+    .text-hover:focus {
+        outline: 0;
+        cursor: pointer;
+        color: rgb(94, 44, 233);
+        -webkit-transition: color 0.7s ease-in-out;
+        transition: color 0.7s ease-in-out;
+    }
+
+    .text-hover:hover:after,
+    .text-hover:focus:after {
+        background-color: rgb(94, 44, 233);
+    }
+
+    .text-hover:hover:before,
+    .text-hover:focus:before {
+        background-color: rgb(94, 44, 233);
+    }
+
+    .text-hover:hover:after,
+    .text-hover:focus:after,
+    .text-hover:hover:before,
+    .text-hover:focus:before {
+        -webkit-transition-duration: 0.7s;
+        transition-duration: 0.7s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-transition-property: 100px, rgb(94, 44, 233);
+        transition-property: 100px, rgb(94, 44, 233);
+        width: 0;
+        height: 3px;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:hover:after,
+    .text-hover-overline-goes-left-underline-goes-right:focus:after {
+        outline: 0;
+        -webkit-transition-property: 100px, rgb(94, 44, 233);
+        transition-property: 100px, rgb(94, 44, 233);
+        width: 100%;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-transition-property: 100px, rgb(94, 44, 233);
+        transition-property: 100px, rgb(94, 44, 233);
+        width: 0;
+        height: 3px;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:hover:before,
+    .text-hover-overline-goes-left-underline-goes-right:focus:before {
+        outline: 0;
+        -webkit-transition-property: 100px, rgb(94, 44, 233);
+        transition-property: 100px, rgb(94, 44, 233);
+        width: 100%;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:after {
+        top: 0%;
+        right: 0%;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:before {
+        bottom: 0%;
+        left: 0%;
     }
 </style>
 
@@ -263,19 +438,27 @@
     </section>
 
     <section id="section2" class="d-flex justify-content-end">
-        <nav class="nav-click">
+        <div class="nav-click navbar-dark" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+            <button class="navbar-toggler border-none" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <nav>
             <div class="collapse" id="navbarToggleExternalContent">
-                <div class="nav-menu-color p-4">
-                    <h5 class="text-white h4">Collapsed content</h5>
-                    <span class="text-muted">Toggleable via the navbar brand.</span>
+                <div class="nav-menu-color d-flex flex-column justify-content-center align-items-center">
+                    <img src="./img/02-首頁/logo.png" alt="" style="width: 200px;">
+                    <h5 class="h4 mt-5 text-hover text-hover-overline-goes-left-underline-goes-right">遊戲玩法</h5>
+                    <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">英雄介紹</h5>
+                    <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">裝備介紹</h5>
+                    <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">活動公告</h5>
+                    <div class="menu-click text-center mt-5" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent">
+                        <div class="border-back"></div>
+                        <div class="border-back"></div>
+                        <div class="border-back"></div>
+                    </div>
                 </div>
             </div>
-            <nav class="navbar navbar-dark bg-dark">
-                <button class="navbar-toggler border-none" data-toggle="collapse"
-                    data-target="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
         </nav>
 
     </section>
@@ -356,7 +539,21 @@
             //     pic.innerHTML = "0";
             // }, 10000);
         }
+        var nav_click = document.querySelector(".nav-click")
+        var menu_click = document.querySelector(".menu-click")
 
+
+        nav_click.onclick = function () {
+            nav_click.classList.add("d-none")
+        }
+
+        // menu_click.onclick = function () {
+        //     nav_click.classList.remove("d-none")
+        // }
+
+        $('#navbarToggleExternalContent').on('hidden.bs.collapse', function () {
+            nav_click.classList.remove("d-none")
+        })
 
 
 
