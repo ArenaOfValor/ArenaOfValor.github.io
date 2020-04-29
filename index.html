@@ -414,7 +414,7 @@
         width: 100%;
         height: 100vh;
         background-image: url("./img/03-遊戲玩法/地形圖.jpg");
-        background-position: center;
+        background-position: 0 60%;
         background-size: cover;
         background-attachment: fixed;
 
@@ -453,6 +453,39 @@
         height: 100vh;
         background-color: rgb(0, 0, 0, 0.2);
     }
+
+    .fort1-ab {
+        position: absolute;
+        top: 20px;
+        right: 245px;
+    }
+
+    .fort2-ab {
+        position: absolute;
+        top: 860px;
+        left: 290px;
+    }
+    .red-team-ab{
+        position: absolute;
+        top: 100px;
+        right: 100px;
+    }
+    .blue-team-ab{
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+    .vs-description{
+        position: absolute;
+        top: 500px;
+        left: 500px;
+    }
+    .victory-description{
+        position: absolute;
+        top: 700px;
+        left: 500px;
+    }
+
 </style>
 
 <body>
@@ -508,17 +541,32 @@
     </section>
 
     <section id="section3">
+
         <div class="game-play-intro">
-            <div>
-                <h1 class="text-white">
-                    <div class="black-mask d-flex justify-content-center align-items-center lax"
-                        data-lax-opacity="(window.innerHeight*2)+100 1, ((window.innerHeight*2)+300) 0">
-                        <b class="game-intro-title">遊戲基礎認識</b>
-                    </div>
-                </h1>
-                <img src="./img/03-遊戲玩法/主堡標示.png" alt="" class="lax" data-lax-opacity="(window.innerHeight*2)+200 0, ((window.innerHeight*2)+500) 1" style="width: 100px;">
-                <img src="./img/03-遊戲玩法/主堡標示.png" alt="" class="lax" data-lax-opacity="(window.innerHeight*2)+200 0, ((window.innerHeight*2)+500) 1" style="width: 100px;"> 
-            </div>
+            <img src="./img/03-遊戲玩法/主堡標示.png" alt="" class="lax fort1-ab"
+                data-lax-opacity="(window.innerHeight*2)+200 0, ((window.innerHeight*2)+500) 1, ((window.innerHeight*2)+800) 1, (window.innerHeight*2)+1000 1" style="width: 5%;">
+            <img src="./img/03-遊戲玩法/主堡標示.png" alt="" class="lax fort2-ab"
+                data-lax-opacity="(window.innerHeight*2)+200 0, ((window.innerHeight*2)+500) 1" style="width: 5%;">
+                <img src="./img/03-遊戲玩法/紅方.png" alt="" class="lax red-team-ab"
+                data-lax-opacity="(window.innerHeight*2)+400 0, ((window.innerHeight*2)+700) 1" style="width: 50%;">
+            <img src="./img/03-遊戲玩法/藍方.png" alt="" class="lax blue-team-ab"
+                data-lax-opacity="(window.innerHeight*2)+400 0, ((window.innerHeight*2)+700) 1" style="width: 50%;">
+                <h2 class="vs-description">
+                    遊戲分為紅方及藍方
+                </h2>
+                <h2 class="victory-description">
+                    摧毀對方主堡則遊戲結束
+                </h2>
+
+            <h1 class="text-white">
+                <div class="black-mask d-flex justify-content-center align-items-center lax"
+                    data-lax-opacity="(window.innerHeight*2)+100 1, ((window.innerHeight*2)+300) 0">
+                    <b class="game-intro-title">遊戲基礎認識</b>
+                </div>
+            </h1>
+            
+
+
         </div>
     </section>
     <!-- data-lax-translate-x="(window.innerHeight*2) 0, ((window.innerHeight*2)+500) -200 -->
