@@ -17,7 +17,7 @@
 
     * {
         box-sizing: border-box;
-
+        font-family: Arial, Helvetica, sans-serif, 微軟正黑體;
     }
 
     a {
@@ -216,7 +216,9 @@
     }
 
     .nav-menu-color {
-        background-color: rgb(255, 255, 255, 0.75) !important;
+        background-color: rgb(255, 255, 255, 0.8) !important;
+        height: 100vh;
+        width: 200px;
     }
 
     .w-15 {
@@ -232,8 +234,258 @@
         height: 0;
         border-style: solid;
         border-width: 0 200px 200px 0;
-        border-color: transparent transparent transparent;
+        border-color: transparent rgb(31, 31, 31, 0.7) transparent transparent;
+        position: fixed relative;
+
     }
+
+    .navbar-toggler {
+        position: fixed relative;
+        right: -100px;
+        top: 25px;
+
+    }
+
+    .h-100 {
+        height: 100vh;
+    }
+
+    .menu-click {
+        height: 5%;
+        width: 25%;
+        cursor: pointer
+    }
+
+    .border-back {
+        width: 50px;
+        height: 1px;
+        border: black solid 2px;
+        margin-bottom: 5px;
+    }
+
+    .h4 {
+        padding: 10px;
+    }
+
+    .navbar-toggler-icon {
+        width: 3em;
+        height: 3em;
+    }
+
+    button {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 200px 200px 0;
+        border-color: transparent rgb(31, 31, 31, 0.5) transparent transparent;
+        position: relative;
+    }
+
+    .menu-logo {
+        width: 200px;
+        background-image: url("./img/logo.png");
+    }
+
+    .text-hover {
+        display: inline;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-duration: 0.7s;
+        transition-duration: 0.7s;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transition-property: color;
+        transition-property: color;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        text-decoration: none;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .text-hover:after,
+    .text-hover:before {
+        -webkit-transition-duration: 0.7s;
+        transition-duration: 0.7s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+
+    .text-hover:after {
+        background-color: rgb(94, 44, 233);
+    }
+
+    .text-hover:before {
+        background-color: rgb(94, 44, 233);
+    }
+
+    .text-hover:hover,
+    .text-hover:focus {
+        outline: 0;
+        cursor: pointer;
+        color: rgb(94, 44, 233);
+        -webkit-transition: color 0.7s ease-in-out;
+        transition: color 0.7s ease-in-out;
+    }
+
+    .text-hover:hover:after,
+    .text-hover:focus:after {
+        background-color: rgb(94, 44, 233);
+    }
+
+    .text-hover:hover:before,
+    .text-hover:focus:before {
+        background-color: rgb(94, 44, 233);
+    }
+
+    .text-hover:hover:after,
+    .text-hover:focus:after,
+    .text-hover:hover:before,
+    .text-hover:focus:before {
+        -webkit-transition-duration: 0.7s;
+        transition-duration: 0.7s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-transition-property: 100px, rgb(94, 44, 233);
+        transition-property: 100px, rgb(94, 44, 233);
+        width: 0;
+        height: 2px;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:hover:after,
+    .text-hover-overline-goes-left-underline-goes-right:focus:after {
+        outline: 0;
+        -webkit-transition-property: 100px, rgb(94, 44, 233);
+        transition-property: 100px, rgb(94, 44, 233);
+        width: 100%;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-transition-property: 100px, rgb(94, 44, 233);
+        transition-property: 100px, rgb(94, 44, 233);
+        width: 0;
+        height: 2px;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:hover:before,
+    .text-hover-overline-goes-left-underline-goes-right:focus:before {
+        outline: 0;
+        -webkit-transition-property: 100px, rgb(94, 44, 233);
+        transition-property: 100px, rgb(94, 44, 233);
+        width: 100%;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:after {
+        top: 0%;
+        right: 0%;
+    }
+
+    .text-hover-overline-goes-left-underline-goes-right:before {
+        bottom: 0%;
+        left: 0%;
+    }
+
+    .game-play-intro {
+        width: 100%;
+        height: 100vh;
+        background-image: url("./img/03-遊戲玩法/地形圖.jpg");
+        background-position: 0 60%;
+        background-size: cover;
+        background-attachment: fixed;
+
+    }
+
+    .game-play-intro.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .game-play-intro.ab {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .hero-intro {
+
+        width: 100%;
+        height: 100vh;
+    }
+
+    #section3 {
+        position: relative;
+        height: calc(100vh + 8000px);
+    }
+
+    .game-intro-title {
+        font-size: 48px;
+        border: white 2px solid;
+        padding: 30px;
+    }
+
+    .black-mask {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0, 0.2);
+    }
+
+    .fort1-ab {
+        position: absolute;
+        top: 20px;
+        right: 245px;
+    }
+
+    .fort2-ab {
+        position: absolute;
+        top: 860px;
+        left: 290px;
+    }
+    .red-team-ab{
+        position: absolute;
+        top: 100px;
+        right: 100px;
+    }
+    .blue-team-ab{
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+    .vs-description{
+        position: absolute;
+        top: 500px;
+        left: 500px;
+    }
+    .victory-description{
+        position: absolute;
+        top: 700px;
+        left: 500px;
+    }
+
 </style>
 
 <body>
@@ -263,36 +515,80 @@
     </section>
 
     <section id="section2" class="d-flex justify-content-end">
-        <nav class="nav-click">
+        <div class="nav-click navbar-dark sticky-top" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+            <button class="navbar-toggler border-none" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <nav>
             <div class="collapse" id="navbarToggleExternalContent">
-                <div class="nav-menu-color p-4">
-                    <h5 class="text-white h4">Collapsed content</h5>
-                    <span class="text-muted">Toggleable via the navbar brand.</span>
+                <div class="nav-menu-color d-flex flex-column justify-content-center align-items-center">
+                    <img src="./img/02-首頁/logo.png" alt="" style="width: 200px;">
+                    <h5 class="h4 mt-5 text-hover text-hover-overline-goes-left-underline-goes-right">遊戲玩法</h5>
+                    <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">英雄介紹</h5>
+                    <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">裝備介紹</h5>
+                    <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">活動公告</h5>
+                    <div class="menu-click text-center mt-5" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent">
+                        <div class="border-back"></div>
+                        <div class="border-back"></div>
+                        <div class="border-back"></div>
+                    </div>
                 </div>
             </div>
-            <nav class="navbar navbar-dark bg-dark">
-                <button class="navbar-toggler border-none" data-toggle="collapse"
-                    data-target="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
         </nav>
 
+    </section>
+
+    <section id="section3">
+
+        <div class="game-play-intro">
+            <img src="./img/03-遊戲玩法/主堡標示.png" alt="" class="lax fort1-ab"
+                data-lax-opacity="(window.innerHeight*2)+200 0, ((window.innerHeight*2)+500) 1, ((window.innerHeight*2)+800) 1, (window.innerHeight*2)+1000 1" style="width: 5%;">
+            <img src="./img/03-遊戲玩法/主堡標示.png" alt="" class="lax fort2-ab"
+                data-lax-opacity="(window.innerHeight*2)+200 0, ((window.innerHeight*2)+500) 1" style="width: 5%;">
+                <img src="./img/03-遊戲玩法/紅方.png" alt="" class="lax red-team-ab"
+                data-lax-opacity="(window.innerHeight*2)+400 0, ((window.innerHeight*2)+700) 1" style="width: 50%;">
+            <img src="./img/03-遊戲玩法/藍方.png" alt="" class="lax blue-team-ab"
+                data-lax-opacity="(window.innerHeight*2)+400 0, ((window.innerHeight*2)+700) 1" style="width: 50%;">
+                <h2 class="vs-description">
+                    遊戲分為紅方及藍方
+                </h2>
+                <h2 class="victory-description">
+                    摧毀對方主堡則遊戲結束
+                </h2>
+
+            <h1 class="text-white">
+                <div class="black-mask d-flex justify-content-center align-items-center lax"
+                    data-lax-opacity="(window.innerHeight*2)+100 1, ((window.innerHeight*2)+300) 0">
+                    <b class="game-intro-title">遊戲基礎認識</b>
+                </div>
+            </h1>
+            
+
+
+        </div>
+    </section>
+    <!-- data-lax-translate-x="(window.innerHeight*2) 0, ((window.innerHeight*2)+500) -200 -->
+
+    <section id="section4">
+        <div class="hero-intro">
+
+        </div>
     </section>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
 
     <script>
         var scene = document.querySelector('#scene');
@@ -356,10 +652,50 @@
             //     pic.innerHTML = "0";
             // }, 10000);
         }
+        var nav_click = document.querySelector(".nav-click")
+        var menu_click = document.querySelector(".menu-click")
+
+
+        nav_click.onclick = function () {
+            nav_click.classList.add("d-none")
+        }
+
+        // menu_click.onclick = function () {
+        //     nav_click.classList.remove("d-none")
+        // }
+
+        $('#navbarToggleExternalContent').on('hidden.bs.collapse', function () {
+            nav_click.classList.remove("d-none")
+        })
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > (window.innerHeight * 2) + 8000 || document.documentElement.scrollTop > (window.innerHeight * 2) + 8000) {
+                $('.game-play-intro').removeClass("fixed");
+                $('.game-play-intro').addClass("ab")
+            } else if (document.body.scrollTop > window.innerHeight * 2 || document.documentElement.scrollTop > window.innerHeight * 2) {
+                $('.game-play-intro').addClass("fixed")
+                $('.game-play-intro').removeClass("ab");
+            } else {
+                $('.game-play-intro').removeClass("fixed");
+                $('.game-play-intro').removeClass("ab");
+            }
+        }
 
 
 
 
+        window.onload = function () {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
     </script>
 </body>
 
