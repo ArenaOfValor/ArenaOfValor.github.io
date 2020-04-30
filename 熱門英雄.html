@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="css/熱門英雄.css">
 
-    <title>熱門英雄</title>
+    <title>歡迎光臨~傳說對決</title>
 
 </head>
 
@@ -113,9 +113,63 @@
 
 
     </section>
-    <section class="section" style="background-color: red;">
+
+
+
+    <section class="section" id="section5">
+
+        <div class="slides">
+
+            <div class="swiper">
+                <div id="ture" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide line1pic1"></div>
+                        <div class="swiper-slide line1pic2"></div>
+                        <div class="swiper-slide line1pic3"></div>
+                        <!-- <div class="swiper-slide line1pic4"></div>
+                        <div class="swiper-slide line1pic5"></div>
+                        <div class="swiper-slide line1pic6"></div>
+                        <div class="swiper-slide line1pic7"></div>
+                        <div class="swiper-slide line1pic8"></div>
+                        <div class="swiper-slide line1pic9"></div>
+                        <div class="swiper-slide line1pic10"></div>
+                        <div class="swiper-slide line1pic11"></div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper">
+                <div id="reverse" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide line2pic1"></div>
+                        <div class="swiper-slide line2pic2"></div>
+                        <div class="swiper-slide line2pic3"></div>
+                        <!-- <div class="swiper-slide line2pic4"></div>
+                        <div class="swiper-slide line2pic5"></div>
+                        <div class="swiper-slide line2pic6"></div>
+                        <div class="swiper-slide line2pic7"></div>
+                        <div class="swiper-slide line2pic8"></div>
+                        <div class="swiper-slide line2pic9"></div>
+                        <div class="swiper-slide line2pic10"></div>
+                        <div class="swiper-slide line2pic11"></div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btn">出賣靈魂點我</div>
+        <div class="btn">我是乖寶寶點我</div>
+
 
     </section>
+
+
+    <footer>
+        <a href=""><div class="logo mr-3"><img src="img/08-登入頁面/GGC-LOGO.jpg" alt="" width="50" height="50"></div></a>
+        <p>Copyright © ArenaOfValor. All rights reserved</p>
+
+    </footer>
 
 
 
@@ -148,59 +202,79 @@
             var scrollval = $(window).scrollTop();
             var vh = $(window).height();
 
-            if(scrollval > (vh*3+5000)){
+            if (scrollval > (vh * 3 + 5000)) {
                 $('.skw-pages').addClass('ab');
                 $('.skw-pages').removeClass('fixed');
-            }else if(scrollval > vh*3){
+            } else if (scrollval > vh * 3) {
                 //section4 fixed
                 $('.skw-pages').addClass('fixed');
                 $('.skw-pages').removeClass('ab');
-            }else{
+            } else {
                 $('.skw-pages').removeClass('fixed');
                 $('.skw-pages').removeClass('ab');
             }
 
             console.log(scrollval);
 
-            if(scrollval > vh*3+4000 ){
+            if (scrollval > vh * 3 + 4000) {
                 pagination(5)
-            }else if(scrollval > vh*3+3000 ){
+            } else if (scrollval > vh * 3 + 3000) {
                 pagination(4)
-            }else if(scrollval > vh*3+2000 ){
+            } else if (scrollval > vh * 3 + 2000) {
                 pagination(3)
-            }else if(scrollval > vh*3+1000 ){
+            } else if (scrollval > vh * 3 + 1000) {
                 pagination(2)
-            }else if(scrollval > vh*3 ){
+            } else if (scrollval > vh * 3) {
                 pagination(1)
             }
-            
+
         });
 
 
 
-            var curPage = 1;
-            var numOfPages = $(".skw-page").length;
-            var animTime = 1000;
-            var scrolling = false;
-            var pgPrefix = ".skw-page-";
+        var curPage = 1;
+        var numOfPages = $(".skw-page").length;
+        var animTime = 1000;
+        var scrolling = false;
+        var pgPrefix = ".skw-page-";
 
-            function pagination(curPage) {
-                scrolling = true;
-                $('.skw-page').removeClass('active');
-                $('.skw-page').addClass('inactive');
-                $(pgPrefix + curPage).removeClass("inactive").addClass("active");
-                
-                // $(pgPrefix + (curPage - 1)).addClass("inactive");
-                // $(pgPrefix + (curPage + 1)).removeClass("active");
+        function pagination(curPage) {
+            scrolling = true;
+            $('.skw-page').removeClass('active');
+            $('.skw-page').addClass('inactive');
+            $(pgPrefix + curPage).removeClass("inactive").addClass("active");
 
-                setTimeout(function () {
-                    scrolling = false;
-                }, animTime);
-            };
+            // $(pgPrefix + (curPage - 1)).addClass("inactive");
+            // $(pgPrefix + (curPage + 1)).removeClass("active");
 
-
+            setTimeout(function () {
+                scrolling = false;
+            }, animTime);
+        };
 
 
+        ////////// 這裡是section5-登入畫面 //////////
+        var swiper1 = new Swiper("#ture", {
+            speed: 15000,
+            autoplay: {
+                delay: 0,
+            },
+            loop: true,
+            loopAdditionalSlides: 4,
+            slidesPerView: 3,
+        });
+        var swiper2 = new Swiper("#reverse", {
+            speed: 15000,
+            roundLengths: false,
+            autoplay: {
+                delay: 0,
+                reverseDirection: true,
+
+            },
+            loop: true,
+            loopAdditionalSlides: 4,
+            slidesPerView: 3,
+        });
 
 
 

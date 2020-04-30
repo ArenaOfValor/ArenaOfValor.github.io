@@ -4,7 +4,9 @@
   height: 100vh;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -14,6 +16,13 @@
 body {
   background: #15181A;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #section4 {
@@ -204,5 +213,108 @@ body {
 
 .skw-page-5 .skw-page__half--right .skw-page__content {
   background: #292929;
+}
+
+#section5 {
+  height: calc(100vh - 90px);
+  background-image: url(../img/08-登入頁面/模糊背景.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 50px 0 0 0;
+}
+
+#section5 .slides .swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+#section5 .slides .swiper .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+#section5 .slides .swiper .swiper-container .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+#section5 .slides .swiper .swiper-container .swiper-slide {
+  width: 9.375rem;
+  height: 18rem;
+  background-color: #999999;
+  border: 1px solid black;
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+  position: relative;
+}
+
+#section5 .slides .swiper .swiper-container .swiper-slide:hover {
+  -webkit-filter: opacity(100%);
+          filter: opacity(100%);
+}
+
+.btn {
+  width: 250px;
+  background-color: #c19826;
+  color: black;
+  font-family: "微軟正黑體";
+  border: 3px solid white;
+  font-size: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 3em #ff0a0a;
+          box-shadow: 0 0 3em #ff0a0a;
+}
+
+.line2pic1 {
+  background: url("../img/08-登入頁面/伺服器維護公告-01.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line2pic2 {
+  background: url("../img/08-登入頁面/系統公告-02.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line2pic3 {
+  background: url("../img/08-登入頁面/賽事公告-02.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* 第一行輪播圖 */
+.line1pic1 {
+  background: url("../img/08-登入頁面/活動公告-03.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line1pic2 {
+  background: url("../img/08-登入頁面/活動公告-02.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line1pic3 {
+  background: url("../img/08-登入頁面/活動公告-01.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+footer {
+  width: 100%;
+  height: 90px;
+  background-color: #0a1124;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  margin-bottom: 0;
+  color: gray;
+  text-align: center;
+  line-height: 90px;
 }
 /*# sourceMappingURL=熱門英雄.css.map */
