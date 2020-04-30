@@ -144,7 +144,8 @@
   
     &-1 {
       .skw-page__half--left .skw-page__content {
-        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/mousover-img-1.jpg');
+        background-image: url('../img/04-熱門英雄介紹/弗洛倫-02.jpg');
+        background-position: 60% 100%;
       }
       .skw-page__half--right .skw-page__content {
         background: lighten(#1C1C1C, 5%);
@@ -155,12 +156,14 @@
         background: lighten(#1C1C1C, 5%);
       }
       .skw-page__half--right .skw-page__content {
-        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg');
+        background-image: url('../img/04-熱門英雄介紹/狄拉克-02.jpg');
+        background-position: 60% 100%;
       }
     }
     &-3 {
       .skw-page__half--left .skw-page__content {
-        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/mousover-img-2.jpg');
+        background-image: url('../img/04-熱門英雄介紹/亥犽-02.jpg');
+        background-position: 50% 100%;
       }
       .skw-page__half--right .skw-page__content {
         background: lighten(#1C1C1C, 5%);
@@ -171,12 +174,15 @@
         background: lighten(#1C1C1C, 5%);
       }
       .skw-page__half--right .skw-page__content {
-        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/sections-3.jpg');
+        background-image: url('../img/04-熱門英雄介紹/刀鋒寶貝-05.jpg');
+        background-position: 60% 100%;
+        background-size: cover;
       }
     }
     &-5 {
       .skw-page__half--left .skw-page__content {
-        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/img-test.jpg');
+        background-image: url('../img/04-熱門英雄介紹/皮皮-02.jpg');
+        background-position: 50% 100%;
       }
       .skw-page__half--right .skw-page__content {
         background: lighten(#1C1C1C, 5%);
