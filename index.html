@@ -7,735 +7,11 @@
     <title>歡迎光臨~傳說對決</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
 
-    * {
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif, 微軟正黑體;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-
-    #section1 {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-    }
-
-    @keyframes showit {
-        from {
-            opacity: 0.4;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fadeout {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
-    }
-
-    .mask {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 4;
-        opacity: 0.8;
-    }
-
-    .mask-top {
-        width: 100%;
-        height: 65px;
-        background-color: black;
-        position: absolute;
-        z-index: 3;
-    }
-
-    .mask-botton {
-        width: 100%;
-        height: 65px;
-        background-color: black;
-        position: absolute;
-        bottom: 0;
-        z-index: 3;
-    }
-
-    #player {
-        width: 100%;
-        height: 100%;
-        animation-name: fadeout;
-        animation-duration: 2s;
-        animation-delay: 3s;
-        animation-fill-mode: forwards;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        pointer-events: none;
-    }
-
-    .pic {
-        width: 100%;
-        height: 100%;
-        background-image: url("img/01-入場畫面/open-background.jpg.jpg");
-        /* 之後問老師怎麼換照片，再改回 */
-        background-position: center;
-        /* 原cover暫用contain */
-        background-size: cover;
-        /* background-repeat: no-repeat; */
-        animation-name: showit;
-        animation-duration: 2s;
-        animation-delay: 6s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        animation-fill-mode: forwards;
-    }
-
-    .pic #number {
-        color: white;
-        font-family: "Franklin Gothic Heavy";
-        font-size: 5.5rem;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -200%);
-    }
-
-    .fullpage {
-        width: 100%;
-        height: 100%;
-    }
-
-    #scene {
-        overflow: hidden;
-    }
-
-    #scroll {
-        color: white;
-        font-family: "Franklin Gothic Heavy";
-        font-size: 30px;
-        font-weight: 900;
-        padding: 4px;
-        position: relative;
-        left: 48%;
-        animation-name: srollDown;
-        animation-duration: 3s;
-        animation-delay: 9s;
-        animation-iteration-count: infinite;
-    }
-
-    #scroll::before {
-        content: ' ';
-        width: 35px;
-        height: 5px;
-        background-color: white;
-        position: absolute;
-        top: 50px;
-        left: 15px;
-
-        transform: rotate(45deg);
-    }
-
-    #scroll::after {
-        content: ' ';
-        width: 35px;
-        height: 5px;
-        background-color: white;
-        position: absolute;
-        top: 50px;
-        right: 15px;
-
-        transform: rotate(-45deg);
-
-    }
-
-
-    @keyframes srollDown {
-        from {
-            top: 810px;
-            opacity: 1;
-        }
-
-        to {
-            top: 840px;
-            opacity: 0;
-        }
-    }
-
-    @media (max-width:768px) {
-        .pic {
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        .pic #number {
-            font-size: 3rem;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -150%);
-        }
-    }
-
-    @media (max-width:576px) {
-        .pic #number {
-            font-size: 2rem;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -150%);
-        }
-
-    }
-
-    #section2 {
-        width: 100%;
-        height: 100vh;
-        background-image: url("./img/02-首頁/index.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    .nav-menu-color {
-        background-color: rgb(255, 255, 255, 0.8) !important;
-        height: 100vh;
-        width: 200px;
-    }
-
-    .w-15 {
-        width: 15% !important;
-    }
-
-    .border-none {
-        border: none !important;
-    }
-
-    .nav-click {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 200px 200px 0;
-        border-color: transparent rgb(31, 31, 31, 0.7) transparent transparent;
-        position: fixed relative;
-
-    }
-
-    .navbar-toggler {
-        position: fixed relative;
-        right: -100px;
-        top: 25px;
-
-    }
-
-    .h-100 {
-        height: 100vh;
-    }
-
-    .menu-click {
-        height: 5%;
-        width: 25%;
-        cursor: pointer
-    }
-
-    .border-back {
-        width: 50px;
-        height: 1px;
-        border: black solid 2px;
-        margin-bottom: 5px;
-    }
-
-    .h4 {
-        padding: 10px;
-    }
-
-    .navbar-toggler-icon {
-        width: 3em;
-        height: 3em;
-    }
-
-    button {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 200px 200px 0;
-        border-color: transparent rgb(31, 31, 31, 0.5) transparent transparent;
-        position: relative;
-    }
-
-    .menu-logo {
-        width: 200px;
-        background-image: url("./img/logo.png");
-    }
-
-    .text-hover {
-        display: inline;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 10px;
-        padding-left: 10px;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        -webkit-transition-duration: 0.7s;
-        transition-duration: 0.7s;
-        -webkit-transition-delay: 0s;
-        transition-delay: 0s;
-        -webkit-transition-property: color;
-        transition-property: color;
-        white-space: nowrap;
-        overflow: hidden;
-        position: relative;
-        z-index: 2;
-        text-decoration: none;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -webkit-touch-callout: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-
-    .text-hover:after,
-    .text-hover:before {
-        -webkit-transition-duration: 0.7s;
-        transition-duration: 0.7s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        -webkit-transition-delay: 0s;
-        transition-delay: 0s;
-    }
-
-    .text-hover:after {
-        background-color: rgb(94, 44, 233);
-    }
-
-    .text-hover:before {
-        background-color: rgb(94, 44, 233);
-    }
-
-    .text-hover:hover,
-    .text-hover:focus {
-        outline: 0;
-        cursor: pointer;
-        color: rgb(94, 44, 233);
-        -webkit-transition: color 0.7s ease-in-out;
-        transition: color 0.7s ease-in-out;
-    }
-
-    .text-hover:hover:after,
-    .text-hover:focus:after {
-        background-color: rgb(94, 44, 233);
-    }
-
-    .text-hover:hover:before,
-    .text-hover:focus:before {
-        background-color: rgb(94, 44, 233);
-    }
-
-    .text-hover:hover:after,
-    .text-hover:focus:after,
-    .text-hover:hover:before,
-    .text-hover:focus:before {
-        -webkit-transition-duration: 0.7s;
-        transition-duration: 0.7s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        -webkit-transition-delay: 0s;
-        transition-delay: 0s;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        -webkit-transition-property: 100px, rgb(94, 44, 233);
-        transition-property: 100px, rgb(94, 44, 233);
-        width: 0;
-        height: 2px;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:hover:after,
-    .text-hover-overline-goes-left-underline-goes-right:focus:after {
-        outline: 0;
-        -webkit-transition-property: 100px, rgb(94, 44, 233);
-        transition-property: 100px, rgb(94, 44, 233);
-        width: 100%;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        -webkit-transition-property: 100px, rgb(94, 44, 233);
-        transition-property: 100px, rgb(94, 44, 233);
-        width: 0;
-        height: 2px;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:hover:before,
-    .text-hover-overline-goes-left-underline-goes-right:focus:before {
-        outline: 0;
-        -webkit-transition-property: 100px, rgb(94, 44, 233);
-        transition-property: 100px, rgb(94, 44, 233);
-        width: 100%;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:after {
-        top: 0%;
-        right: 0%;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:before {
-        bottom: 0%;
-        left: 0%;
-    }
-
-    .game-play-intro {
-        width: 100%;
-        height: 100vh;
-        background-image: url("./img/03-遊戲玩法/地形圖.jpg");
-        background-position: 0 60%;
-        background-size: cover;
-        background-attachment: fixed;
-
-    }
-
-    .game-play-intro-transfer {
-        width: 100%;
-        height: 100vh;
-        background-image: url("./img/03-遊戲玩法/遊戲介紹-背景模糊.png");
-        background-position: 0 60%;
-        background-size: cover;
-        background-attachment: fixed;
-        position: absolute;
-        top: 0;
-        left: 0;
-
-    }
-
-    .game-play-intro-middle-sreen {
-        width: 65%;
-        height: 80%;
-        background-image: url("./img/03-遊戲玩法/地形圖.jpg");
-        background-position: center;
-        background-size: cover;
-        position: relative;
-    }
-
-    .game-play-intro.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .game-play-intro.ab {
-        position: absolute;
-        bottom: 0;
-    }
-
-    .hero-intro {
-
-        width: 100%;
-        height: 100vh;
-    }
-
-    #section3 {
-        position: relative;
-        height: calc(100vh + 15000px);
-    }
-
-    .game-intro-title {
-        font-size: 48px;
-        border: white 2px solid;
-        padding: 30px;
-    }
-
-    .black-mask {
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .fort1-ab {
-        position: absolute;
-        top: 110px;
-        right: 165px;
-    }
-
-    .fort2-ab {
-        position: absolute;
-        top: 650px;
-        left: 195px;
-    }
-
-    .red-team-ab {
-        position: absolute;
-        top: 100px;
-        right: 160px;
-    }
-
-    .blue-team-ab {
-        position: absolute;
-        top: 130px;
-        left: 180px;
-    }
-
-    .vs-description-style {
-        background-color: rgba(252, 98, 98, 0.7);
-        padding: 10px;
-        text-align: center;
-        border-radius: 10px;
-
-    }
-
-    .vs-description-ab {
-        position: absolute;
-        top: 700px;
-        left: 600px;
-    }
-
-    .red-tower-left {
-        position: absolute;
-        top: 75px;
-        right: 330px;
-
-    }
-
-    .red-tower-middle {
-        position: absolute;
-        top: 180px;
-        right: 265px;
-    }
-
-    .red-tower-right {
-        position: absolute;
-        top: 220px;
-        right: 112px;
-    }
-
-    .blue-tower-left {
-        position: absolute;
-        bottom: 170px;
-        left: 140px;
-    }
-
-    .blue-tower-middle {
-        position: absolute;
-        bottom: 125px;
-        left: 290px;
-    }
-
-    .blue-tower-right {
-        position: absolute;
-        bottom: 25px;
-        left: 360px;
-    }
-
-    .blue-tower-middle-text {
-        position: absolute;
-        bottom: 140px;
-        left: 280px;
-    }
-
-    .red-tower-middle-text {
-        position: absolute;
-        top: 193px;
-        right: 250px;
-    }
-
-    .tower-intro {
-        background-color: rgb(137, 223, 8, 0.8);
-        width: 500px;
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        right: 0;
-        top: 70%;
-        text-align: center;
-    }
-
-    .defender-blue-left-ab {
-        position: absolute;
-        left: 135px;
-        top: 430px;
-    }
-
-    .defender-blue-middle-ab {
-        position: absolute;
-        left: 412px;
-        top: 535px;
-    }
-
-    .defender-blue-right-ab {
-        position: absolute;
-        left: 538px;
-        top: 700px;
-    }
-
-    .defender-blue-left-outside-ab {
-        position: absolute;
-        left: 135px;
-        top: 240px;
-    }
-
-    .defender-blue-middle-outside-ab {
-        position: absolute;
-        left: 495px;
-        top: 450px;
-    }
-
-    .defender-blue-right-outside-ab {
-        position: absolute;
-        left: 830px;
-        top: 700px;
-    }
-
-    .defender-red-left-ab {
-        position: absolute;
-        right: 510px;
-        top: 75px;
-    }
-
-    .defender-red-middle-ab {
-        position: absolute;
-        right: 385px;
-        top: 240px;
-    }
-
-    .defender-red-right-ab {
-        position: absolute;
-        right: 107px;
-        top: 340px;
-    }
-
-    .defender-red-left-outside-ab {
-        position: absolute;
-        right: 803px;
-        top: 75px;
-    }
-
-    .defender-red-middle-outside-ab {
-        position: absolute;
-        right: 465px;
-        top: 330px;
-    }
-
-    .defender-red-right-outside-ab {
-        position: absolute;
-        right: 107px;
-        top: 540px;
-    }
-
-    .defender-text-blue {
-        position: absolute;
-        left: 495px;
-        top: 465px;
-    }
-
-    .defender-text-red {
-        position: absolute;
-        right: 465px;
-        top: 345px;
-    }
-
-    .defender-intro {
-        background-color: rgb(100, 217, 247, 0.8);
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        left: 0;
-        top: 17%;
-        text-align: center;
-    }
-
-    .bone-ab {
-        position: absolute;
-        left: 460px;
-        top: 220px;
-    }
-
-    .bone-text {
-        position: absolute;
-        left: 467px;
-        top: 255px;
-        z-index: 2;
-    }
-
-    .caesar-ab {
-        position: absolute;
-        left: 335px;
-        top: 270px;
-    }
-
-    .caesar-text {
-        position: absolute;
-        left: 352px;
-        top: 330px;
-        z-index: 2;
-    }
-
-    .magic-ab {
-        position: absolute;
-        right: 300px;
-        top: 480px;
-    }
-
-    .magic-text {
-        position: absolute;
-        right: 318px;
-        top: 540px;
-        z-index: 2;
-    }
-
-    .bone-intro {
-        background-color: rgb(11, 106, 194, 0.8);
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        right: 150px;
-        top: 28%;
-        text-align: center;
-    }
-
-    .caesar-intro {
-        background-color: rgba(255, 246, 115, 0.8);
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        left: -20px;
-        top: 48%;
-        text-align: center;
-    }
-
-    .magic-intro {
-        background-color: rgba(91, 255, 154, 0.8);
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        right: 137px;
-        top: 100%;
-        text-align: center;
-    }
 </style>
 
 <body>
@@ -773,7 +49,7 @@
         <nav>
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="nav-menu-color d-flex flex-column justify-content-center align-items-center">
-                    <img src="./img/02-首頁/logo.png" alt="" style="width: 200px;">
+                    <img src="img/02-首頁/logo.png" alt="" style="width: 200px;">
                     <h5 class="h4 mt-5 text-hover text-hover-overline-goes-left-underline-goes-right">遊戲玩法</h5>
                     <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">英雄介紹</h5>
                     <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">裝備介紹</h5>
@@ -795,15 +71,16 @@
         <div class="game-play-intro">
             <h1 class="text-white">
                 <div class="black-mask d-flex justify-content-center align-items-center lax"
-                    data-lax-opacity="(window.innerHeight*2)+100 1, ((window.innerHeight*2)+500) 0">
-                    <b class="game-intro-title">遊戲基礎認識</b>
+                    data-lax-opacity="(window.innerHeight*2)+100 0.8, ((window.innerHeight*2)+500) 0, ((window.innerHeight*2)+12000) 0, (window.innerHeight*2)+13000 1">
+                    <b class="game-intro-title lax"
+                        data-lax-opacity="(window.innerHeight*2)+100 1, ((window.innerHeight*2)+500) 0">遊戲基礎認識</b>
                 </div>
             </h1>
-
             <div class="game-play-intro-transfer lax d-flex justify-content-center align-items-center"
                 data-lax-opacity="(window.innerHeight*2)+100 0, ((window.innerHeight*2)+500) 1">
-                <div class="game-play-intro-middle-sreen">
+                <div class="game-play-intro-middle-sreen d-flex justify-content-center align-items-center">
 
+                    <!-- 從這裡開始你的表演 -->
 
                     <img src="./img/03-遊戲玩法/主堡標示.png" alt="" class="lax fort1-ab"
                         data-lax-opacity="(window.innerHeight*2)+400 0, ((window.innerHeight*2)+900) 1, ((window.innerHeight*2)+2700) 1, (window.innerHeight*2)+3000 0"
@@ -819,7 +96,7 @@
                         style="width: 60%;">
                     <div class="vs-description-ab d-flex justify-content-center flex-column lax"
                         data-lax-opacity="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) 1, ((window.innerHeight*2)+2700) 1, (window.innerHeight*2)+3000 0"
-                        data-lax-translate-y="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) -200, (window.innerHeight*2)+2700 -200, ((window.innerHeight*2)+3000) -400">
+                        data-lax-translate-y="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) -200, (window.innerHeight*2)+2700 -200, ((window.innerHeight*2)+3000) -300">
                         <h2 class="vs-description-style">
                             遊戲分為紅方及藍方
                         </h2>
@@ -852,6 +129,26 @@
                         data-lax-opacity="(window.innerHeight*2)+7500 0, ((window.innerHeight*2)+7900) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0">
                         擊殺後全隊獲得經驗與金幣
                     </h2>
+                    <div class="lax d-flex justify-content-center align-content-center flex-column"
+                        data-lax-opacity="(window.innerHeight*2)+9500 0, ((window.innerHeight*2)+10000) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0">
+                        <h2 class="soul-intro">
+                            擊殺後產生靈魂到敵方野區晃一圈
+                        </h2>
+                        <h2 class="soul-intro">
+                            靈魂行經處會開放視野
+                        </h2>
+                    </div>
+                    <h2 class="cp-intro lax"
+                        data-lax-translate-x="(window.innerHeight*2)+11500 0, ((window.innerHeight*2)+12000) -200"
+                        data-lax-opacity="(window.innerHeight*2)+11500 0, ((window.innerHeight*2)+12000) 1">
+                        擊殺後獲得經驗與金幣
+                    </h2>
+                    <h2 class="cs-intro lax"
+                        data-lax-translate-y="(window.innerHeight*2)+11500 0, ((window.innerHeight*2)+12000) -200"
+                        data-lax-opacity="(window.innerHeight*2)+11500 0, ((window.innerHeight*2)+12000) 1">
+                        擊殺後獲得經驗與金幣
+                    </h2>
+
 
                     <!-- 水晶塔 -->
 
@@ -945,11 +242,62 @@
                     <img src="./img/03-遊戲玩法/魔龍標示.png" alt="" class="lax magic-ab"
                         data-lax-opacity="(window.innerHeight*2)+7000 0, ((window.innerHeight*2)+7500) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0"
                         style="width: 7%;">
+
+                    <!-- 靈魂鳥 -->
+
+                    <img src="./img/03-遊戲玩法/靈魂鳥.png" alt="" class="lax soul-left-text"
+                        data-lax-opacity="(window.innerHeight*2)+9000 0, ((window.innerHeight*2)+9500) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0"
+                        style="width: 7%;">
+                    <img src="./img/03-遊戲玩法/靈魂鳥標示.png" alt="" class="lax soul-left-ab"
+                        data-lax-opacity="(window.innerHeight*2)+9000 0, ((window.innerHeight*2)+9500) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/靈魂鳥.png" alt="" class="lax soul-right-text"
+                        data-lax-opacity="(window.innerHeight*2)+9000 0, ((window.innerHeight*2)+9500) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0"
+                        style="width: 7%;">
+                    <img src="./img/03-遊戲玩法/靈魂鳥標示.png" alt="" class="lax soul-right-ab"
+                        data-lax-opacity="(window.innerHeight*2)+9000 0, ((window.innerHeight*2)+9500) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0"
+                        style="width: 4%;">
+
+                    <!-- 小兵、野怪 -->
+
+                    <img src="./img/03-遊戲玩法/野怪.png" alt="" class="lax cp-1-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪.png" alt="" class="lax cp-2-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪.png" alt="" class="lax cp-3-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪.png" alt="" class="lax cp-4-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪標示.png" alt="" class="lax cp-1-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪標示.png" alt="" class="lax cp-2-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪標示.png" alt="" class="lax cp-3-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪標示.png" alt="" class="lax cp-4-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/小兵.png" alt="" class="lax cs-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/小兵標示.png" alt="" class="lax cs-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 10%;">
+
+
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- data-lax-translate-x="(window.innerHeight*2) 0, ((window.innerHeight*2)+500) -200 -->
+
 
     <section id="section4">
         <div class="hero-intro">
@@ -1051,7 +399,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > (window.innerHeight * 2) + 15000 || document.documentElement.scrollTop > (window.innerHeight * 2) + 15000) {
+            if (document.body.scrollTop > (window.innerHeight * 2) + 13000 || document.documentElement.scrollTop > (window.innerHeight * 2) + 13000) {
                 $('.game-play-intro').removeClass("fixed");
                 $('.game-play-intro').addClass("ab")
             } else if (document.body.scrollTop > window.innerHeight * 2 || document.documentElement.scrollTop > window.innerHeight * 2) {
