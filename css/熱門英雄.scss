@@ -223,17 +223,13 @@ $scrollTime: 1s;
 ////////// 這裡是section5-登入畫面 //////////
 
 #section5 {
-  height: calc(100vh - 90px);
+  height: calc(100vh - 92px);
   background-image: url(../img/08-登入頁面/模糊背景.jpg);
   background-position: center;
   background-size: cover;
   padding: 50px 0 0 0;
 }
 
-
-#section5 .slides {
-
-}
 
 #section5 .slides .swiper {
   width: 100%;
@@ -271,7 +267,11 @@ $scrollTime: 1s;
   border: 3px solid white;
   font-size: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 3em rgb(255, 10, 10);;
+  box-shadow: 0 0 3em rgb(255, 10, 10);
+}
+
+#test{
+  width: 380px;
 }
 
 
@@ -316,17 +316,20 @@ $scrollTime: 1s;
 
 footer{
   width: 100%;
-  height: 90px;
   background-color: #0a1124;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 0;
+}
+
+#test :nth-child(3){
+  color: #38a0f9;
 }
 
 footer p{
   margin-bottom: 0;
   color: gray;
   text-align: center;
-  line-height: 90px;
 }
 

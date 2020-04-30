@@ -216,7 +216,7 @@ body {
 }
 
 #section5 {
-  height: calc(100vh - 90px);
+  height: calc(100vh - 92px);
   background-image: url(../img/08-登入頁面/模糊背景.jpg);
   background-position: center;
   background-size: cover;
@@ -265,6 +265,10 @@ body {
           box-shadow: 0 0 3em #ff0a0a;
 }
 
+#test {
+  width: 380px;
+}
+
 .line2pic1 {
   background: url("../img/08-登入頁面/伺服器維護公告-01.jpg") no-repeat center center;
   background-size: cover;
@@ -298,7 +302,6 @@ body {
 
 footer {
   width: 100%;
-  height: 90px;
   background-color: #0a1124;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,12 +312,16 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px 0;
+}
+
+#test :nth-child(3) {
+  color: #38a0f9;
 }
 
 footer p {
   margin-bottom: 0;
   color: gray;
   text-align: center;
-  line-height: 90px;
 }
 /*# sourceMappingURL=熱門英雄.css.map */
