@@ -423,7 +423,7 @@
     .game-play-intro-transfer {
         width: 100%;
         height: 100vh;
-        background-image: url("./img/03-遊戲玩法/PC版設計圖-5 [轉換]-03.png");
+        background-image: url("./img/03-遊戲玩法/遊戲介紹-背景模糊.png");
         background-position: 0 60%;
         background-size: cover;
         background-attachment: fixed;
@@ -461,7 +461,7 @@
 
     #section3 {
         position: relative;
-        height: calc(100vh + 8000px);
+        height: calc(100vh + 15000px);
     }
 
     .game-intro-title {
@@ -510,7 +510,7 @@
 
     .vs-description-ab {
         position: absolute;
-        top: 500px;
+        top: 700px;
         left: 600px;
     }
 
@@ -518,6 +518,7 @@
         position: absolute;
         top: 75px;
         right: 330px;
+
     }
 
     .red-tower-middle {
@@ -549,15 +550,191 @@
         bottom: 25px;
         left: 360px;
     }
+
     .blue-tower-middle-text {
         position: absolute;
         bottom: 140px;
         left: 280px;
     }
+
     .red-tower-middle-text {
         position: absolute;
         top: 193px;
         right: 250px;
+    }
+
+    .tower-intro {
+        background-color: rgb(137, 223, 8, 0.8);
+        width: 500px;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        right: 0;
+        top: 70%;
+        text-align: center;
+    }
+
+    .defender-blue-left-ab {
+        position: absolute;
+        left: 135px;
+        top: 430px;
+    }
+
+    .defender-blue-middle-ab {
+        position: absolute;
+        left: 412px;
+        top: 535px;
+    }
+
+    .defender-blue-right-ab {
+        position: absolute;
+        left: 538px;
+        top: 700px;
+    }
+
+    .defender-blue-left-outside-ab {
+        position: absolute;
+        left: 135px;
+        top: 240px;
+    }
+
+    .defender-blue-middle-outside-ab {
+        position: absolute;
+        left: 495px;
+        top: 450px;
+    }
+
+    .defender-blue-right-outside-ab {
+        position: absolute;
+        left: 830px;
+        top: 700px;
+    }
+
+    .defender-red-left-ab {
+        position: absolute;
+        right: 510px;
+        top: 75px;
+    }
+
+    .defender-red-middle-ab {
+        position: absolute;
+        right: 385px;
+        top: 240px;
+    }
+
+    .defender-red-right-ab {
+        position: absolute;
+        right: 107px;
+        top: 340px;
+    }
+
+    .defender-red-left-outside-ab {
+        position: absolute;
+        right: 803px;
+        top: 75px;
+    }
+
+    .defender-red-middle-outside-ab {
+        position: absolute;
+        right: 465px;
+        top: 330px;
+    }
+
+    .defender-red-right-outside-ab {
+        position: absolute;
+        right: 107px;
+        top: 540px;
+    }
+
+    .defender-text-blue {
+        position: absolute;
+        left: 495px;
+        top: 465px;
+    }
+
+    .defender-text-red {
+        position: absolute;
+        right: 465px;
+        top: 345px;
+    }
+
+    .defender-intro {
+        background-color: rgb(100, 217, 247, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        top: 17%;
+        text-align: center;
+    }
+
+    .bone-ab {
+        position: absolute;
+        left: 460px;
+        top: 220px;
+    }
+
+    .bone-text {
+        position: absolute;
+        left: 467px;
+        top: 255px;
+        z-index: 2;
+    }
+
+    .caesar-ab {
+        position: absolute;
+        left: 335px;
+        top: 270px;
+    }
+
+    .caesar-text {
+        position: absolute;
+        left: 352px;
+        top: 330px;
+        z-index: 2;
+    }
+
+    .magic-ab {
+        position: absolute;
+        right: 300px;
+        top: 480px;
+    }
+
+    .magic-text {
+        position: absolute;
+        right: 318px;
+        top: 540px;
+        z-index: 2;
+    }
+
+    .bone-intro {
+        background-color: rgb(11, 106, 194, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        right: 150px;
+        top: 28%;
+        text-align: center;
+    }
+
+    .caesar-intro {
+        background-color: rgba(255, 246, 115, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        left: -20px;
+        top: 48%;
+        text-align: center;
+    }
+
+    .magic-intro {
+        background-color: rgba(91, 255, 154, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        right: 137px;
+        top: 100%;
+        text-align: center;
     }
 </style>
 
@@ -641,7 +818,8 @@
                         data-lax-opacity="(window.innerHeight*2)+900 0, ((window.innerHeight*2)+1400) 1, ((window.innerHeight*2)+2700) 1, (window.innerHeight*2)+3000 0"
                         style="width: 60%;">
                     <div class="vs-description-ab d-flex justify-content-center flex-column lax"
-                        data-lax-opacity="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) 1, ((window.innerHeight*2)+2700) 1, (window.innerHeight*2)+3000 0">
+                        data-lax-opacity="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) 1, ((window.innerHeight*2)+2700) 1, (window.innerHeight*2)+3000 0"
+                        data-lax-translate-y="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) -200, (window.innerHeight*2)+2700 -200, ((window.innerHeight*2)+3000) -400">
                         <h2 class="vs-description-style">
                             遊戲分為紅方及藍方
                         </h2>
@@ -649,31 +827,124 @@
                             摧毀對方主堡則遊戲結束
                         </h2>
                     </div>
+                    <h2 class="tower-intro lax"
+                        data-lax-translate-x="(window.innerHeight*2)+3500 0, ((window.innerHeight*2)+3900) -200, window.innerHeight*2)+4400 -200, ((window.innerHeight*2)+5000) -400"
+                        data-lax-opacity="(window.innerHeight*2)+3500 0, ((window.innerHeight*2)+3900) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0">
+                        水晶塔被摧毀，敵方出現超級兵
+                    </h2>
+                    <h2 class="defender-intro lax"
+                        data-lax-translate-y="(window.innerHeight*2)+5500 0, ((window.innerHeight*2)+5900) 200, window.innerHeight*2)+6400 200, ((window.innerHeight*2)+7000) 400"
+                        data-lax-opacity="(window.innerHeight*2)+5500 0, ((window.innerHeight*2)+5900) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0">
+                        防禦塔會對最先進入防禦範圍內的敵人發動攻擊
+                    </h2>
+                    <h2 class="bone-intro lax"
+                        data-lax-translate-x="(window.innerHeight*2)+7500 0, ((window.innerHeight*2)+7900) -200, window.innerHeight*2)+8400 -200, ((window.innerHeight*2)+9000) -400"
+                        data-lax-opacity="(window.innerHeight*2)+7500 0, ((window.innerHeight*2)+7900) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0">
+                        擊殺後英雄獲得回血buff
+                    </h2>
+                    <h2 class="caesar-intro lax"
+                        data-lax-translate-x="(window.innerHeight*2)+7500 0, ((window.innerHeight*2)+7900) 200, window.innerHeight*2)+8400 200, ((window.innerHeight*2)+9000) 400"
+                        data-lax-opacity="(window.innerHeight*2)+7500 0, ((window.innerHeight*2)+7900) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0">
+                        擊殺後全隊獲得史詩級buff
+                    </h2>
+                    <h2 class="magic-intro lax"
+                        data-lax-translate-y="(window.innerHeight*2)+7500 0, ((window.innerHeight*2)+7900) -200, window.innerHeight*2)+8400 -200, ((window.innerHeight*2)+9000) -400"
+                        data-lax-opacity="(window.innerHeight*2)+7500 0, ((window.innerHeight*2)+7900) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0">
+                        擊殺後全隊獲得經驗與金幣
+                    </h2>
+
+                    <!-- 水晶塔 -->
+
                     <img src="./img/03-遊戲玩法/水晶塔標示.png" alt="" class="lax red-tower-left"
-                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+10000) 1, (window.innerHeight*2)+11000 1"
+                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0"
                         style="width: 5%;">
                     <img src="./img/03-遊戲玩法/水晶塔標示.png" alt="" class="lax red-tower-middle"
-                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+10000) 1, (window.innerHeight*2)+11000 1"
+                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0"
                         style="width: 5%;">
                     <img src="./img/03-遊戲玩法/水晶塔標示.png" alt="" class="lax red-tower-right"
-                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+10000) 1, (window.innerHeight*2)+11000 1"
+                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0"
                         style="width: 5%;">
                     <img src="./img/03-遊戲玩法/水晶塔標示.png" alt="" class="lax blue-tower-left"
-                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+10000) 1, (window.innerHeight*2)+11000 1"
+                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0"
                         style="width: 5%;">
                     <img src="./img/03-遊戲玩法/水晶塔標示.png" alt="" class="lax blue-tower-middle"
-                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+10000) 1, (window.innerHeight*2)+11000 1"
+                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0"
                         style="width: 5%;">
                     <img src="./img/03-遊戲玩法/水晶塔標示.png" alt="" class="lax blue-tower-right"
-                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+10000) 1, (window.innerHeight*2)+11000 1"
+                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0"
                         style="width: 5%;">
-                        <img src="./img/03-遊戲玩法/水晶塔.png" alt="" class="lax blue-tower-middle-text"
-                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+10000) 1, (window.innerHeight*2)+11000 1"
+                    <img src="./img/03-遊戲玩法/水晶塔.png" alt="" class="lax blue-tower-middle-text"
+                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0"
                         style="width: 7%;">
                     <img src="./img/03-遊戲玩法/水晶塔.png" alt="" class="lax red-tower-middle-text"
-                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+10000) 1, (window.innerHeight*2)+11000 1"
+                        data-lax-opacity="(window.innerHeight*2)+3000 0, ((window.innerHeight*2)+3500) 1, ((window.innerHeight*2)+4400) 1, (window.innerHeight*2)+5000 0"
                         style="width: 7%;">
 
+                    <!-- 防禦塔 -->
+
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-blue-left-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-blue-middle-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-blue-right-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-blue-left-outside-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-blue-middle-outside-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-blue-right-outside-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-red-left-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-red-middle-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-red-right-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-red-left-outside-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-red-middle-outside-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔標示.png" alt="" class="lax defender-red-right-outside-ab"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔.png" alt="" class="lax defender-text-blue"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/防禦塔.png" alt="" class="lax defender-text-red"
+                        data-lax-opacity="(window.innerHeight*2)+4900 0, ((window.innerHeight*2)+5500) 1, ((window.innerHeight*2)+6400) 1, (window.innerHeight*2)+7000 0"
+                        style="width: 4%;">
+
+                    <!-- 古龍、凱薩、魔龍     -->
+
+                    <img src="./img/03-遊戲玩法/骨龍.png" alt="" class="lax bone-text"
+                        data-lax-opacity="(window.innerHeight*2)+7000 0, ((window.innerHeight*2)+7500) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/骨龍標示.png" alt="" class="lax bone-ab"
+                        data-lax-opacity="(window.innerHeight*2)+7000 0, ((window.innerHeight*2)+7500) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/凱薩.png" alt="" class="lax caesar-text"
+                        data-lax-opacity="(window.innerHeight*2)+7000 0, ((window.innerHeight*2)+7500) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/凱薩標示.png" alt="" class="lax caesar-ab"
+                        data-lax-opacity="(window.innerHeight*2)+7000 0, ((window.innerHeight*2)+7500) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0"
+                        style="width: 7%;">
+                    <img src="./img/03-遊戲玩法/魔龍.png" alt="" class="lax magic-text"
+                        data-lax-opacity="(window.innerHeight*2)+7000 0, ((window.innerHeight*2)+7500) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/魔龍標示.png" alt="" class="lax magic-ab"
+                        data-lax-opacity="(window.innerHeight*2)+7000 0, ((window.innerHeight*2)+7500) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0"
+                        style="width: 7%;">
                 </div>
             </div>
         </div>
@@ -780,7 +1051,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > (window.innerHeight * 2) + 8000 || document.documentElement.scrollTop > (window.innerHeight * 2) + 8000) {
+            if (document.body.scrollTop > (window.innerHeight * 2) + 15000 || document.documentElement.scrollTop > (window.innerHeight * 2) + 15000) {
                 $('.game-play-intro').removeClass("fixed");
                 $('.game-play-intro').addClass("ab")
             } else if (document.body.scrollTop > window.innerHeight * 2 || document.documentElement.scrollTop > window.innerHeight * 2) {
