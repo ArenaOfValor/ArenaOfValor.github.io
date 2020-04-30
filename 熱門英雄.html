@@ -178,32 +178,195 @@
         </div>
 
 
+        <!-- 5/1問老師這裡有一個bug，如果modal包modal，裡面的modal關閉時，外面的modal也會被關閉 -->
+        <!-- 5/1問老師：打開modal裡面的modal後，關閉時，會出現一條scrollTop的滾輪？但只打開一層時不會有這個問題？ -->
+
         <div class="button">
 
-            <button type="button" id="outside_btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" id="outside_btn" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModal">
                 出賣靈魂點我
             </button>
 
-            <button type="button" id="outside_btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" id="outside_btn" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModal">
                 我是乖寶寶點我
             </button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <div class="modal-content" id="modal1_background">
+                        <div class="modal-header" id="test_X_position">
+                            <h1 class="modal-title" id="exampleModalLabel">Sign Up</h1>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            ...
+
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="modal_text1">
+                                            帳號
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="modal_text1">
+                                            密碼
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="modal_text1">
+                                            信箱
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- check input text -->
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="modal_text2">
+                                            <input type="checkbox">記住帳號
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="modal_text2">
+                                            <input type="checkbox">保持登入狀態
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 登入 取消 -->
+                                <div class="row">
+                                    <div class="col-5">
+                                        <button type="button" id="mid_btn1" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModa2">
+                                            登入
+                                        </button>
+
+
+                                        <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabe2" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabe2">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...登入說明文字
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save
+                                                            changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-5">
+                                        <button type="button" id="mid_btn2" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModa3">
+                                            取消
+                                        </button>
+
+
+                                        <div class="modal fade" id="exampleModa3" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabe3" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabe3">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...取消說明文字
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save
+                                                            changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 忘記密碼 -->
+                                <div class="row">
+                                    <div class="col-5">
+                                        <button type="button" id="mid_btn3" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModa4">
+                                            忘記密碼
+                                        </button>
+
+
+                                        <div class="modal fade" id="exampleModa4" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabe4" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabe4">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...忘記密碼文字
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save
+                                                            changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
                         </div>
+
+
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+
                         </div>
                     </div>
                 </div>
