@@ -294,7 +294,7 @@ body {
           justify-content: space-evenly;
 }
 
-.btn {
+#outside_btn {
   width: 250px;
   background-color: #c19826;
   color: black;
