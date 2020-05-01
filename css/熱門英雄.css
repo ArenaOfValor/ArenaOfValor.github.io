@@ -253,22 +253,6 @@ body {
           filter: opacity(100%);
 }
 
-.btn {
-  width: 250px;
-  background-color: #c19826;
-  color: black;
-  font-family: "微軟正黑體";
-  border: 3px solid white;
-  font-size: 30px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 3em #ff0a0a;
-          box-shadow: 0 0 3em #ff0a0a;
-}
-
-#test {
-  width: 380px;
-}
-
 .line2pic1 {
   background: url("../img/08-登入頁面/伺服器維護公告-01.jpg") no-repeat center center;
   background-size: cover;
@@ -281,6 +265,16 @@ body {
 
 .line2pic3 {
   background: url("../img/08-登入頁面/賽事公告-02.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line2pic4 {
+  background: url("../img/08-登入頁面/活動公告-05.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line2pic5 {
+  background: url("../img/08-登入頁面/活動公告-06.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -300,6 +294,100 @@ body {
   background-size: cover;
 }
 
+.line1pic4 {
+  background: url("../img/08-登入頁面/活動公告-04.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line1pic5 {
+  background: url("../img/08-登入頁面/賽事公告-01.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.buttons {
+  padding: 70px 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#outside_btn {
+  width: 250px;
+  background-color: rgba(255, 217, 0, 0.74);
+  color: black;
+  font-family: "微軟正黑體";
+  border: 3px solid rgba(255, 255, 255, 0.603);
+  font-size: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 2em red;
+          box-shadow: 0 0 2em red;
+}
+
+#modal1_background {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/08-登入頁面/羊皮紙02.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  -webkit-box-shadow: inset 10px 10px 3em black,inset -10px 10px 3em black,inset -5px -30px 5em black;
+          box-shadow: inset 10px 10px 3em black,inset -10px 10px 3em black,inset -5px -30px 5em black;
+}
+
+#test_X_position {
+  position: relative;
+}
+
+#test_X_position .close {
+  position: absolute;
+  right: -500px;
+  top: -40px;
+  font-size: 100px;
+}
+
+.modal_text1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+form {
+  font-size: 20px;
+}
+
+input {
+  background-color: rgba(240, 185, 130, 0.582);
+}
+
+.rightshort {
+  padding-right: 0;
+}
+
+.leftshort {
+  padding-left: 0;
+}
+
+.mid_btn {
+  width: 100%;
+  background-color: #455555;
+  color: black;
+  font-family: "微軟正黑體";
+  border: 3px solid rgba(255, 255, 255, 0.603);
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.modal-header {
+  border-bottom: unset;
+  margin: auto;
+}
+
+.modal-footer {
+  border-top: unset;
+}
+
 footer {
   width: 100%;
   background-color: #0a1124;
@@ -315,7 +403,11 @@ footer {
   padding: 10px 0;
 }
 
-#test :nth-child(3) {
+#footer_text {
+  width: 380px;
+}
+
+#footer_text :nth-child(3) {
   color: #38a0f9;
 }
 

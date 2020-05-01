@@ -4,738 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+
     <title>歡迎光臨~傳說對決</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
 
-    * {
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif, 微軟正黑體;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-
-    #section1 {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-    }
-
-    @keyframes showit {
-        from {
-            opacity: 0.4;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fadeout {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
-    }
-
-    .mask {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 4;
-        opacity: 0.8;
-    }
-
-    .mask-top {
-        width: 100%;
-        height: 65px;
-        background-color: black;
-        position: absolute;
-        z-index: 3;
-    }
-
-    .mask-botton {
-        width: 100%;
-        height: 65px;
-        background-color: black;
-        position: absolute;
-        bottom: 0;
-        z-index: 3;
-    }
-
-    #player {
-        width: 100%;
-        height: 100%;
-        animation-name: fadeout;
-        animation-duration: 2s;
-        animation-delay: 3s;
-        animation-fill-mode: forwards;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        pointer-events: none;
-    }
-
-    .pic {
-        width: 100%;
-        height: 100%;
-        background-image: url("img/01-入場畫面/open-background.jpg.jpg");
-        /* 之後問老師怎麼換照片，再改回 */
-        background-position: center;
-        /* 原cover暫用contain */
-        background-size: cover;
-        /* background-repeat: no-repeat; */
-        animation-name: showit;
-        animation-duration: 2s;
-        animation-delay: 6s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        animation-fill-mode: forwards;
-    }
-
-    .pic #number {
-        color: white;
-        font-family: "Franklin Gothic Heavy";
-        font-size: 5.5rem;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -200%);
-    }
-
-    .fullpage {
-        width: 100%;
-        height: 100%;
-    }
-
-    #scene {
-        overflow: hidden;
-    }
-
-    #scroll {
-        color: white;
-        font-family: "Franklin Gothic Heavy";
-        font-size: 30px;
-        font-weight: 900;
-        padding: 4px;
-        position: relative;
-        left: 48%;
-        animation-name: srollDown;
-        animation-duration: 3s;
-        animation-delay: 9s;
-        animation-iteration-count: infinite;
-    }
-
-    #scroll::before {
-        content: ' ';
-        width: 35px;
-        height: 5px;
-        background-color: white;
-        position: absolute;
-        top: 50px;
-        left: 15px;
-
-        transform: rotate(45deg);
-    }
-
-    #scroll::after {
-        content: ' ';
-        width: 35px;
-        height: 5px;
-        background-color: white;
-        position: absolute;
-        top: 50px;
-        right: 15px;
-
-        transform: rotate(-45deg);
-
-    }
-
-
-    @keyframes srollDown {
-        from {
-            top: 810px;
-            opacity: 1;
-        }
-
-        to {
-            top: 840px;
-            opacity: 0;
-        }
-    }
-
-    @media (max-width:768px) {
-        .pic {
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        .pic #number {
-            font-size: 3rem;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -150%);
-        }
-    }
-
-    @media (max-width:576px) {
-        .pic #number {
-            font-size: 2rem;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -150%);
-        }
-
-    }
-
-    #section2 {
-        width: 100%;
-        height: 100vh;
-        background-image: url("./img/02-首頁/index.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    .nav-menu-color {
-        background-color: rgb(255, 255, 255, 0.8) !important;
-        height: 100vh;
-        width: 200px;
-    }
-
-    .w-15 {
-        width: 15% !important;
-    }
-
-    .border-none {
-        border: none !important;
-    }
-
-    .nav-click {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 200px 200px 0;
-        border-color: transparent rgb(31, 31, 31, 0.7) transparent transparent;
-        position: fixed relative;
-
-    }
-
-    .navbar-toggler {
-        position: fixed relative;
-        right: -100px;
-        top: 25px;
-
-    }
-
-    .h-100 {
-        height: 100vh;
-    }
-
-    .menu-click {
-        height: 5%;
-        width: 25%;
-        cursor: pointer
-    }
-
-    .border-back {
-        width: 50px;
-        height: 1px;
-        border: black solid 2px;
-        margin-bottom: 5px;
-    }
-
-    .h4 {
-        padding: 10px;
-    }
-
-    .navbar-toggler-icon {
-        width: 3em;
-        height: 3em;
-    }
-
-    button {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 200px 200px 0;
-        border-color: transparent rgb(31, 31, 31, 0.5) transparent transparent;
-        position: relative;
-    }
-
-    .menu-logo {
-        width: 200px;
-        background-image: url("./img/logo.png");
-    }
-
-    .text-hover {
-        display: inline;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 10px;
-        padding-left: 10px;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        -webkit-transition-duration: 0.7s;
-        transition-duration: 0.7s;
-        -webkit-transition-delay: 0s;
-        transition-delay: 0s;
-        -webkit-transition-property: color;
-        transition-property: color;
-        white-space: nowrap;
-        overflow: hidden;
-        position: relative;
-        z-index: 2;
-        text-decoration: none;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -webkit-touch-callout: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-
-    .text-hover:after,
-    .text-hover:before {
-        -webkit-transition-duration: 0.7s;
-        transition-duration: 0.7s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        -webkit-transition-delay: 0s;
-        transition-delay: 0s;
-    }
-
-    .text-hover:after {
-        background-color: rgb(94, 44, 233);
-    }
-
-    .text-hover:before {
-        background-color: rgb(94, 44, 233);
-    }
-
-    .text-hover:hover,
-    .text-hover:focus {
-        outline: 0;
-        cursor: pointer;
-        color: rgb(94, 44, 233);
-        -webkit-transition: color 0.7s ease-in-out;
-        transition: color 0.7s ease-in-out;
-    }
-
-    .text-hover:hover:after,
-    .text-hover:focus:after {
-        background-color: rgb(94, 44, 233);
-    }
-
-    .text-hover:hover:before,
-    .text-hover:focus:before {
-        background-color: rgb(94, 44, 233);
-    }
-
-    .text-hover:hover:after,
-    .text-hover:focus:after,
-    .text-hover:hover:before,
-    .text-hover:focus:before {
-        -webkit-transition-duration: 0.7s;
-        transition-duration: 0.7s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        -webkit-transition-delay: 0s;
-        transition-delay: 0s;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        -webkit-transition-property: 100px, rgb(94, 44, 233);
-        transition-property: 100px, rgb(94, 44, 233);
-        width: 0;
-        height: 2px;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:hover:after,
-    .text-hover-overline-goes-left-underline-goes-right:focus:after {
-        outline: 0;
-        -webkit-transition-property: 100px, rgb(94, 44, 233);
-        transition-property: 100px, rgb(94, 44, 233);
-        width: 100%;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        -webkit-transition-property: 100px, rgb(94, 44, 233);
-        transition-property: 100px, rgb(94, 44, 233);
-        width: 0;
-        height: 2px;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:hover:before,
-    .text-hover-overline-goes-left-underline-goes-right:focus:before {
-        outline: 0;
-        -webkit-transition-property: 100px, rgb(94, 44, 233);
-        transition-property: 100px, rgb(94, 44, 233);
-        width: 100%;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:after {
-        top: 0%;
-        right: 0%;
-    }
-
-    .text-hover-overline-goes-left-underline-goes-right:before {
-        bottom: 0%;
-        left: 0%;
-    }
-
-    .game-play-intro {
-        width: 100%;
-        height: 100vh;
-        background-image: url("./img/03-遊戲玩法/地形圖.jpg");
-        background-position: 0 60%;
-        background-size: cover;
-        background-attachment: fixed;
-
-    }
-
-    .game-play-intro-transfer {
-        width: 100%;
-        height: 100vh;
-        background-image: url("./img/03-遊戲玩法/遊戲介紹-背景模糊.png");
-        background-position: 0 60%;
-        background-size: cover;
-        background-attachment: fixed;
-        position: absolute;
-        top: 0;
-        left: 0;
-
-    }
-
-    .game-play-intro-middle-sreen {
-        width: 65%;
-        height: 80%;
-        background-image: url("./img/03-遊戲玩法/地形圖.jpg");
-        background-position: center;
-        background-size: cover;
-        position: relative;
-    }
-
-    .game-play-intro.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .game-play-intro.ab {
-        position: absolute;
-        bottom: 0;
-    }
-
-    .hero-intro {
-
-        width: 100%;
-        height: 100vh;
-    }
-
-    #section3 {
-        position: relative;
-        height: calc(100vh + 15000px);
-    }
-
-    .game-intro-title {
-        font-size: 48px;
-        border: white 2px solid;
-        padding: 30px;
-    }
-
-    .black-mask {
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .fort1-ab {
-        position: absolute;
-        top: 110px;
-        right: 165px;
-    }
-
-    .fort2-ab {
-        position: absolute;
-        top: 650px;
-        left: 195px;
-    }
-
-    .red-team-ab {
-        position: absolute;
-        top: 100px;
-        right: 160px;
-    }
-
-    .blue-team-ab {
-        position: absolute;
-        top: 130px;
-        left: 180px;
-    }
-
-    .vs-description-style {
-        background-color: rgba(252, 98, 98, 0.7);
-        padding: 10px;
-        text-align: center;
-        border-radius: 10px;
-
-    }
-
-    .vs-description-ab {
-        position: absolute;
-        top: 700px;
-        left: 600px;
-    }
-
-    .red-tower-left {
-        position: absolute;
-        top: 75px;
-        right: 330px;
-
-    }
-
-    .red-tower-middle {
-        position: absolute;
-        top: 180px;
-        right: 265px;
-    }
-
-    .red-tower-right {
-        position: absolute;
-        top: 220px;
-        right: 112px;
-    }
-
-    .blue-tower-left {
-        position: absolute;
-        bottom: 170px;
-        left: 140px;
-    }
-
-    .blue-tower-middle {
-        position: absolute;
-        bottom: 125px;
-        left: 290px;
-    }
-
-    .blue-tower-right {
-        position: absolute;
-        bottom: 25px;
-        left: 360px;
-    }
-
-    .blue-tower-middle-text {
-        position: absolute;
-        bottom: 140px;
-        left: 280px;
-    }
-
-    .red-tower-middle-text {
-        position: absolute;
-        top: 193px;
-        right: 250px;
-    }
-
-    .tower-intro {
-        background-color: rgb(137, 223, 8, 0.8);
-        width: 500px;
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        right: 0;
-        top: 70%;
-        text-align: center;
-    }
-
-    .defender-blue-left-ab {
-        position: absolute;
-        left: 135px;
-        top: 430px;
-    }
-
-    .defender-blue-middle-ab {
-        position: absolute;
-        left: 412px;
-        top: 535px;
-    }
-
-    .defender-blue-right-ab {
-        position: absolute;
-        left: 538px;
-        top: 700px;
-    }
-
-    .defender-blue-left-outside-ab {
-        position: absolute;
-        left: 135px;
-        top: 240px;
-    }
-
-    .defender-blue-middle-outside-ab {
-        position: absolute;
-        left: 495px;
-        top: 450px;
-    }
-
-    .defender-blue-right-outside-ab {
-        position: absolute;
-        left: 830px;
-        top: 700px;
-    }
-
-    .defender-red-left-ab {
-        position: absolute;
-        right: 510px;
-        top: 75px;
-    }
-
-    .defender-red-middle-ab {
-        position: absolute;
-        right: 385px;
-        top: 240px;
-    }
-
-    .defender-red-right-ab {
-        position: absolute;
-        right: 107px;
-        top: 340px;
-    }
-
-    .defender-red-left-outside-ab {
-        position: absolute;
-        right: 803px;
-        top: 75px;
-    }
-
-    .defender-red-middle-outside-ab {
-        position: absolute;
-        right: 465px;
-        top: 330px;
-    }
-
-    .defender-red-right-outside-ab {
-        position: absolute;
-        right: 107px;
-        top: 540px;
-    }
-
-    .defender-text-blue {
-        position: absolute;
-        left: 495px;
-        top: 465px;
-    }
-
-    .defender-text-red {
-        position: absolute;
-        right: 465px;
-        top: 345px;
-    }
-
-    .defender-intro {
-        background-color: rgb(100, 217, 247, 0.8);
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        left: 0;
-        top: 17%;
-        text-align: center;
-    }
-
-    .bone-ab {
-        position: absolute;
-        left: 460px;
-        top: 220px;
-    }
-
-    .bone-text {
-        position: absolute;
-        left: 467px;
-        top: 255px;
-        z-index: 2;
-    }
-
-    .caesar-ab {
-        position: absolute;
-        left: 335px;
-        top: 270px;
-    }
-
-    .caesar-text {
-        position: absolute;
-        left: 352px;
-        top: 330px;
-        z-index: 2;
-    }
-
-    .magic-ab {
-        position: absolute;
-        right: 300px;
-        top: 480px;
-    }
-
-    .magic-text {
-        position: absolute;
-        right: 318px;
-        top: 540px;
-        z-index: 2;
-    }
-
-    .bone-intro {
-        background-color: rgb(11, 106, 194, 0.8);
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        right: 150px;
-        top: 28%;
-        text-align: center;
-    }
-
-    .caesar-intro {
-        background-color: rgba(255, 246, 115, 0.8);
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        left: -20px;
-        top: 48%;
-        text-align: center;
-    }
-
-    .magic-intro {
-        background-color: rgba(91, 255, 154, 0.8);
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        right: 137px;
-        top: 100%;
-        text-align: center;
-    }
 </style>
 
 <body>
@@ -764,8 +47,9 @@
         </div>
     </section>
 
-    <section id="section2" class="d-flex justify-content-end">
-        <div class="nav-click navbar-dark sticky-top" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+    <div class="d-flex justify-content-end xx">
+        <div class="nav-click navbar-dark d-none" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+            id="nav-btn" title="navbar">
             <button class="navbar-toggler border-none" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -773,7 +57,7 @@
         <nav>
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="nav-menu-color d-flex flex-column justify-content-center align-items-center">
-                    <img src="./img/02-首頁/logo.png" alt="" style="width: 200px;">
+                    <img src="img/02-首頁/logo.png" alt="" style="width: 200px;">
                     <h5 class="h4 mt-5 text-hover text-hover-overline-goes-left-underline-goes-right">遊戲玩法</h5>
                     <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">英雄介紹</h5>
                     <h5 class="h4 text-hover text-hover-overline-goes-left-underline-goes-right">裝備介紹</h5>
@@ -787,6 +71,9 @@
                 </div>
             </div>
         </nav>
+    </div>
+    <section id="section2">
+
 
     </section>
 
@@ -795,15 +82,16 @@
         <div class="game-play-intro">
             <h1 class="text-white">
                 <div class="black-mask d-flex justify-content-center align-items-center lax"
-                    data-lax-opacity="(window.innerHeight*2)+100 1, ((window.innerHeight*2)+500) 0">
-                    <b class="game-intro-title">遊戲基礎認識</b>
+                    data-lax-opacity="(window.innerHeight*2)+100 0.8, ((window.innerHeight*2)+500) 0, ((window.innerHeight*2)+12000) 0, (window.innerHeight*2)+13000 1">
+                    <b class="game-intro-title lax"
+                        data-lax-opacity="(window.innerHeight*2)+100 1, ((window.innerHeight*2)+500) 0">遊戲基礎認識</b>
                 </div>
             </h1>
-
             <div class="game-play-intro-transfer lax d-flex justify-content-center align-items-center"
                 data-lax-opacity="(window.innerHeight*2)+100 0, ((window.innerHeight*2)+500) 1">
-                <div class="game-play-intro-middle-sreen">
+                <div class="game-play-intro-middle-sreen d-flex justify-content-center align-items-center">
 
+                    <!-- 從這裡開始你的表演 -->
 
                     <img src="./img/03-遊戲玩法/主堡標示.png" alt="" class="lax fort1-ab"
                         data-lax-opacity="(window.innerHeight*2)+400 0, ((window.innerHeight*2)+900) 1, ((window.innerHeight*2)+2700) 1, (window.innerHeight*2)+3000 0"
@@ -819,7 +107,7 @@
                         style="width: 60%;">
                     <div class="vs-description-ab d-flex justify-content-center flex-column lax"
                         data-lax-opacity="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) 1, ((window.innerHeight*2)+2700) 1, (window.innerHeight*2)+3000 0"
-                        data-lax-translate-y="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) -200, (window.innerHeight*2)+2700 -200, ((window.innerHeight*2)+3000) -400">
+                        data-lax-translate-y="(window.innerHeight*2)+1400 0, ((window.innerHeight*2)+2000) -200, (window.innerHeight*2)+2700 -200, ((window.innerHeight*2)+3000) -300">
                         <h2 class="vs-description-style">
                             遊戲分為紅方及藍方
                         </h2>
@@ -852,6 +140,26 @@
                         data-lax-opacity="(window.innerHeight*2)+7500 0, ((window.innerHeight*2)+7900) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0">
                         擊殺後全隊獲得經驗與金幣
                     </h2>
+                    <div class="lax d-flex justify-content-center align-content-center flex-column"
+                        data-lax-opacity="(window.innerHeight*2)+9500 0, ((window.innerHeight*2)+10000) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0">
+                        <h2 class="soul-intro">
+                            擊殺後產生靈魂到敵方野區晃一圈
+                        </h2>
+                        <h2 class="soul-intro">
+                            靈魂行經處會開放視野
+                        </h2>
+                    </div>
+                    <h2 class="cp-intro lax"
+                        data-lax-translate-x="(window.innerHeight*2)+11500 0, ((window.innerHeight*2)+12000) -200"
+                        data-lax-opacity="(window.innerHeight*2)+11500 0, ((window.innerHeight*2)+12000) 1">
+                        擊殺後獲得經驗與金幣
+                    </h2>
+                    <h2 class="cs-intro lax"
+                        data-lax-translate-y="(window.innerHeight*2)+11500 0, ((window.innerHeight*2)+12000) -200"
+                        data-lax-opacity="(window.innerHeight*2)+11500 0, ((window.innerHeight*2)+12000) 1">
+                        擊殺後獲得經驗與金幣
+                    </h2>
+
 
                     <!-- 水晶塔 -->
 
@@ -945,29 +253,421 @@
                     <img src="./img/03-遊戲玩法/魔龍標示.png" alt="" class="lax magic-ab"
                         data-lax-opacity="(window.innerHeight*2)+7000 0, ((window.innerHeight*2)+7500) 1, ((window.innerHeight*2)+8400) 1, (window.innerHeight*2)+9000 0"
                         style="width: 7%;">
+
+                    <!-- 靈魂鳥 -->
+
+                    <img src="./img/03-遊戲玩法/靈魂鳥.png" alt="" class="lax soul-left-text"
+                        data-lax-opacity="(window.innerHeight*2)+9000 0, ((window.innerHeight*2)+9500) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0"
+                        style="width: 7%;">
+                    <img src="./img/03-遊戲玩法/靈魂鳥標示.png" alt="" class="lax soul-left-ab"
+                        data-lax-opacity="(window.innerHeight*2)+9000 0, ((window.innerHeight*2)+9500) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0"
+                        style="width: 4%;">
+                    <img src="./img/03-遊戲玩法/靈魂鳥.png" alt="" class="lax soul-right-text"
+                        data-lax-opacity="(window.innerHeight*2)+9000 0, ((window.innerHeight*2)+9500) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0"
+                        style="width: 7%;">
+                    <img src="./img/03-遊戲玩法/靈魂鳥標示.png" alt="" class="lax soul-right-ab"
+                        data-lax-opacity="(window.innerHeight*2)+9000 0, ((window.innerHeight*2)+9500) 1, ((window.innerHeight*2)+10400) 1, (window.innerHeight*2)+11000 0"
+                        style="width: 4%;">
+
+                    <!-- 小兵、野怪 -->
+
+                    <img src="./img/03-遊戲玩法/野怪.png" alt="" class="lax cp-1-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪.png" alt="" class="lax cp-2-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪.png" alt="" class="lax cp-3-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪.png" alt="" class="lax cp-4-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪標示.png" alt="" class="lax cp-1-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪標示.png" alt="" class="lax cp-2-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪標示.png" alt="" class="lax cp-3-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/野怪標示.png" alt="" class="lax cp-4-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/小兵.png" alt="" class="lax cs-text"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 5%;">
+                    <img src="./img/03-遊戲玩法/小兵標示.png" alt="" class="lax cs-ab"
+                        data-lax-opacity="(window.innerHeight*2)+11000 0, ((window.innerHeight*2)+11500) 1"
+                        style="width: 10%;">
                 </div>
             </div>
         </div>
     </section>
-    <!-- data-lax-translate-x="(window.innerHeight*2) 0, ((window.innerHeight*2)+500) -200 -->
+
+    <!-- section4 -->
 
     <section id="section4">
-        <div class="hero-intro">
 
+        <div class="skw-pages">
+            <div class="skw-page skw-page-1 active">
+                <div class="skw-page__half skw-page__half--left floren-bac-color">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content"></div>
+                    </div>
+                </div>
+                <div class="skw-page__half skw-page__half--right">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content ">
+                            <h2 class="skw-page__heading text-style d-flex align-items-end flex-column">
+                                <p>花美男大叔的定位是戰士/刺客</p>
+                                <p>跟其他肌肉疙瘩相比體質偏向孱弱</p>
+                                <p>但是沒關係，花美男大叔有的是技巧</p>
+                                <p>靠著回血、反打、免傷、減控、打真傷</p>
+                                <p>如果在小型團戰沒辦法先手把大叔送回家</p>
+                                <p>戰場中穿梭的瀟灑身影將成為你的無盡夢靨</p>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skw-page skw-page-2">
+                <div class="skw-page__half skw-page__half--left">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content">
+                            <h2 class="skw-page__heading">
+                                特長是團控，控到頭殼破掉
+                                魔量全英雄最高，配合天生技能-元體
+                                瀕死時1點魔可擋1.5倍傷害，不太會被秒
+                                控制技再加上大絕的超遠技離光束砲，一砲下去
+                                敵人還沒靠近你就可以一波帶走，根本來不及握手</h2>
+                            <p class="skw-page__description">Nothing to do here, continue scrolling.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skw-page__half skw-page__half--right">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skw-page skw-page-3">
+                <div class="skw-page__half skw-page__half--left">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content"></div>
+                    </div>
+                </div>
+                <div class="skw-page__half skw-page__half--right">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content">
+                            <h2 class="skw-page__heading">
+                                想要當忍者，丟手裏劍。『亥犽』是你的最佳選擇
+                                配置二段位移技能，雖然血少但是保命能力不錯
+                                因為攻擊觸發道具效果、天生技可以打出真傷
+                                把坦克當成紙在打，血多防高都不是問題
+                                除了秒殺，我想不到還有哪些死法
+                            </h2>
+                            <p class="skw-page__description">The end is near, I promise!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skw-page skw-page-4">
+                <div class="skw-page__half skw-page__half--left">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content">
+                            <h2 class="skw-page__heading">
+                                刀鋒寶貝光看名字就像是一個矛盾集合體
+                                溫柔的收割著一條又一條鮮活的生命
+                                刀鋒寶貝，常遊走在殘血的人周圍
+                                小心喔...當你殘血在回家路上
+                                刀鋒很可能會從你身後出現
+                                瞬間清空你僅存的血量
+                            </h2>
+                            <p class="skw-page__description">Ok, ok, just one more scroll!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skw-page__half skw-page__half--right">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skw-page skw-page-5">
+                <div class="skw-page__half skw-page__half--left">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content"></div>
+                    </div>
+                </div>
+                <div class="skw-page__half skw-page__half--right">
+                    <div class="skw-page__skewed">
+                        <div class="skw-page__content">
+                            <h2 class="skw-page__heading">
+                                第一眼看到這顆彈跳皮球
+                                就覺得是來鬧的，真的是很鬧
+                                定位是坦克/輔助，可以變成一顆球
+                                強力遠距離戀愛...噢不，是遠距離開戰
+                                在危機時刻強行把隊友吞下消化(?)的能力
+                                你說這樣英雄不是來鬧不然是甚麼你說說
+                                啊? 你說甚麼?這英雄很可愛? 不不不
+                                可愛是留給隊友 可怕是留給對手的
+                            </h2>
+                            <p class="skw-page__description">
+                                Feel free to check
+                                <a class="skw-page__link" href="https://codepen.io/suez/pens/public/" target="_blank">my
+                                    other pens</a> and follow me on
+                                <a class="skw-page__link" href="https://twitter.com/NikolayTalanov"
+                                    target="_blank">Twitter</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section5 -->
+
+    <section class="section" id="section5">
+
+        <div class="slides">
+
+            <div class="swiper">
+                <div id="ture" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide line1pic1"></div>
+                        <div class="swiper-slide line1pic2"></div>
+                        <div class="swiper-slide line1pic3"></div>
+                        <div class="swiper-slide line1pic4"></div>
+                        <div class="swiper-slide line1pic5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper">
+                <div id="reverse" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide line2pic1"></div>
+                        <div class="swiper-slide line2pic2"></div>
+                        <div class="swiper-slide line2pic3"></div>
+                        <div class="swiper-slide line2pic4"></div>
+                        <div class="swiper-slide line2pic5"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- 5/1問老師這裡有一個bug，如果modal包modal，裡面的modal關閉時，外面的modal也會被關閉 -->
+        <!-- 5/1問老師：打開modal裡面的modal後，關閉時，會出現一條scrollTop的滾輪？但只打開一層時不會有這個問題？ -->
+        <!-- 5/1問老師：第二行swiper會突然變很快！ -->
+
+        <div class="buttons">
+
+            <button type="button" id="outside_btn" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModal">
+                出賣靈魂點我
+            </button>
+
+            <button type="button" id="outside_btn" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModal">
+                我是乖寶寶點我
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <div class="modal-content" id="modal1_background">
+                        <div class="modal-header mt-5" id="test_X_position">
+                            <h1 class="modal-title" id="exampleModalLabel">Sign Up</h1>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body d-flex jus">
+
+                            <!-- 5/1問老師：為什麼帳號：跟文字框中間沒辦法靠近？ -->
+                            <div class="container justify-content-center align-items-center">
+                                <div class="row mb-5">
+                                    <div class="col-2"></div>
+                                    <div class="col-2 d-flex justify-content-end">
+                                        <div class="modal_text1">
+                                            帳號：
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex align-items-center justify-content-start">
+                                        <form><input type="text" name="account" class="text-black-50"></form>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-2"></div>
+                                    <div class="col-2 d-flex justify-content-end">
+                                        <div class="modal_text1">
+                                            密碼：
+                                        </div>
+                                    </div>
+                                    <div class="col-1 d-flex align-items-center justify-content-left">
+                                        <form><input type="password" name="password"></form>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-2"></div>
+                                    <div class="col-2 d-flex justify-content-end">
+                                        <div class="modal_text1">
+                                            信箱：
+                                        </div>
+                                    </div>
+                                    <div class="col-1 d-flex align-items-center justify-content-left">
+                                        <form><input type="text" name="e-mail" class="text-black-50"></form>
+                                    </div>
+                                </div>
+
+
+                                <!-- 5/1問老師：打勾後，關閉視窗後，無法自動取消打勾 -->
+                                <!-- check input text -->
+                                <div class="row mb-2">
+                                    <div class="col-3"></div>
+                                    <div class="col-2">
+                                        <div class="modal_text2">
+                                            <input type="checkbox">記住帳號
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="modal_text2">
+                                            <input type="checkbox">保持登入狀態
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 登入 取消 -->
+                                <div class="row d-flex justify-content-left mb-3">
+                                    <div class="col-3"></div>
+                                    <div class="col-2">
+                                        <button type="button" class="btn btn-primary mid_btn" data-toggle="modal"
+                                            data-target="#exampleModa2">
+                                            登入
+                                        </button>
+
+
+                                        <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabe2" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabe2">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...登入說明文字
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" id="close-window" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <button type="button" class="btn btn-primary mid_btn" data-dismiss="modal">
+                                            取消
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                                <!-- 忘記密碼 -->
+                                <div class="row">
+                                    <div class="col-4"></div>
+                                    <div class="col-2">
+                                        <button type="button" id="mid_btn3" class="btn" data-toggle="modal"
+                                            data-target="#exampleModa4">
+                                            忘記密碼
+                                        </button>
+
+
+                                        <div class="modal fade" id="exampleModa4" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabe4" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabe4">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        密碼還敢忘記，吃飯會不會忘記！
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
 
+
+
+
+
+    <footer>
+        <a href="https://moba.garena.tw/" target="_blank">
+            <div class="logo mr-3"><img src="img/08-登入頁面/GGC-LOGO.jpg" alt="" width="50" height="50"></div>
+        </a>
+
+        <div class="mr-5">
+            <p>Copyright © ArenaOfValor. All rights reserved</p>
+        </div>
+
+        <div id="footer_text" class="mr-3 d-flex flex-wrap">
+            <p>本網頁僅供教學及練習使用，若有冒犯請歡迎組隊PK</p>
+            <p>請注意遊戲時間，避免沉迷</p>
+            <p>本遊戲服務區域為台灣、香港、澳門</p>
+        </div>
+
+
+        <a href="https://www.facebook.com/AoVTW/" target="_blank">
+            <div class="logo"><img src="img/08-登入頁面/facebook-logo.jpg" alt="" width="30" height="30"></div>
+        </a>
+
+    </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
 
     <script>
@@ -1035,37 +735,36 @@
         var nav_click = document.querySelector(".nav-click")
         var menu_click = document.querySelector(".menu-click")
 
-
         nav_click.onclick = function () {
-            nav_click.classList.add("d-none")
+            nav_click.classList.add("opacity-0")
         }
 
-        // menu_click.onclick = function () {
-        //     nav_click.classList.remove("d-none")
-        // }
-
-        $('#navbarToggleExternalContent').on('hidden.bs.collapse', function () {
-            nav_click.classList.remove("d-none")
-        })
+        menu_click.onclick = function () {
+            nav_click.classList.remove("opacity-0")
+        }
+       
 
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > (window.innerHeight * 2) + 15000 || document.documentElement.scrollTop > (window.innerHeight * 2) + 15000) {
+            if (document.body.scrollTop > (window.innerHeight * 2) + 13000 || document.documentElement.scrollTop > (window.innerHeight * 2) + 13000) {
                 $('.game-play-intro').removeClass("fixed");
                 $('.game-play-intro').addClass("ab")
+                $('.nav-click').removeClass("d-none")
             } else if (document.body.scrollTop > window.innerHeight * 2 || document.documentElement.scrollTop > window.innerHeight * 2) {
                 $('.game-play-intro').addClass("fixed")
                 $('.game-play-intro').removeClass("ab");
+                $('.nav-click').removeClass("d-none")
+
+            } else if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+                $('.nav-click').removeClass("d-none")
+
             } else {
                 $('.game-play-intro').removeClass("fixed");
                 $('.game-play-intro').removeClass("ab");
+                $('.nav-click').addClass("d-none")
             }
         }
-
-
-
-
         window.onload = function () {
             lax.setup() // init
 
@@ -1076,6 +775,103 @@
 
             window.requestAnimationFrame(updateLax)
         }
+        $(window).scroll(function () {
+            // last = $("body").height() - $(window).height()
+            var scrollval = $(window).scrollTop();
+            var vh = $(window).height();
+
+            if (scrollval > (vh * 2 + 19500)) {
+                $('.skw-pages').addClass('ab');
+                $('.skw-pages').removeClass('fixed');
+            } else if (scrollval > (vh * 2 + 13000)) {
+                //section4 fixed
+                $('.skw-pages').addClass('fixed');
+                $('.skw-pages').removeClass('ab');
+            } else {
+                $('.skw-pages').removeClass('fixed');
+                $('.skw-pages').removeClass('ab');
+            }
+
+            console.log(scrollval);
+
+            if (scrollval > vh * 2 + 18000) {
+                pagination(5)
+            } else if (scrollval > vh * 2 + 17000) {
+                pagination(4)
+            } else if (scrollval > vh * 2 + 16000) {
+                pagination(3)
+            } else if (scrollval > vh * 2 + 15000) {
+                pagination(2)
+            } else if (scrollval > vh * 2 + 14000) {
+                pagination(1)
+            }
+
+        });
+
+
+
+        var curPage = 1;
+        var numOfPages = $(".skw-page").length;
+        var animTime = 1000;
+        var scrolling = false;
+        var pgPrefix = ".skw-page-";
+
+        function pagination(curPage) {
+            scrolling = true;
+            $('.skw-page').removeClass('active');
+            $('.skw-page').addClass('inactive');
+            $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+
+            // $(pgPrefix + (curPage - 1)).addClass("inactive");
+            // $(pgPrefix + (curPage + 1)).removeClass("active");
+
+            setTimeout(function () {
+                scrolling = false;
+            }, animTime);
+        };
+
+
+        ////////// 這裡是section5-登入畫面 //////////
+        var swiper1 = new Swiper("#ture", {
+            speed: 15000,
+            autoplay: {
+                delay: 0,
+            },
+            loop: true,
+            loopAdditionalSlides: 4,
+            slidesPerView: 3,
+        });
+        var swiper2 = new Swiper("#reverse", {
+            speed: 15000,
+            roundLengths: false,
+            autoplay: {
+                delay: 0,
+                reverseDirection: true,
+            },
+            loop: true,
+            loopAdditionalSlides: 4,
+            slidesPerView: 3,
+        });
+
+        var close_window = document.querySelector("#close-window")
+
+        close_window.onclick = function(){
+            $('#close-window').modal('toggle')
+        } 
+
+// 5/1問老師：為什麼最後要卡這個沒在動的？
+        // var swiper3 = new Swiper("#ture2", {
+        //     speed: 2000,
+        //     autoplay: {
+        //         delay: 0,
+        //     },
+        //     loop: true,
+        //     loopAdditionalSlides: 7,
+        //     width: 430,
+        //     height: 600,
+        //     spaceBetween: 70,
+
+        // });
     </script>
 </body>
 
