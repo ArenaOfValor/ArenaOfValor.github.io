@@ -47,7 +47,7 @@
         </div>
     </section>
 
-    <div class="d-flex justify-content-end sticky-top">
+    <div class="d-flex justify-content-end xx">
         <div class="nav-click navbar-dark d-none" data-toggle="collapse" data-target="#navbarToggleExternalContent"
             id="nav-btn" title="navbar">
             <button class="navbar-toggler border-none" type="button">
@@ -312,22 +312,22 @@
 
         <div class="skw-pages">
             <div class="skw-page skw-page-1 active">
-                <div class="skw-page__half skw-page__half--left">
+                <div class="skw-page__half skw-page__half--left floren-bac-color">
                     <div class="skw-page__skewed">
                         <div class="skw-page__content"></div>
                     </div>
                 </div>
                 <div class="skw-page__half skw-page__half--right">
                     <div class="skw-page__skewed">
-                        <div class="skw-page__content">
-                            <h2 class="skw-page__heading">
-                                大叔的定位是戰士/刺客
-                                跟其他肌肉疙瘩相比體質偏孱弱
-                                但是沒關係，花美男大叔有的是技巧
-                                靠著回血、反打、免傷、減控、打真傷
-                                如果在小型團戰沒辦法先手把大叔送回家
-                                那戰場中穿梭的瀟灑身影將成為你的無盡夢靨</h2>
-                            <p class="skw-page__description">Just scroll down</p>
+                        <div class="skw-page__content ">
+                            <h2 class="skw-page__heading text-style d-flex align-items-end flex-column">
+                                <p>花美男大叔的定位是戰士/刺客</p>
+                                <p>跟其他肌肉疙瘩相比體質偏向孱弱</p>
+                                <p>但是沒關係，花美男大叔有的是技巧</p>
+                                <p>靠著回血、反打、免傷、減控、打真傷</p>
+                                <p>如果在小型團戰沒辦法先手把大叔送回家</p>
+                                <p>戰場中穿梭的瀟灑身影將成為你的無盡夢靨</p>
+                            </h2>
                         </div>
                     </div>
                 </div>
@@ -489,13 +489,13 @@
                         </div>
                         <div class="modal-body d-flex jus">
 
-<!-- 5/1問老師：為什麼帳號：跟文字框中間沒辦法靠近？ -->
+                            <!-- 5/1問老師：為什麼帳號：跟文字框中間沒辦法靠近？ -->
                             <div class="container justify-content-center align-items-center">
                                 <div class="row mb-5">
                                     <div class="col-2"></div>
                                     <div class="col-2 d-flex justify-content-end">
                                         <div class="modal_text1">
-                                        帳號：
+                                            帳號：
                                         </div>
                                     </div>
                                     <div class="col d-flex align-items-center justify-content-start">
@@ -506,7 +506,7 @@
                                     <div class="col-2"></div>
                                     <div class="col-2 d-flex justify-content-end">
                                         <div class="modal_text1">
-                                        密碼：
+                                            密碼：
                                         </div>
                                     </div>
                                     <div class="col-1 d-flex align-items-center justify-content-left">
@@ -517,7 +517,7 @@
                                     <div class="col-2"></div>
                                     <div class="col-2 d-flex justify-content-end">
                                         <div class="modal_text1">
-                                        信箱：
+                                            信箱：
                                         </div>
                                     </div>
                                     <div class="col-1 d-flex align-items-center justify-content-left">
@@ -567,7 +567,7 @@
                                                         ...登入說明文字
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
+                                                        <button type="button" id="close-window" class="btn btn-secondary"
                                                             data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
@@ -735,15 +735,14 @@
         var nav_click = document.querySelector(".nav-click")
         var menu_click = document.querySelector(".menu-click")
 
-
-
-
         nav_click.onclick = function () {
-            nav_click.classList.add("d-none")
+            nav_click.classList.add("opacity-0")
         }
-        $('#navbarToggleExternalContent').on('hidden.bs.collapse', function () {
-            nav_click.classList.remove("d-none")
-        })
+
+        menu_click.onclick = function () {
+            nav_click.classList.remove("opacity-0")
+        }
+       
 
         window.onscroll = function () { scrollFunction() };
 
@@ -751,9 +750,11 @@
             if (document.body.scrollTop > (window.innerHeight * 2) + 13000 || document.documentElement.scrollTop > (window.innerHeight * 2) + 13000) {
                 $('.game-play-intro').removeClass("fixed");
                 $('.game-play-intro').addClass("ab")
+                $('.nav-click').removeClass("d-none")
             } else if (document.body.scrollTop > window.innerHeight * 2 || document.documentElement.scrollTop > window.innerHeight * 2) {
                 $('.game-play-intro').addClass("fixed")
                 $('.game-play-intro').removeClass("ab");
+                $('.nav-click').removeClass("d-none")
 
             } else if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
                 $('.nav-click').removeClass("d-none")
@@ -846,26 +847,31 @@
             autoplay: {
                 delay: 0,
                 reverseDirection: true,
-
             },
             loop: true,
             loopAdditionalSlides: 4,
             slidesPerView: 3,
         });
 
-// 5/1問老師：為什麼最後要卡這個沒在動的？
-        var swiper3 = new Swiper("#ture2", {
-            speed: 2000,
-            autoplay: {
-                delay: 0,
-            },
-            loop: true,
-            loopAdditionalSlides: 7,
-            width: 430,
-            height: 600,
-            spaceBetween: 70,
+        var close_window = document.querySelector("#close-window")
 
-        });
+        close_window.onclick = function(){
+            $('#close-window').modal('toggle')
+        } 
+
+// 5/1問老師：為什麼最後要卡這個沒在動的？
+        // var swiper3 = new Swiper("#ture2", {
+        //     speed: 2000,
+        //     autoplay: {
+        //         delay: 0,
+        //     },
+        //     loop: true,
+        //     loopAdditionalSlides: 7,
+        //     width: 430,
+        //     height: 600,
+        //     spaceBetween: 70,
+
+        // });
     </script>
 </body>
 

@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    // background-color: black;
 }
 
 * {
@@ -12,7 +12,12 @@ body {
 a {
     text-decoration: none;
 }
-
+.xx{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+}
 
 #section1 {
     width: 100%;
@@ -218,21 +223,38 @@ a {
     border: none !important;
 }
 
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 51;
+}
+
 .nav-click {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 200px 200px 0;
     border-color: transparent rgba(31, 31, 31, 0.7) transparent transparent;
+    opacity: 1;
+    transition: 1.5s;
 }
 
 
-.fl-r{
+.opacity-0{
+    opacity: 0;
+    transition: 0.3s;
+
+
+}
+
+
+.fl-r {
     float: right;
 }
 
 .navbar-toggler {
-    position: fixed;
+
     right: -100px;
     top: 25px;
     z-index: 9;
@@ -851,369 +873,379 @@ button {
     right: 0;
     top: 550px;
 }
-  
-  
-  ////////// 這裡是section4-熱門英雄 //////////
-  *,
-  *:before,
-  *:after {
+
+
+////////// 這裡是section4-熱門英雄 //////////
+*,
+*:before,
+*:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  #section4 {
+}
+
+#section4 {
     position: relative;
     height: 6500px;
-  }
-  
-  .skw-pages {
+}
+
+.skw-pages {
     overflow: hidden;
     position: relative;
     height: 100vh;
     width: 100%;
-  }
-  
-  .skw-pages.fixed {
+}
+
+.skw-pages.fixed {
     position: fixed;
     left: 0;
     top: 0;
-  }
-  
-  .skw-pages.ab {
+}
+
+.skw-pages.ab {
     position: absolute;
     left: 0;
     bottom: 0;
-  }
-  
-  
-  
-  $skewDeg: 18deg;
-  $magicVH: 32.4vh; // this number is magic and depends on skew angle
-  $scrollTime: 1s;
-  
-  .skw-page {
+}
+
+
+
+$skewDeg: 18deg;
+$magicVH: 32.4vh; // this number is magic and depends on skew angle
+$scrollTime: 1s;
+
+.skw-page {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-  
+
     &__half {
-      position: absolute;
-      top: 0;
-      width: 50%;
-      height: 100vh;
-      transition: transform $scrollTime;
-  
-      &--left {
-        left: 0;
-        transform: translate3d(-$magicVH, 100%, 0);
-      }
-  
-      &--right {
-        left: 50%;
-        transform: translate3d($magicVH, -100%, 0);
-      }
-  
-      .skw-page.active & {
-        transform: translate3d(0, 0, 0);
-      }
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        transition: transform $scrollTime;
+
+        &--left {
+            left: 0;
+            transform: translate3d(-$magicVH, 100%, 0);
+        }
+
+        &--right {
+            left: 50%;
+            transform: translate3d($magicVH, -100%, 0);
+        }
+
+        .skw-page.active & {
+            transform: translate3d(0, 0, 0);
+        }
     }
-  
+
     &__skewed {
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      width: 140%;
-      height: 100%;
-      transform: skewX($skewDeg * -1);
-      background: #000;
-  
-      .skw-page__half--left & {
-        left: -40%;
-      }
-  
-      .skw-page__half--right & {
-        right: -40%;
-      }
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 140%;
+        height: 100%;
+        transform: skewX($skewDeg * -1);
+        background: #000;
+
+        .skw-page__half--left & {
+            left: -40%;
+        }
+
+        .skw-page__half--right & {
+            right: -40%;
+        }
     }
-  
+
     &__content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-flow: column wrap;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      padding: 0 30%;
-      color: #fff;
-      transform: skewX($skewDeg);
-      transition: transform $scrollTime, opacity $scrollTime;
-      background-size: cover;
-  
-      .skw-page__half--left & {
-        padding-left: 30%;
-        padding-right: 30%;
-        transform-origin: 100% 0;
-      }
-  
-      .skw-page__half--right & {
-        padding-left: 30%;
-        padding-right: 30%;
-        transform-origin: 0 100%;
-      }
-  
-      .skw-page.inactive & {
-        opacity: 0.5;
-        transform: skewX($skewDeg) scale(0.95);
-      }
-    }
-  
-    &__heading {
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      font-size: 25px;
-      text-align: center;
-    }
-  
-    &__description {
-      font-size: 18px;
-      text-align: center;
-    }
-  
-    &__link {
-      color: #FFA0A0;
-    }
-  
-    &-1 {
-      .skw-page__half--left .skw-page__content {
-        background-image: url('../img/04-熱門英雄介紹/弗洛倫-02.jpg');
-        background-position: 60% 100%;
-      }
-  
-      .skw-page__half--right .skw-page__content {
-        background: lighten(#1C1C1C, 5%);
-      }
-    }
-  
-    &-2 {
-      .skw-page__half--left .skw-page__content {
-        background: lighten(#1C1C1C, 5%);
-      }
-  
-      .skw-page__half--right .skw-page__content {
-        background-image: url('../img/04-熱門英雄介紹/狄拉克-02.jpg');
-        background-position: 60% 100%;
-      }
-    }
-  
-    &-3 {
-      .skw-page__half--left .skw-page__content {
-        background-image: url('../img/04-熱門英雄介紹/亥犽-02.jpg');
-        background-position: 50% 100%;
-      }
-  
-      .skw-page__half--right .skw-page__content {
-        background: lighten(#1C1C1C, 5%);
-      }
-    }
-  
-    &-4 {
-      .skw-page__half--left .skw-page__content {
-        background: lighten(#1C1C1C, 5%);
-      }
-  
-      .skw-page__half--right .skw-page__content {
-        background-image: url('../img/04-熱門英雄介紹/刀鋒寶貝-05.jpg');
-        background-position: 60% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 30%;
+        color: #fff;
+        transform: skewX($skewDeg);
+        transition: transform $scrollTime, opacity $scrollTime;
         background-size: cover;
-      }
+
+        .skw-page__half--left & {
+            padding-left: 30%;
+            padding-right: 30%;
+            transform-origin: 100% 0;
+        }
+
+        .skw-page__half--right & {
+            padding-left: 30%;
+            padding-right: 30%;
+            transform-origin: 0 100%;
+        }
+
+        .skw-page.inactive & {
+            opacity: 0.5;
+            transform: skewX($skewDeg) scale(0.95);
+        }
     }
-  
+
+    &__heading {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    &__description {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    &__link {
+        color: #FFA0A0;
+    }
+
+    &-1 {
+        .skw-page__half--left .skw-page__content {
+            background-image: url('../img/04-熱門英雄介紹/弗洛倫-02.jpg');
+            background-position: 60% 100%;
+        }
+
+        .skw-page__half--right .skw-page__content {
+            background: lighten(rgb(236, 89, 89), 5%);
+            box-shadow: inset -250px -30px 5em white,inset 1px 30px 5em white,;
+        }
+    }
+
+    &-2 {
+        .skw-page__half--left .skw-page__content {
+            background: lighten(#1C1C1C, 5%);
+        }
+
+        .skw-page__half--right .skw-page__content {
+            background-image: url('../img/04-熱門英雄介紹/狄拉克-02.jpg');
+            background-position: 60% 100%;
+        }
+    }
+
+    &-3 {
+        .skw-page__half--left .skw-page__content {
+            background-image: url('../img/04-熱門英雄介紹/亥犽-02.jpg');
+            background-position: 50% 100%;
+        }
+
+        .skw-page__half--right .skw-page__content {
+            background: lighten(#1C1C1C, 5%);
+        }
+    }
+
+    &-4 {
+        .skw-page__half--left .skw-page__content {
+            background: lighten(#1C1C1C, 5%);
+        }
+
+        .skw-page__half--right .skw-page__content {
+            background-image: url('../img/04-熱門英雄介紹/刀鋒寶貝-05.jpg');
+            background-position: 60% 100%;
+            background-size: cover;
+        }
+    }
+
     &-5 {
-      .skw-page__half--left .skw-page__content {
-        background-image: url('../img/04-熱門英雄介紹/皮皮-02.jpg');
-        background-position: 50% 100%;
-      }
-  
-      .skw-page__half--right .skw-page__content {
-        background: lighten(#1C1C1C, 5%);
-      }
+        .skw-page__half--left .skw-page__content {
+            background-image: url('../img/04-熱門英雄介紹/皮皮-02.jpg');
+            background-position: 50% 100%;
+        }
+
+        .skw-page__half--right .skw-page__content {
+            background: lighten(#1C1C1C, 5%);
+        }
     }
-  }
-  
-  
-  
-  
-  
-  ////////// 這裡是section5-登入畫面 //////////
-  
-  #section5 {
+}
+
+.text-style {
+    color: rgb(99, 47, 23);
+    letter-spacing: 2px;
+    text-shadow: white 0em 0em 0.5em;
+    font-weight: bold;
+}
+
+
+
+
+
+
+////////// 這裡是section5-登入畫面 //////////
+
+#section5 {
     height: calc(100vh - 92px);
     background-image: url(../img/08-登入頁面/模糊背景.jpg);
     background-position: center;
     background-size: cover;
     padding: 50px 0 0 0;
-  }
-  
-  
-  #section5 .slides .swiper {
+}
+
+
+#section5 .slides .swiper {
     width: 100%;
     overflow: hidden;
-  }
-  
-  #section5 .slides .swiper .swiper-container {
+}
+
+#section5 .slides .swiper .swiper-container {
     width: 100%;
     height: 100%;
-  }
-  
-  #section5 .slides .swiper .swiper-container .swiper-wrapper {
+}
+
+#section5 .slides .swiper .swiper-container .swiper-wrapper {
     transition-timing-function: linear;
-  }
-  
-  #section5 .slides .swiper .swiper-container .swiper-slide {
+}
+
+#section5 .slides .swiper .swiper-container .swiper-slide {
     width: 9.375rem;
     height: 18rem;
     background-color: #999999;
     border: 1px solid black;
     filter: opacity(90%);
     position: relative;
-  }
-  
-  #section5 .slides .swiper .swiper-container .swiper-slide:hover {
+}
+
+#section5 .slides .swiper .swiper-container .swiper-slide:hover {
     filter: opacity(100%);
-  }
-  
-  
-  // /* section5圖片區 */
-  // /* 第二行輪播圖 */
-  .line2pic1 {
+}
+
+
+// /* section5圖片區 */
+// /* 第二行輪播圖 */
+.line2pic1 {
     background: url("../img/08-登入頁面/伺服器維護公告-01.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  .line2pic2 {
+}
+
+.line2pic2 {
     background: url("../img/08-登入頁面/系統公告-02.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  .line2pic3 {
+}
+
+.line2pic3 {
     background: url("../img/08-登入頁面/賽事公告-02.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  .line2pic4 {
+}
+
+.line2pic4 {
     background: url("../img/08-登入頁面/活動公告-05.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  .line2pic5 {
+}
+
+.line2pic5 {
     background: url("../img/08-登入頁面/活動公告-06.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  
-  /* 第一行輪播圖 */
-  
-  .line1pic1 {
+}
+
+
+/* 第一行輪播圖 */
+
+.line1pic1 {
     background: url("../img/08-登入頁面/活動公告-03.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  .line1pic2 {
+}
+
+.line1pic2 {
     background: url("../img/08-登入頁面/活動公告-02.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  .line1pic3 {
+}
+
+.line1pic3 {
     background: url("../img/08-登入頁面/活動公告-01.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  .line1pic4 {
+}
+
+.line1pic4 {
     background: url("../img/08-登入頁面/活動公告-04.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  .line1pic5 {
+}
+
+.line1pic5 {
     background: url("../img/08-登入頁面/賽事公告-01.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
-  
-  ////////// 這裡是登入的button //////////
+}
 
-  // 5/1問老師為什麼合併後所有button都要設定100%？不然就壞掉了？
-  button{
+
+////////// 這裡是登入的button //////////
+
+// 5/1問老師為什麼合併後所有button都要設定100%？不然就壞掉了？
+button {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .buttons {
+.buttons {
     padding: 70px 20%;
     display: flex;
     justify-content: space-evenly;
-  }
-  
-  #outside_btn {
+}
+
+#outside_btn {
     width: 250px;
     height: 100%;
-    background-color: rgba(255, 217, 0, 0.74);
-    color: black;
+    background-color: rgba(255, 200, 138, 0.74);
+    color: rgb(88, 51, 20);
     font-family: "微軟正黑體";
     border: 3px solid rgba(255, 255, 255, 0.603);
     font-size: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 2em rgb(255, 0, 0);
-  }
-  
-  
-  #modal1_background{
+    box-shadow: 0 0 2em rgb(255, 39, 10);
+}
+
+
+#modal1_background {
     width: 100%;
     height: 80vh;
     background-image: url(../img/08-登入頁面/羊皮紙02.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    box-shadow: inset 10px 10px 3em black,inset -10px 10px 3em black,inset -5px -30px 5em black;
-  }
-  
-  
-  // 5/1問老師：RWD的時候 X有問題
-  #test_X_position{
+    box-shadow: inset 10px 10px 3em black, inset -10px 10px 3em black, inset -5px -30px 5em black;
+}
+
+
+// 5/1問老師：RWD的時候 X有問題
+#test_X_position {
     position: relative;
-  }
-  #test_X_position .close{
+}
+
+#test_X_position .close {
     position: absolute;
     right: -500px;
     top: -40px;
     font-size: 100px;
-  }
-  
-  
-  
-  ////////// 這裡是登入的內文 //////////
-  .modal_text1{
+}
+
+
+
+////////// 這裡是登入的內文 //////////
+.modal_text1 {
     font-size: 30px;
     font-weight: 900;
-  }
-  
-  form{
+}
+
+form {
     font-size: 20px;
-  }
-  
-  input{
+}
+
+input {
     background-color: rgba(240, 185, 130, 0.582);
-  }
-  
- 
-  
-  
-  ////////// 這裡是登入內的button //////////
-  .mid_btn {
+}
+
+
+
+
+////////// 這裡是登入內的button //////////
+.mid_btn {
     width: 70%;
     height: 100%;
     background-color: #455555;
@@ -1222,54 +1254,55 @@ button {
     border: 3px solid rgba(255, 255, 255, 0.603);
     font-size: 30px;
     border-radius: 5px;
-  }
+}
 
-  #mid_btn3{
+#mid_btn3 {
     width: 80%;
     height: 100%;
-    color:rgb(23, 97, 167);
-  }
-  
-  
-  
-  
-  
-  .modal-header{
-    border-bottom:unset;
+    color: rgb(23, 97, 167);
+}
+
+
+
+
+
+.modal-header {
+    border-bottom: unset;
     margin: auto;
-  }
-  .modal-footer{
-    border-top:unset;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  ////////// 這裡是footer //////////
-  
-  footer {
+}
+
+.modal-footer {
+    border-top: unset;
+}
+
+
+
+
+
+
+
+
+////////// 這裡是footer //////////
+
+footer {
     width: 100%;
     background-color: #0a1124;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
-  }
-  
-  #footer_text {
+}
+
+#footer_text {
     width: 380px;
-  }
-  
-  #footer_text :nth-child(3) {
+}
+
+#footer_text :nth-child(3) {
     color: #38a0f9;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin-bottom: 0;
     color: gray;
     text-align: center;
-  }
+}

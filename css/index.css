@@ -2,7 +2,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
 }
 
 * {
@@ -13,6 +12,13 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.xx {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
 }
 
 #section1 {
@@ -256,12 +262,28 @@ a {
   border: none !important;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 51;
+}
+
 .nav-click {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 200px 200px 0;
   border-color: transparent rgba(31, 31, 31, 0.7) transparent transparent;
+  opacity: 1;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.opacity-0 {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .fl-r {
@@ -269,7 +291,6 @@ a {
 }
 
 .navbar-toggler {
-  position: fixed;
   right: -100px;
   top: 25px;
   z-index: 9;
@@ -1042,7 +1063,9 @@ button {
 }
 
 .skw-page-1 .skw-page__half--right .skw-page__content {
-  background: #292929;
+  background: #ef7070;
+  -webkit-box-shadow: inset -250px -30px 5em white, inset 1px 30px 5em white;
+          box-shadow: inset -250px -30px 5em white, inset 1px 30px 5em white;
 }
 
 .skw-page-2 .skw-page__half--left .skw-page__content {
@@ -1080,6 +1103,13 @@ button {
 
 .skw-page-5 .skw-page__half--right .skw-page__content {
   background: #292929;
+}
+
+.text-style {
+  color: #632f17;
+  letter-spacing: 2px;
+  text-shadow: white 0em 0em 0.5em;
+  font-weight: bold;
 }
 
 #section5 {
@@ -1189,14 +1219,14 @@ button {
 #outside_btn {
   width: 250px;
   height: 100%;
-  background-color: rgba(255, 217, 0, 0.74);
-  color: black;
+  background-color: rgba(255, 200, 138, 0.74);
+  color: #583314;
   font-family: "微軟正黑體";
   border: 3px solid rgba(255, 255, 255, 0.603);
   font-size: 30px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 2em red;
-          box-shadow: 0 0 2em red;
+  -webkit-box-shadow: 0 0 2em #ff270a;
+          box-shadow: 0 0 2em #ff270a;
 }
 
 #modal1_background {
@@ -1206,8 +1236,8 @@ button {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  -webkit-box-shadow: inset 10px 10px 3em black,inset -10px 10px 3em black,inset -5px -30px 5em black;
-          box-shadow: inset 10px 10px 3em black,inset -10px 10px 3em black,inset -5px -30px 5em black;
+  -webkit-box-shadow: inset 10px 10px 3em black, inset -10px 10px 3em black, inset -5px -30px 5em black;
+          box-shadow: inset 10px 10px 3em black, inset -10px 10px 3em black, inset -5px -30px 5em black;
 }
 
 #test_X_position {
