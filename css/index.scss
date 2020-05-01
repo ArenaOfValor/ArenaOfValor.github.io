@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    // background-color: black;
+    background-color: black;
 }
 
 * {
@@ -12,7 +12,8 @@ body {
 a {
     text-decoration: none;
 }
-.xx{
+
+.xx {
     position: fixed;
     top: 0;
     right: 0;
@@ -223,7 +224,7 @@ a {
     border: none !important;
 }
 
-nav{
+nav {
     position: fixed;
     top: 0;
     right: 0;
@@ -241,7 +242,7 @@ nav{
 }
 
 
-.opacity-0{
+.opacity-0 {
     opacity: 0;
     transition: 0.3s;
 
@@ -1017,36 +1018,40 @@ $scrollTime: 1s;
         }
 
         .skw-page__half--right .skw-page__content {
-            background: lighten(rgb(236, 89, 89), 5%);
-            box-shadow: inset -250px -30px 5em white,inset 1px 30px 5em white,;
+            background: lighten(rgb(245, 77, 77), 5%);
+            box-shadow: inset -250px -30px 5em white, inset 0px 30px 5em white ;
         }
     }
 
     &-2 {
         .skw-page__half--left .skw-page__content {
-            background: lighten(#1C1C1C, 5%);
+            background: lighten(rgb(32, 15, 0), 5%);
+            box-shadow: inset 0px -30px 5em white, inset 250px 30px 5em white ;
         }
 
         .skw-page__half--right .skw-page__content {
-            background-image: url('../img/04-熱門英雄介紹/狄拉克-02.jpg');
+            background-image: url('../img/04-熱門英雄介紹/亥犽-02.jpg');
             background-position: 60% 100%;
+            
         }
     }
 
     &-3 {
         .skw-page__half--left .skw-page__content {
-            background-image: url('../img/04-熱門英雄介紹/亥犽-02.jpg');
+            background-image: url('../img/04-熱門英雄介紹/狄拉克-02.jpg');
             background-position: 50% 100%;
         }
 
         .skw-page__half--right .skw-page__content {
-            background: lighten(#1C1C1C, 5%);
+            background: lighten(rgb(240, 206, 12), 5%);
+            box-shadow: inset -250px -30px 5em white, inset 0px 30px 5em white ;
         }
     }
 
     &-4 {
         .skw-page__half--left .skw-page__content {
-            background: lighten(#1C1C1C, 5%);
+            background: lighten(rgb(36, 0, 56), 5%);
+            box-shadow: inset 0px -30px 5em white, inset 250px 30px 5em white ;
         }
 
         .skw-page__half--right .skw-page__content {
@@ -1059,11 +1064,12 @@ $scrollTime: 1s;
     &-5 {
         .skw-page__half--left .skw-page__content {
             background-image: url('../img/04-熱門英雄介紹/皮皮-02.jpg');
-            background-position: 50% 100%;
+            background-position: 50% 100%;       
         }
 
         .skw-page__half--right .skw-page__content {
-            background: lighten(#1C1C1C, 5%);
+            background: lighten(rgb(75, 147, 165), 5%);
+            box-shadow: inset -250px -30px 5em white, inset 0px 30px 5em white ;
         }
     }
 }
@@ -1072,6 +1078,47 @@ $scrollTime: 1s;
     color: rgb(99, 47, 23);
     letter-spacing: 2px;
     text-shadow: white 0em 0em 0.5em;
+    font-weight: bold;
+}
+
+.skw-page-2 .text-style {
+
+    color: rgb(201, 198, 59);
+    letter-spacing: 2px;
+    text-shadow: white 0em 0em 0.5em;
+    font-weight: bold;
+}
+.skw-page-2 .skw-page__heading{
+    width: 600px;
+    position: relative;
+    left: 20px;
+}
+
+.skw-page-3 .skw-page__heading{
+    width: 600px;
+    position: relative;
+    right: 50px;
+    
+}
+.skw-page-3 .text-style {
+
+    color: rgb(15, 14, 102);
+    letter-spacing: 2px;
+    text-shadow: rgb(78, 44, 44) 0em 0em 0.5em;
+    font-weight: bold;
+}
+.skw-page-4 .text-style {
+
+    color: rgb(238, 30, 221);
+    letter-spacing: 2px;
+    text-shadow: rgb(255, 37, 37) 0em 0em 0.5em;
+    font-weight: bold;
+}
+.skw-page-5 .text-style {
+
+    color: rgb(27, 77, 48);
+    letter-spacing: 2px;
+    text-shadow: rgb(153, 248, 1) 0em 0em 0.5em;
     font-weight: bold;
 }
 
