@@ -272,6 +272,7 @@ a {
   position: fixed;
   right: -100px;
   top: 25px;
+  z-index: 9;
 }
 
 .h-100 {
