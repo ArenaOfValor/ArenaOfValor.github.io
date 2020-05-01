@@ -1145,6 +1145,13 @@ button {
   
   
   ////////// 這裡是登入的button //////////
+
+  // 5/1問老師為什麼合併後所有button都要設定100%？不然就壞掉了？
+  button{
+    width: 100%;
+    height: 100%;
+  }
+
   .buttons {
     padding: 70px 20%;
     display: flex;
