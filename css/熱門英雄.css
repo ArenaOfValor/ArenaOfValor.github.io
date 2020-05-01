@@ -268,6 +268,16 @@ body {
   background-size: cover;
 }
 
+.line2pic4 {
+  background: url("../img/08-登入頁面/活動公告-05.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line2pic5 {
+  background: url("../img/08-登入頁面/活動公告-06.jpg") no-repeat center center;
+  background-size: cover;
+}
+
 /* 第一行輪播圖 */
 .line1pic1 {
   background: url("../img/08-登入頁面/活動公告-03.jpg") no-repeat center center;
@@ -284,7 +294,17 @@ body {
   background-size: cover;
 }
 
-.button {
+.line1pic4 {
+  background: url("../img/08-登入頁面/活動公告-04.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line1pic5 {
+  background: url("../img/08-登入頁面/賽事公告-01.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.buttons {
   padding: 70px 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,7 +316,7 @@ body {
 
 #outside_btn {
   width: 250px;
-  background-color: #c19826;
+  background-color: rgba(255, 217, 0, 0.74);
   color: black;
   font-family: "微軟正黑體";
   border: 3px solid rgba(255, 255, 255, 0.603);
@@ -328,28 +348,35 @@ body {
   font-size: 100px;
 }
 
-#mid_btn1 {
-  width: 250px;
-  background-color: #26c1c1;
-  color: black;
-  font-family: "微軟正黑體";
-  border: 3px solid rgba(255, 255, 255, 0.603);
+.modal_text1 {
   font-size: 30px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 2em red;
-          box-shadow: 0 0 2em red;
+  font-weight: 900;
 }
 
-#mid_btn2 {
-  width: 250px;
-  background-color: #8bc126;
+form {
+  font-size: 20px;
+}
+
+input {
+  background-color: rgba(240, 185, 130, 0.582);
+}
+
+.rightshort {
+  padding-right: 0;
+}
+
+.leftshort {
+  padding-left: 0;
+}
+
+.mid_btn {
+  width: 100%;
+  background-color: #455555;
   color: black;
   font-family: "微軟正黑體";
   border: 3px solid rgba(255, 255, 255, 0.603);
   font-size: 30px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 2em red;
-          box-shadow: 0 0 2em red;
+  border-radius: 5px;
 }
 
 .modal-header {

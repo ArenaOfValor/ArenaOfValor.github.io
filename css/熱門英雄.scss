@@ -278,6 +278,16 @@ $scrollTime: 1s;
   background-size: cover;
 }
 
+.line2pic4 {
+  background: url("../img/08-登入頁面/活動公告-05.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line2pic5 {
+  background: url("../img/08-登入頁面/活動公告-06.jpg") no-repeat center center;
+  background-size: cover;
+}
+
 
 /* 第一行輪播圖 */
 
@@ -296,9 +306,19 @@ $scrollTime: 1s;
   background-size: cover;
 }
 
+.line1pic4 {
+  background: url("../img/08-登入頁面/活動公告-04.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.line1pic5 {
+  background: url("../img/08-登入頁面/賽事公告-01.jpg") no-repeat center center;
+  background-size: cover;
+}
+
 
 ////////// 這裡是登入的button //////////
-.button {
+.buttons {
   padding: 70px 20%;
   display: flex;
   justify-content: space-evenly;
@@ -306,7 +326,7 @@ $scrollTime: 1s;
 
 #outside_btn {
   width: 250px;
-  background-color: #c19826;
+  background-color: rgba(255, 217, 0, 0.74);
   color: black;
   font-family: "微軟正黑體";
   border: 3px solid rgba(255, 255, 255, 0.603);
@@ -340,33 +360,37 @@ $scrollTime: 1s;
 
 
 
-
-
-
-
-
-
-
-#mid_btn1 {
-  width: 250px;
-  background-color: #26c1c1;
-  color: black;
-  font-family: "微軟正黑體";
-  border: 3px solid rgba(255, 255, 255, 0.603);
+////////// 這裡是登入的內文 //////////
+.modal_text1{
   font-size: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 2em rgb(255, 0, 0);
+  font-weight: 900;
 }
 
-#mid_btn2 {
-  width: 250px;
-  background-color: #8bc126;
+form{
+  font-size: 20px;
+}
+
+input{
+  background-color: rgba(240, 185, 130, 0.582);
+}
+
+.rightshort{
+  padding-right: 0;
+}
+.leftshort{
+  padding-left: 0;
+}
+
+
+////////// 這裡是登入內的button //////////
+.mid_btn {
+  width: 100%;
+  background-color: #455555;
   color: black;
   font-family: "微軟正黑體";
   border: 3px solid rgba(255, 255, 255, 0.603);
   font-size: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 2em rgb(255, 0, 0);
+  border-radius: 5px;
 }
 
 

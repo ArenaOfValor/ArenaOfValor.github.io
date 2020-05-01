@@ -161,6 +161,8 @@
                         <div class="swiper-slide line1pic1"></div>
                         <div class="swiper-slide line1pic2"></div>
                         <div class="swiper-slide line1pic3"></div>
+                        <div class="swiper-slide line1pic4"></div>
+                        <div class="swiper-slide line1pic5"></div>
                     </div>
                 </div>
             </div>
@@ -171,6 +173,8 @@
                         <div class="swiper-slide line2pic1"></div>
                         <div class="swiper-slide line2pic2"></div>
                         <div class="swiper-slide line2pic3"></div>
+                        <div class="swiper-slide line2pic4"></div>
+                        <div class="swiper-slide line2pic5"></div>
                     </div>
                 </div>
             </div>
@@ -181,7 +185,7 @@
         <!-- 5/1問老師這裡有一個bug，如果modal包modal，裡面的modal關閉時，外面的modal也會被關閉 -->
         <!-- 5/1問老師：打開modal裡面的modal後，關閉時，會出現一條scrollTop的滾輪？但只打開一層時不會有這個問題？ -->
 
-        <div class="button">
+        <div class="buttons">
 
             <button type="button" id="outside_btn" class="btn btn-primary" data-toggle="modal"
                 data-target="#exampleModal">
@@ -197,7 +201,7 @@
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                     <div class="modal-content" id="modal1_background">
-                        <div class="modal-header" id="test_X_position">
+                        <div class="modal-header mt-5" id="test_X_position">
                             <h1 class="modal-title" id="exampleModalLabel">Sign Up</h1>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -206,36 +210,51 @@
                         <div class="modal-body">
 
                             <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-5">
+                                <div class="row mb-3">
+                                    <div class="col-1"></div>
+                                    <div class="col-2 rightshort">
                                         <div class="modal_text1">
-                                            帳號
+                                        帳號：
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="modal_text1">
-                                            密碼
-                                        </div>
+                                    <div class="col-1 leftshort d-flex align-items-center justify-content-left">
+                                        <form><input type="text" name="account" class="text-black-50"></form>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-5">
+                                <div class="row mb-3">
+                                    <div class="col-1"></div>
+                                    <div class="col-2 rightshort">
                                         <div class="modal_text1">
-                                            信箱
+                                        密碼：
                                         </div>
+                                    </div>
+                                    <div class="col-1 leftshort d-flex align-items-center justify-content-left">
+                                        <form><input type="password" name="password"></form>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-1"></div>
+                                    <div class="col-2 rightshort">
+                                        <div class="modal_text1">
+                                        信箱：
+                                        </div>
+                                    </div>
+                                    <div class="col-1 leftshort d-flex align-items-center justify-content-left">
+                                        <form><input type="text" name="e-mail" class="text-black-50"></form>
                                     </div>
                                 </div>
 
+
+<!-- 5/1問老師：打勾後，關閉視窗後，無法自動取消打勾 -->
                                 <!-- check input text -->
                                 <div class="row">
-                                    <div class="col-5">
+                                    <div class="col-3"></div>
+                                    <div class="col-2">
                                         <div class="modal_text2">
                                             <input type="checkbox">記住帳號
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-3">
                                         <div class="modal_text2">
                                             <input type="checkbox">保持登入狀態
                                         </div>
@@ -243,9 +262,10 @@
                                 </div>
 
                                 <!-- 登入 取消 -->
-                                <div class="row">
-                                    <div class="col-5">
-                                        <button type="button" id="mid_btn1" class="btn btn-primary" data-toggle="modal"
+                                <div class="row d-flex justify-content-left">
+                                    <div class="col-3"></div>
+                                    <div class="col-2">
+                                        <button type="button" class="btn btn-primary mid_btn" data-toggle="modal"
                                             data-target="#exampleModa2">
                                             登入
                                         </button>
@@ -276,9 +296,8 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-5">
-                                        <button type="button" id="mid_btn2" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#exampleModa3">
+                                    <div class="col-2">
+                                        <button type="button" class="btn btn-primary mid_btn" data-dismiss="modal">
                                             取消
                                         </button>
 
@@ -311,8 +330,9 @@
 
                                 <!-- 忘記密碼 -->
                                 <div class="row">
-                                    <div class="col-5">
-                                        <button type="button" id="mid_btn3" class="btn btn-primary" data-toggle="modal"
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                        <button type="button" id="mid_btn3" class="btn btn-dark" data-toggle="modal"
                                             data-target="#exampleModa4">
                                             忘記密碼
                                         </button>
@@ -330,7 +350,7 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        ...忘記密碼文字
+                                                        密碼還敢忘記，吃飯會不會忘記！
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
