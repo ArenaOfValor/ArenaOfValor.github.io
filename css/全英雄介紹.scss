@@ -1,0 +1,625 @@
+#section1-1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/05-全英雄/背景圖-02.jpg);
+    background-position: center;
+}
+#section1-1::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+} 
+
+
+
+#section1-1 .slides .swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+#section1-1 .slides .swiper .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+#section1-1 .slides .swiper .swiper-container .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+#section1-1 .slides .swiper .swiper-container .swiper-slide {
+    width: 9.375rem;
+    height: 18rem;
+    background-color: #999999;
+    filter: opacity(90%);
+    position: relative;
+}
+
+#section1-1 .slides .swiper .swiper-container .swiper-slide:hover {
+    filter: opacity(100%);
+}
+
+
+// /* 輪播圖 */
+.pic1 {
+    background: url("../img/05-全英雄/英雄輪播圖-01.jpg") no-repeat center center;
+    background-size: cover;
+}
+.pic2 {
+    background: url("../img/05-全英雄/英雄輪播圖-02.jpg") no-repeat center center;
+    background-size: cover;
+}
+.pic3 {
+    background: url("../img/05-全英雄/英雄輪播圖-03.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+
+
+
+
+#relative{
+    position: relative;
+}
+
+
+
+#section1-1_toggle {
+    height: 100px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1)0%, rgba(255, 255, 255, 1)100%);
+    margin: 0;
+}
+
+.button {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(146, 122, 110, 0.65);
+    text-align: center;
+    line-height: 80px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s;
+}
+
+.button.active {
+    background-color: rgba(66, 55, 50, 0.65);
+    color: sandybrown;
+    width: 80px;
+    border-radius: 50px;
+}
+
+
+.section1-1_content {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.815)0%, rgba(255, 255, 255, 1)100%);
+    width: 100%;
+    padding: 15px;
+}
+
+
+.section1-1_text {
+    width: 100%;
+    display: none;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0px 0px 6px rgba(248, 222, 182, 0.562), 0px 0px 15px #fff, 0px 0px 20px #fff;
+    font-weight: 900;
+    padding: 20px 30px;
+}
+
+.section1-1_text.active {
+    display: block;
+}
+
+
+.text-height {
+    width: 100%;
+    height: calc(100vh - 550px);
+    font-size: 15px;
+    text-align: center;
+}
+
+.pic_text{
+    width: 145px;
+    height: 50px;
+
+}
+.pic{
+    width: 90px;
+    height: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+// <!-- 刺客 -->
+#pic1-1{
+    background-image: url(../img/05-全英雄/刺客/刀鋒寶貝.jpg);
+}
+#pic1-1:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/刀鋒寶貝.png);
+}
+#pic1-2{
+    background-image: url(../img/05-全英雄/刺客/奎倫.jpg);
+    background-position: center;
+}
+#pic1-2:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/奎倫.png);
+}
+#pic1-3{
+    background-image: url(../img/05-全英雄/刺客/孫悟空.jpg);
+    background-position: center;
+}
+#pic1-3:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/悟空.png);
+}
+#pic1-4{
+    background-image: url(../img/05-全英雄/刺客/愛里.jpg);
+    background-position: center;
+}
+#pic1-4:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/艾里.png);
+}
+#pic1-5{
+    background-image: url(../img/05-全英雄/刺客/潘因.jpg);
+    background-position: center;
+}
+#pic1-5:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/潘因.png);
+}
+#pic1-6{
+    background-image: url(../img/05-全英雄/刺客/科里納卡.jpg);
+    background-position: center;
+}
+#pic1-6:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/科里納卡.png);
+}
+#pic1-7{
+    background-image: url(../img/05-全英雄/刺客/納克羅斯.jpg);
+    background-position: center;
+}
+#pic1-7:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/納克羅斯.png);
+}
+#pic1-8{
+    background-image: url(../img/05-全英雄/刺客/綺羅.jpg);
+    background-position: center;
+}
+#pic1-8:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/綺蘿.png);
+}
+#pic1-9{
+    background-image: url(../img/05-全英雄/刺客/莫拉.jpg);
+    background-position: center;
+}
+#pic1-9:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/莫拉.png);
+}
+#pic1-10{
+    background-image: url(../img/05-全英雄/刺客/蝙蝠俠.jpg);
+    background-position: center;
+}
+#pic1-10:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/蝙蝠俠.png);
+}
+#pic1-11{
+    background-image: url(../img/05-全英雄/刺客/銀晝.jpg);
+    background-position: center;
+}
+#pic1-11:hover{
+    background-image: url(../img/05-全英雄/刺客-黑白/銀晝.png);
+}
+
+
+// <!-- 坦克 -->
+#pic2-1{
+    background-image: url(../img/05-全英雄/坦克/伯頓.jpg);
+}
+#pic2-1:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/伯頓.png);
+}
+#pic2-2{
+    background-image: url(../img/05-全英雄/坦克/克萊斯.jpg);
+    background-position: center;
+}
+#pic2-2:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/克萊斯.png);
+}
+#pic2-3{
+    background-image: url(../img/05-全英雄/坦克/古木.jpg);
+    background-position: center;
+}
+#pic2-3:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/古木.png);
+}
+#pic2-4{
+    background-image: url(../img/05-全英雄/坦克/塔拉.jpg);
+    background-position: center;
+}
+#pic2-4:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/塔拉.png);
+}
+#pic2-5{
+    background-image: url(../img/05-全英雄/坦克/歐米茄.jpg);
+    background-position: center;
+}
+#pic2-5:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/茄米歐.png);
+}
+#pic2-6{
+    background-image: url(../img/05-全英雄/坦克/渥馬爾.jpg);
+    background-position: center;
+}
+#pic2-6:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/沃瑪爾.png);
+}
+#pic2-7{
+    background-image: url(../img/05-全英雄/坦克/牛魔王.jpg);
+    background-position: center;
+}
+#pic2-7:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/牛魔王.png);
+}
+#pic2-8{
+    background-image: url(../img/05-全英雄/坦克/維羅.jpg);
+    background-position: center;
+}
+#pic2-8:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/維羅.png);
+}
+#pic2-9{
+    background-image: url(../img/05-全英雄/坦克/美娜.jpg);
+    background-position: center;
+}
+#pic2-9:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/美娜.png);
+}
+#pic2-10{
+    background-image: url(../img/05-全英雄/坦克/薩尼.jpg);
+    background-position: center;
+}
+#pic2-10:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/薩尼.png);
+}
+#pic2-11{
+    background-image: url(../img/05-全英雄/坦克/諾克西.jpg);
+    background-position: center;
+}
+#pic2-11:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/諾可西.png);
+}
+#pic2-12{
+    background-image: url(../img/05-全英雄/坦克/阿塔.jpg);
+    background-position: center;
+}
+#pic2-12:hover{
+    background-image: url(../img/05-全英雄/坦克-黑白/阿塔.png);
+}
+
+
+// <!-- 法師 -->
+#pic3-1{
+    background-image: url(../img/05-全英雄/法師/伊耿士.jpg);
+}
+#pic3-1:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/伊耿士.png);
+}
+#pic3-2{
+    background-image: url(../img/05-全英雄/法師/依夏.jpg);
+    background-position: center;
+}
+#pic3-2:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/依夏.png);
+}
+#pic3-3{
+    background-image: url(../img/05-全英雄/法師/克里希.jpg);
+    background-position: center;
+}
+#pic3-3:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/克里希.png);
+}
+#pic3-4{
+    background-image: url(../img/05-全英雄/法師/歌德爾.jpg);
+    background-position: center;
+}
+#pic3-4:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/哥德爾.png);
+}
+#pic3-5{
+    background-image: url(../img/05-全英雄/法師/拉茲.jpg);
+    background-position: center;
+}
+#pic3-5:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/拉茲.png);
+}
+#pic3-6{
+    background-image: url(../img/05-全英雄/法師/迪拉克.jpg);
+    background-position: center;
+}
+#pic3-6:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/狄拉克.png);
+}
+#pic3-7{
+    background-image: url(../img/05-全英雄/法師/盧密亞.jpg);
+    background-position: center;
+}
+#pic3-7:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/盧蜜亞.png);
+}
+#pic3-8{
+    background-image: url(../img/05-全英雄/法師/莉莉安.jpg);
+    background-position: center;
+}
+#pic3-8:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/莉莉安.png);
+}
+#pic3-9{
+    background-image: url(../img/05-全英雄/法師/蘿兒.jpg);
+    background-position: center;
+}
+#pic3-9:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/蘿兒.png);
+}
+#pic3-10{
+    background-image: url(../img/05-全英雄/法師/貂蟬.jpg);
+    background-position: center;
+}
+#pic3-10:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/貂蟬.png);
+}
+#pic3-11{
+    background-image: url(../img/05-全英雄/法師/阿茲卡.jpg);
+    background-position: center;
+}
+#pic3-11:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/阿茲卡.png);
+}
+#pic3-12{
+    background-image: url(../img/05-全英雄/法師/阿萊斯特.jpg);
+    background-position: center;
+}
+#pic3-12:hover{
+    background-image: url(../img/05-全英雄/法師-黑白/阿萊斯特.png);
+}
+
+
+// <!-- 射手 -->
+#pic4-1{
+    background-image: url(../img/05-全英雄/射手/亥犽.jpg);
+}
+#pic4-1:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/亥犽.png);
+}
+#pic4-2{
+    background-image: url(../img/05-全英雄/射手/凡恩.jpg);
+    background-position: center;
+}
+#pic4-2:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/凡恩.png);
+}
+#pic4-3{
+    background-image: url(../img/05-全英雄/射手/勇.jpg);
+    background-position: center;
+}
+#pic4-3:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/勇.png);
+}
+#pic4-4{
+    background-image: url(../img/05-全英雄/射手/卡芬妮.jpg);
+    background-position: center;
+}
+#pic4-4:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/卡芬妮.png);
+}
+#pic4-5{
+    background-image: url(../img/05-全英雄/射手/堇.jpg);
+    background-position: center;
+}
+#pic4-5:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/堇.png);
+}
+#pic4-6{
+    background-image: url(../img/05-全英雄/射手/小丑.jpg);
+    background-position: center;
+}
+#pic4-6:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/小丑.png);
+}
+#pic4-7{
+    background-image: url(../img/05-全英雄/射手/西路卡.jpg);
+    background-position: center;
+}
+#pic4-7:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/希露卡.png);
+}
+#pic4-8{
+    background-image: url(../img/05-全英雄/射手/拉維爾.jpg);
+    background-position: center;
+}
+#pic4-8:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/拉維爾.png);
+}
+#pic4-9{
+    background-image: url(../img/05-全英雄/射手/特爾安納斯.jpg);
+    background-position: center;
+}
+#pic4-9:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/特爾安娜絲.png);
+}
+#pic4-10{
+    background-image: url(../img/05-全英雄/射手/琳蒂.jpg);
+    background-position: center;
+}
+#pic4-10:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/琳蒂.png);
+}
+#pic4-11{
+    background-image: url(../img/05-全英雄/射手/蘭鐸.jpg);
+    background-position: center;
+}
+#pic4-11:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/蘭鐸.png);
+}
+#pic4-12{
+    background-image: url(../img/05-全英雄/射手/靈靈.jpg);
+    background-position: center;
+}
+#pic4-12:hover{
+    background-image: url(../img/05-全英雄/射手-黑白/靈靈.png);
+}
+
+
+
+// <!-- 輔助 -->
+#pic5-1{
+    background-image: url(../img/05-全英雄/輔助/卡瑞茲.jpg);
+}
+#pic5-1:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/卡瑞茲.png);
+}
+#pic5-2{
+    background-image: url(../img/05-全英雄/輔助/垮克.jpg);
+    background-position: center;
+}
+#pic5-2:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/夸克.png);
+}
+#pic5-3{
+    background-image: url(../img/05-全英雄/輔助/安奈特.jpg);
+    background-position: center;
+}
+#pic5-3:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/安奈特.png);
+}
+#pic5-4{
+    background-image: url(../img/05-全英雄/輔助/愛麗絲.jpg);
+    background-position: center;
+}
+#pic5-4:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/愛麗絲.png);
+}
+#pic5-5{
+    background-image: url(../img/05-全英雄/輔助/提米.jpg);
+    background-position: center;
+}
+#pic5-5:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/提米.png);
+}
+#pic5-6{
+    background-image: url(../img/05-全英雄/輔助/查戈納爾.jpg);
+    background-position: center;
+}
+#pic5-6:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/查戈納爾.png);
+}
+#pic5-7{
+    background-image: url(../img/05-全英雄/輔助/佩娜.jpg);
+    background-position: center;
+}
+#pic5-7:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/珮娜.png);
+}
+#pic5-8{
+    background-image: url(../img/05-全英雄/輔助/皮皮.jpg);
+    background-position: center;
+}
+#pic5-8:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/皮皮.png);
+}
+#pic5-9{
+    background-image: url(../img/05-全英雄/輔助/朗博.jpg);
+    background-position: center;
+}
+#pic5-9:hover{
+    background-image: url(../img/05-全英雄/輔助-黑白/郎博.png);
+}
+
+
+
+
+// <!-- 戰士 -->
+#pic6-1{
+    background-image: url(../img/05-全英雄/戰士/呂布.jpg);
+}
+#pic6-1:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/呂布.png);
+}
+#pic6-2{
+    background-image: url(../img/05-全英雄/戰士/夜叉.jpg);
+    background-position: center;
+}
+#pic6-2:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/夜叉.png);
+}
+#pic6-3{
+    background-image: url(../img/05-全英雄/戰士/安格列.jpg);
+    background-position: center;
+}
+#pic6-3:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/安格列.png);
+}
+#pic6-4{
+    background-image: url(../img/05-全英雄/戰士/費洛倫.jpg);
+    background-position: center;
+}
+#pic6-4:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/弗洛倫.png);
+}
+#pic6-5{
+    background-image: url(../img/05-全英雄/戰士/艾翠絲.jpg);
+    background-position: center;
+}
+#pic6-5:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/愛翠絲.png);
+}
+#pic6-6{
+    background-image: url(../img/05-全英雄/戰士/洛克.jpg);
+    background-position: center;
+}
+#pic6-6:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/洛克.png);
+}
+#pic6-7{
+    background-image: url(../img/05-全英雄/戰士/色斐斯.jpg);
+    background-position: center;
+}
+#pic6-7:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/瑟斐斯.png);
+}
+#pic6-8{
+    background-image: url(../img/05-全英雄/戰士/艾蜜莉.jpg);
+    background-position: center;
+}
+#pic6-8:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/艾蜜莉.png);
+}
+#pic6-9{
+    background-image: url(../img/05-全英雄/戰士/莫托斯.jpg);
+    background-position: center;
+}
+#pic6-9:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/莫托斯.png);
+}
+#pic6-10{
+    background-image: url(../img/05-全英雄/戰士/趙雲.jpg);
+    background-position: center;
+}
+#pic6-10:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/趙雲.png);
+}
+#pic6-11{
+    background-image: url(../img/05-全英雄/戰士/馬洛斯.jpg);
+    background-position: center;
+}
+#pic6-11:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/馬洛斯.png);
+}
+#pic6-12{
+    background-image: url(../img/05-全英雄/戰士/龍馬.jpg);
+    background-position: center;
+}
+#pic6-12:hover{
+    background-image: url(../img/05-全英雄/戰士-黑白/龍馬.png);
+}

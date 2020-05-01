@@ -12,96 +12,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/全英雄介紹.css">
+
     <title>全英雄介紹</title>
 
 </head>
 
 <body>
-    <section class="section">入場頁</section>
-    <section class="section">首頁</section>
-    <section class="section">遊戲玩法</section>
+    <section id="section1-1">
 
-    <section id="section4">
-
-        <div class="skw-pages">
-            <div class="skw-page skw-page-1 active">
-                <div class="skw-page__half skw-page__half--left">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content"></div>
-                    </div>
-                </div>
-                <div class="skw-page__half skw-page__half--right">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content">
-                            <h2 class="skw-page__heading">Skewed One Page Scroll</h2>
-                            <p class="skw-page__description">Just scroll down</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skw-page skw-page-2">
-                <div class="skw-page__half skw-page__half--left">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content">
-                            <h2 class="skw-page__heading">Page 2</h2>
-                            <p class="skw-page__description">Nothing to do here, continue scrolling.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="skw-page__half skw-page__half--right">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skw-page skw-page-3">
-                <div class="skw-page__half skw-page__half--left">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content"></div>
-                    </div>
-                </div>
-                <div class="skw-page__half skw-page__half--right">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content">
-                            <h2 class="skw-page__heading">Page 3</h2>
-                            <p class="skw-page__description">The end is near, I promise!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skw-page skw-page-4">
-                <div class="skw-page__half skw-page__half--left">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content">
-                            <h2 class="skw-page__heading">Page 4</h2>
-                            <p class="skw-page__description">Ok, ok, just one more scroll!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="skw-page__half skw-page__half--right">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skw-page skw-page-5">
-                <div class="skw-page__half skw-page__half--left">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content"></div>
-                    </div>
-                </div>
-                <div class="skw-page__half skw-page__half--right">
-                    <div class="skw-page__skewed">
-                        <div class="skw-page__content">
-                            <h2 class="skw-page__heading">Epic finale</h2>
-                            <p class="skw-page__description">
-                                Feel free to check
-                                <a class="skw-page__link" href="https://codepen.io/suez/pens/public/" target="_blank">my
-                                    other pens</a> and follow me on
-                                <a class="skw-page__link" href="https://twitter.com/NikolayTalanov"
-                                    target="_blank">Twitter</a>
-                            </p>
-                        </div>
+        <div class="slides mb-5">
+            <div class="swiper">
+                <div id="ture" class="swiper-container">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide pic1"></div>
+                    <div class="swiper-slide pic2"></div>
+                    <div class="swiper-slide pic3"></div>
                     </div>
                 </div>
             </div>
@@ -110,10 +36,257 @@
 
 
 
-    </section>
-    <section class="section" style="background-color: red;">
+        <div class="container" id="relative">
+
+            <div class="title">                  
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="https://arenaofvalor.github.io/">首頁</a></li>
+    <!-- 5/4問老師：怎麼跳到index裡的section4？有辦法嗎？ -->
+                      <li class="breadcrumb-item"><a href="#">熱門英雄介紹</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">全英雄列表</li>
+                    </ol>
+                  </nav>
+            </div>
+
+            <div class="row d-flex justify-content-around" id="section1-1_toggle">
+                <div id="button1" class="button active">刺客
+                </div>
+                <div id="button2" class="button">坦克
+                </div>
+                <div id="button3" class="button">法師
+                </div>
+                <div id="button4" class="button">射手
+                </div>
+                <div id="button5" class="button">輔助
+                </div>
+                <div id="button6" class="button">戰士
+                </div>
+            </div>
+
+            <div class="section1-1_content">
+                <!-- 刺客 -->
+                <div class="section1-1_text active text-height">
+                    <div class="row d-flex justify-content-between mt-5">
+                        <div class="col pic" id="pic1-1"></div>
+                        <div class="col pic" id="pic1-2"></div>
+                        <div class="col pic" id="pic1-3"></div>
+                        <div class="col pic" id="pic1-4"></div>
+                        <div class="col pic" id="pic1-5"></div>
+                        <div class="col pic" id="pic1-6"></div>
+                    </div>
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">刀鋒寶貝</div>
+                        <div class="pic_text">奎倫</div>
+                        <div class="pic_text">悟空</div>
+                        <div class="pic_text">愛里</div>
+                        <div class="pic_text">潘因</div>
+                        <div class="pic_text">科里納卡</div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col pic" id="pic1-7"></div>
+                        <div class="col pic" id="pic1-8"></div>
+                        <div class="col pic" id="pic1-9"></div>
+                        <div class="col pic" id="pic1-10"></div>
+                        <div class="col pic" id="pic1-11"></div>
+                        <div class="col pic" id="pic1-12"></div>
+                    </div>  
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">納克羅斯</div>
+                        <div class="pic_text">綺蘿</div>
+                        <div class="pic_text">莫拉</div>
+                        <div class="pic_text">蝙蝠俠</div>
+                        <div class="pic_text">銀晝</div>
+                        <div class="pic_text"></div>
+                    </div>             
+                </div>
+                
+                <!-- 坦克 -->
+                <div class="section1-1_text text-height">
+                    <div class="row d-flex justify-content-between mt-5">
+                        <div class="col pic" id="pic2-1"></div>
+                        <div class="col pic" id="pic2-2"></div>
+                        <div class="col pic" id="pic2-3"></div>
+                        <div class="col pic" id="pic2-4"></div>
+                        <div class="col pic" id="pic2-5"></div>
+                        <div class="col pic" id="pic2-6"></div>
+                    </div>
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">伯頓</div>
+                        <div class="pic_text">克萊斯</div>
+                        <div class="pic_text">古木</div>
+                        <div class="pic_text">塔拉</div>
+                        <div class="pic_text">歐米茄</div>
+                        <div class="pic_text">渥馬爾</div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col pic" id="pic2-7"></div>
+                        <div class="col pic" id="pic2-8"></div>
+                        <div class="col pic" id="pic2-9"></div>
+                        <div class="col pic" id="pic2-10"></div>
+                        <div class="col pic" id="pic2-11"></div>
+                        <div class="col pic" id="pic2-12"></div>
+                    </div>  
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">牛魔王</div>
+                        <div class="pic_text">維羅</div>
+                        <div class="pic_text">美娜</div>
+                        <div class="pic_text">薩尼</div>
+                        <div class="pic_text">諾可西</div>
+                        <div class="pic_text">阿塔</div>
+                    </div>
+                </div>
+
+                <!-- 法師 -->
+                <div class="section1-1_text text-height">
+                    <div class="row d-flex justify-content-between mt-5">
+                        <div class="col pic" id="pic3-1"></div>
+                        <div class="col pic" id="pic3-2"></div>
+                        <div class="col pic" id="pic3-3"></div>
+                        <div class="col pic" id="pic3-4"></div>
+                        <div class="col pic" id="pic3-5"></div>
+                        <div class="col pic" id="pic3-6"></div>
+                    </div>
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">伊耿士</div>
+                        <div class="pic_text">依夏</div>
+                        <div class="pic_text">克里希</div>
+                        <div class="pic_text">哥德爾</div>
+                        <div class="pic_text">拉茲</div>
+                        <div class="pic_text">狄拉克</div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col pic" id="pic3-7"></div>
+                        <div class="col pic" id="pic3-8"></div>
+                        <div class="col pic" id="pic3-9"></div>
+                        <div class="col pic" id="pic3-10"></div>
+                        <div class="col pic" id="pic3-11"></div>
+                        <div class="col pic" id="pic3-12"></div>
+                    </div>  
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">盧蜜亞</div>
+                        <div class="pic_text">莉莉安</div>
+                        <div class="pic_text">蘿兒</div>
+                        <div class="pic_text">貂蟬</div>
+                        <div class="pic_text">阿茲卡</div>
+                        <div class="pic_text">阿萊斯特</div>
+                    </div>
+                </div>
+
+                <!-- 射手 -->
+                <div class="section1-1_text text-height">
+                    <div class="row d-flex justify-content-between mt-5">
+                        <div class="col pic" id="pic4-1"></div>
+                        <div class="col pic" id="pic4-2"></div>
+                        <div class="col pic" id="pic4-3"></div>
+                        <div class="col pic" id="pic4-4"></div>
+                        <div class="col pic" id="pic4-5"></div>
+                        <div class="col pic" id="pic4-6"></div>
+                    </div>
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">亥犽</div>
+                        <div class="pic_text">凡恩</div>
+                        <div class="pic_text">勇</div>
+                        <div class="pic_text">卡芬妮</div>
+                        <div class="pic_text">堇</div>
+                        <div class="pic_text">小丑</div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col pic" id="pic4-7"></div>
+                        <div class="col pic" id="pic4-8"></div>
+                        <div class="col pic" id="pic4-9"></div>
+                        <div class="col pic" id="pic4-10"></div>
+                        <div class="col pic" id="pic4-11"></div>
+                        <div class="col pic" id="pic4-12"></div>
+                    </div>  
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">希露卡</div>
+                        <div class="pic_text">拉維爾</div>
+                        <div class="pic_text">特爾安娜絲</div>
+                        <div class="pic_text">琳蒂</div>
+                        <div class="pic_text">蘭鐸</div>
+                        <div class="pic_text">靈靈</div>
+                    </div>
+                </div>
+
+                <!-- 輔助 -->
+                <div class="section1-1_text text-height">
+                    <div class="row d-flex justify-content-between mt-5">
+                        <div class="col pic" id="pic5-1"></div>
+                        <div class="col pic" id="pic5-2"></div>
+                        <div class="col pic" id="pic5-3"></div>
+                        <div class="col pic" id="pic5-4"></div>
+                        <div class="col pic" id="pic5-5"></div>
+                        <div class="col pic" id="pic5-6"></div>
+                    </div>
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">卡瑞茲</div>
+                        <div class="pic_text">夸克</div>
+                        <div class="pic_text">安奈特</div>
+                        <div class="pic_text">愛麗絲</div>
+                        <div class="pic_text">提米</div>
+                        <div class="pic_text">查戈納爾</div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col pic" id="pic5-7"></div>
+                        <div class="col pic" id="pic5-8"></div>
+                        <div class="col pic" id="pic5-9"></div>
+                        <div class="col pic" id="pic5-10"></div>
+                        <div class="col pic" id="pic5-11"></div>
+                        <div class="col pic" id="pic5-12"></div>
+                    </div>  
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">珮娜</div>
+                        <div class="pic_text">皮皮</div>
+                        <div class="pic_text">郎博</div>
+                        <div class="pic_text"></div>
+                        <div class="pic_text"></div>
+                        <div class="pic_text"></div>
+                    </div>
+                </div>
+
+                <!-- 戰士 -->
+                <div class="section1-1_text text-height">
+                    <div class="row d-flex justify-content-between mt-5">
+                        <div class="col pic" id="pic6-1"></div>
+                        <div class="col pic" id="pic6-2"></div>
+                        <div class="col pic" id="pic6-3"></div>
+                        <div class="col pic" id="pic6-4"></div>
+                        <div class="col pic" id="pic6-5"></div>
+                        <div class="col pic" id="pic6-6"></div>
+                    </div>
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">呂布</div>
+                        <div class="pic_text">夜叉</div>
+                        <div class="pic_text">安格列</div>
+                        <div class="pic_text">弗洛倫</div>
+                        <div class="pic_text">艾翠絲</div>
+                        <div class="pic_text">洛克</div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col pic" id="pic6-7"></div>
+                        <div class="col pic" id="pic6-8"></div>
+                        <div class="col pic" id="pic6-9"></div>
+                        <div class="col pic" id="pic6-10"></div>
+                        <div class="col pic" id="pic6-11"></div>
+                        <div class="col pic" id="pic6-12"></div>
+                    </div>  
+                    <div class="row d-flex justify-content-between pl-3 pr-3">
+                        <div class="pic_text">瑟斐斯</div>
+                        <div class="pic_text">艾蜜莉</div>
+                        <div class="pic_text">莫托斯</div>
+                        <div class="pic_text">趙雲</div>
+                        <div class="pic_text">馬洛斯</div>
+                        <div class="pic_text">龍馬</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </section>
+
+
 
 
 
@@ -139,69 +312,41 @@
 
 
     <script>
-
-        ////////// 這裡是section4-熱門英雄 //////////
-        $(window).scroll(function () {
-            // last = $("body").height() - $(window).height()
-            var scrollval = $(window).scrollTop();
-            var vh = $(window).height();
-
-            if(scrollval > (vh*3+5000)){
-                $('.skw-pages').addClass('ab');
-                $('.skw-pages').removeClass('fixed');
-            }else if(scrollval > vh*3){
-                //section4 fixed
-                $('.skw-pages').addClass('fixed');
-                $('.skw-pages').removeClass('ab');
-            }else{
-                $('.skw-pages').removeClass('fixed');
-                $('.skw-pages').removeClass('ab');
-            }
-
-            console.log(scrollval);
-
-            if(scrollval > vh*3+4000 ){
-                pagination(5)
-            }else if(scrollval > vh*3+3000 ){
-                pagination(4)
-            }else if(scrollval > vh*3+2000 ){
-                pagination(3)
-            }else if(scrollval > vh*3+1000 ){
-                pagination(2)
-            }else if(scrollval > vh*3 ){
-                pagination(1)
-            }
-            
+        var swiper1 = new Swiper("#ture", {
+            speed: 15000,
+            autoplay: {
+                delay: 0,
+            },
+            loop: true,
+            loopAdditionalSlides: 4,
+            slidesPerView: 3,
         });
 
 
+        /////////// 這是切換多分頁 ///////////
+        var btn = document.querySelectorAll(".button")
+        var content = document.querySelectorAll(".section1-1_text")
 
-            var curPage = 1;
-            var numOfPages = $(".skw-page").length;
-            var animTime = 1000;
-            var scrolling = false;
-            var pgPrefix = ".skw-page-";
+        for (var index = 0; index < btn.length; index++) {
+            const btns = btn[index];
+            const contents = content[index];
 
-            function pagination(curPage) {
-                scrolling = true;
-                $('.skw-page').removeClass('active');
-                $('.skw-page').addClass('inactive');
-                $(pgPrefix + curPage).removeClass("inactive").addClass("active");
-                
-                // $(pgPrefix + (curPage - 1)).addClass("inactive");
-                // $(pgPrefix + (curPage + 1)).removeClass("active");
+            btns.onclick = function () {
+                clearALLshow()
+                btns.classList.add('active')
+                contents.classList.add('active')
+            }
+        }
 
-                setTimeout(function () {
-                    scrolling = false;
-                }, animTime);
-            };
+        function clearALLshow() {
+            for (var index = 0; index < btn.length; index++) {
+                const btns = btn[index];
+                const contents = content[index];
 
-
-
-
-
-
-
+                btns.classList.remove('active')
+                contents.classList.remove('active')
+            }
+        }
 
 
 
@@ -211,4 +356,3 @@
 </body>
 
 </html>
-
