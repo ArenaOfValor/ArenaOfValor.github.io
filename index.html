@@ -306,7 +306,7 @@
         </div>
     </section>
 
-                    <!-- section4 -->
+    <!-- section4 -->
 
     <section id="section4">
 
@@ -490,23 +490,24 @@
                         </div>
                         <div class="modal-body">
 
-                            <div class="container-fluid">
-                                <div class="row mb-3">
-                                    <div class="col-1"></div>
-                                    <div class="col-2 rightshort">
+<!-- 5/1問老師：為什麼帳號：跟文字框中間沒辦法靠近？ -->
+                            <div class="container">
+                                <div class="row mb-5">
+                                    <div class="col-2"></div>
+                                    <div class="col-2 rightshort ">
                                         <div class="modal_text1">
-                                            帳號：
+                                        帳號：
                                         </div>
                                     </div>
-                                    <div class="col-1 leftshort d-flex align-items-center justify-content-left">
+                                    <div class="col leftshort d-flex align-items-center justify-content-left">
                                         <form><input type="text" name="account" class="text-black-50"></form>
                                     </div>
                                 </div>
-                                <div class="row mb-3">
-                                    <div class="col-1"></div>
+                                <div class="row mb-5">
+                                    <div class="col-2"></div>
                                     <div class="col-2 rightshort">
                                         <div class="modal_text1">
-                                            密碼：
+                                        密碼：
                                         </div>
                                     </div>
                                     <div class="col-1 leftshort d-flex align-items-center justify-content-left">
@@ -514,10 +515,10 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <div class="col-1"></div>
+                                    <div class="col-2"></div>
                                     <div class="col-2 rightshort">
                                         <div class="modal_text1">
-                                            信箱：
+                                        信箱：
                                         </div>
                                     </div>
                                     <div class="col-1 leftshort d-flex align-items-center justify-content-left">
@@ -543,7 +544,7 @@
                                 </div>
 
                                 <!-- 登入 取消 -->
-                                <div class="row d-flex justify-content-left">
+                                <div class="row d-flex justify-content-left mb-3">
                                     <div class="col-3"></div>
                                     <div class="col-2">
                                         <button type="button" class="btn btn-primary mid_btn" data-toggle="modal"
@@ -611,8 +612,8 @@
 
                                 <!-- 忘記密碼 -->
                                 <div class="row">
-                                    <div class="col-3"></div>
-                                    <div class="col-3">
+                                    <div class="col-4"></div>
+                                    <div class="col-2">
                                         <button type="button" id="mid_btn3" class="btn btn-dark" data-toggle="modal"
                                             data-target="#exampleModa4">
                                             忘記密碼
@@ -647,10 +648,6 @@
                             </div>
                         </div>
 
-
-                        <div class="modal-footer">
-
-                        </div>
                     </div>
                 </div>
             </div>
@@ -883,6 +880,20 @@
             loop: true,
             loopAdditionalSlides: 4,
             slidesPerView: 3,
+        });
+
+// 5/1問老師：為什麼最後要卡這個沒在動的？
+        var swiper3 = new Swiper("#ture2", {
+            speed: 2000,
+            autoplay: {
+                delay: 0,
+            },
+            loop: true,
+            loopAdditionalSlides: 7,
+            width: 430,
+            height: 600,
+            spaceBetween: 70,
+
         });
     </script>
 </body>
