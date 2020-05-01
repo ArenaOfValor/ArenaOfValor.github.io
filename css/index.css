@@ -1234,14 +1234,6 @@ input {
   background-color: rgba(240, 185, 130, 0.582);
 }
 
-.rightshort {
-  padding-right: 0;
-}
-
-.leftshort {
-  padding-left: 0;
-}
-
 .mid_btn {
   width: 70%;
   height: 100%;
@@ -1256,6 +1248,7 @@ input {
 #mid_btn3 {
   width: 80%;
   height: 100%;
+  color: #1761a7;
 }
 
 .modal-header {
