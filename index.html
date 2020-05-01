@@ -306,7 +306,7 @@
         </div>
     </section>
 
-                    <!-- section4 -->
+    <!-- section4 -->
 
     <section id="section4">
 
@@ -463,6 +463,7 @@
 
         <!-- 5/1問老師這裡有一個bug，如果modal包modal，裡面的modal關閉時，外面的modal也會被關閉 -->
         <!-- 5/1問老師：打開modal裡面的modal後，關閉時，會出現一條scrollTop的滾輪？但只打開一層時不會有這個問題？ -->
+        <!-- 5/1問老師：第二行swiper會突然變很快！ -->
 
         <div class="buttons">
 
@@ -488,23 +489,24 @@
                         </div>
                         <div class="modal-body">
 
-                            <div class="container-fluid">
-                                <div class="row mb-3">
-                                    <div class="col-1"></div>
-                                    <div class="col-2 rightshort">
+<!-- 5/1問老師：為什麼帳號：跟文字框中間沒辦法靠近？ -->
+                            <div class="container">
+                                <div class="row mb-5">
+                                    <div class="col-2"></div>
+                                    <div class="col-2 rightshort ">
                                         <div class="modal_text1">
-                                            帳號：
+                                        帳號：
                                         </div>
                                     </div>
-                                    <div class="col-1 leftshort d-flex align-items-center justify-content-left">
+                                    <div class="col leftshort d-flex align-items-center justify-content-left">
                                         <form><input type="text" name="account" class="text-black-50"></form>
                                     </div>
                                 </div>
-                                <div class="row mb-3">
-                                    <div class="col-1"></div>
+                                <div class="row mb-5">
+                                    <div class="col-2"></div>
                                     <div class="col-2 rightshort">
                                         <div class="modal_text1">
-                                            密碼：
+                                        密碼：
                                         </div>
                                     </div>
                                     <div class="col-1 leftshort d-flex align-items-center justify-content-left">
@@ -512,10 +514,10 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <div class="col-1"></div>
+                                    <div class="col-2"></div>
                                     <div class="col-2 rightshort">
                                         <div class="modal_text1">
-                                            信箱：
+                                        信箱：
                                         </div>
                                     </div>
                                     <div class="col-1 leftshort d-flex align-items-center justify-content-left">
@@ -541,7 +543,7 @@
                                 </div>
 
                                 <!-- 登入 取消 -->
-                                <div class="row d-flex justify-content-left">
+                                <div class="row d-flex justify-content-left mb-3">
                                     <div class="col-3"></div>
                                     <div class="col-2">
                                         <button type="button" class="btn btn-primary mid_btn" data-toggle="modal"
@@ -567,8 +569,6 @@
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save
-                                                            changes</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -580,37 +580,13 @@
                                             取消
                                         </button>
 
-
-                                        <div class="modal fade" id="exampleModa3" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabe3" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabe3">Modal title</h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        ...取消說明文字
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save
-                                                            changes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- 忘記密碼 -->
                                 <div class="row">
-                                    <div class="col-3"></div>
-                                    <div class="col-3">
+                                    <div class="col-4"></div>
+                                    <div class="col-2">
                                         <button type="button" id="mid_btn3" class="btn btn-dark" data-toggle="modal"
                                             data-target="#exampleModa4">
                                             忘記密碼
@@ -634,8 +610,6 @@
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save
-                                                            changes</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -645,10 +619,6 @@
                             </div>
                         </div>
 
-
-                        <div class="modal-footer">
-
-                        </div>
                     </div>
                 </div>
             </div>
@@ -881,6 +851,20 @@
             loop: true,
             loopAdditionalSlides: 4,
             slidesPerView: 3,
+        });
+
+// 5/1問老師：為什麼最後要卡這個沒在動的？
+        var swiper3 = new Swiper("#ture2", {
+            speed: 2000,
+            autoplay: {
+                delay: 0,
+            },
+            loop: true,
+            loopAdditionalSlides: 7,
+            width: 430,
+            height: 600,
+            spaceBetween: 70,
+
         });
     </script>
 </body>

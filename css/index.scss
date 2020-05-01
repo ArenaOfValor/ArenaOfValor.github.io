@@ -1145,6 +1145,13 @@ button {
   
   
   ////////// 這裡是登入的button //////////
+
+  // 5/1問老師為什麼合併後所有button都要設定100%？不然就壞掉了？
+  button{
+    width: 100%;
+    height: 100%;
+  }
+
   .buttons {
     padding: 70px 20%;
     display: flex;
@@ -1153,6 +1160,7 @@ button {
   
   #outside_btn {
     width: 250px;
+    height: 100%;
     background-color: rgba(255, 217, 0, 0.74);
     color: black;
     font-family: "微軟正黑體";
@@ -1174,7 +1182,7 @@ button {
   }
   
   
-  // RWD的時候 X有問題
+  // 5/1問老師：RWD的時候 X有問題
   #test_X_position{
     position: relative;
   }
@@ -1211,13 +1219,19 @@ button {
   
   ////////// 這裡是登入內的button //////////
   .mid_btn {
-    width: 100%;
+    width: 70%;
+    height: 100%;
     background-color: #455555;
     color: black;
     font-family: "微軟正黑體";
     border: 3px solid rgba(255, 255, 255, 0.603);
     font-size: 30px;
     border-radius: 5px;
+  }
+
+  #mid_btn3{
+    width: 80%;
+    height: 100%;
   }
   
   
