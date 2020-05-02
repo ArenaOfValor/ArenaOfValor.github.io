@@ -1,0 +1,535 @@
+@charset "UTF-8";
+.backgroundpic {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/07-裝備列表/背景圖-02.jpg);
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  float: left;
+}
+
+.backgroundpic::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.425);
+  opacity: 0.5;
+}
+
+.banner {
+  width: 100%;
+  height: 45vh;
+  background-image: url(../img/07-裝備列表/刀鋒寶貝-01.jpg);
+  position: absolute;
+  left: 0;
+  top: 48px;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -1%);
+          transform: translate(-50%, -1%);
+}
+
+#section1-1_toggle {
+  height: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(white));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, white 100%);
+  margin: 0;
+}
+
+.button {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(146, 122, 110, 0.65);
+  text-align: center;
+  line-height: 80px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.button.active {
+  background-color: rgba(66, 55, 50, 0.65);
+  color: sandybrown;
+  width: 80px;
+  border-radius: 50px;
+}
+
+.section1-1_content {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.815)), to(white));
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.815) 0%, white 100%);
+  width: 100%;
+  padding: 15px;
+}
+
+.section1-1_text {
+  width: 100%;
+  display: none;
+  color: white;
+  font-size: 30px;
+  text-shadow: 0px 0px 6px rgba(248, 222, 182, 0.562), 0px 0px 15px #fff, 0px 0px 20px #fff;
+  font-weight: 900;
+  padding: 20px 30px;
+}
+
+.section1-1_text.active {
+  display: block;
+}
+
+.text-height {
+  width: 100%;
+  height: calc(100vh - 750px);
+  font-size: 15px;
+  text-align: center;
+}
+
+.pic_text {
+  width: 145px;
+  height: 50px;
+}
+
+.pic {
+  width: 90px;
+  height: 90px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#pic1-1 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊001.png);
+}
+
+#pic1-1:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊001-B.jpg);
+}
+
+#pic1-2 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊002.png);
+  background-position: center;
+}
+
+#pic1-2:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊002-B.jpg);
+}
+
+#pic1-3 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊003.png);
+  background-position: center;
+}
+
+#pic1-3:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊-003-B.jpg);
+}
+
+#pic1-4 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊004.png);
+  background-position: center;
+}
+
+#pic1-4:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊004-B.jpg);
+}
+
+#pic1-5 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊005.png);
+  background-position: center;
+}
+
+#pic1-5:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊005-B.jpg);
+}
+
+#pic1-6 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊007.png);
+  background-position: center;
+}
+
+#pic1-6:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊007-B.jpg);
+}
+
+#pic1-7 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊008.png);
+  background-position: center;
+}
+
+#pic1-7:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊008-B.jpg);
+}
+
+#pic1-8 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊009.png);
+  background-position: center;
+}
+
+#pic1-8:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊009-B.jpg);
+}
+
+#pic1-9 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊010.png);
+  background-position: center;
+}
+
+#pic1-9:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊010-B.jpg);
+}
+
+#pic1-10 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊011.png);
+  background-position: center;
+}
+
+#pic1-10:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊011-B.jpg);
+}
+
+#pic1-11 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊012.png);
+  background-position: center;
+}
+
+#pic1-11:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊012-B.jpg);
+}
+
+#pic1-12 {
+  background-image: url(../img/07-裝備列表/攻擊/攻擊014.png);
+  background-position: center;
+}
+
++ ≠
+#pic1-12:hover {
+  background-image: url(../img/07-裝備列表/攻擊-黑白/攻擊014-B.jpg);
+}
+
+#pic2-1 {
+  background-image: url(../img/07-裝備列表/防禦/防禦002.png);
+}
+
+#pic2-1:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-002-B.jpg);
+}
+
+#pic2-2 {
+  background-image: url(../img/07-裝備列表/防禦/防禦003.png);
+  background-position: center;
+}
+
+#pic2-2:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-003-B.jpg);
+}
+
+#pic2-3 {
+  background-image: url(../img/07-裝備列表/防禦/防禦004.png);
+  background-position: center;
+}
+
+#pic2-3:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-004-B.jpg);
+}
+
+#pic2-4 {
+  background-image: url(../img/07-裝備列表/防禦/防禦005.png);
+  background-position: center;
+}
+
+#pic2-4:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-005-B.jpg);
+}
+
+#pic2-5 {
+  background-image: url(../img/07-裝備列表/防禦/防禦006.png);
+  background-position: center;
+}
+
+#pic2-5:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-006-B.jpg);
+}
+
+#pic2-6 {
+  background-image: url(../img/07-裝備列表/防禦/防禦007.png);
+  background-position: center;
+}
+
+#pic2-6:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-007-B.jpg);
+}
+
+#pic2-7 {
+  background-image: url(../img/07-裝備列表/防禦/防禦008.png);
+  background-position: center;
+}
+
+#pic2-7:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-008-B.jpg);
+}
+
+#pic2-8 {
+  background-image: url(../img/07-裝備列表/防禦/防禦009.png);
+  background-position: center;
+}
+
+#pic2-8:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-009-B.jpg);
+}
+
+#pic2-9 {
+  background-image: url(../img/07-裝備列表/防禦/防禦010.png);
+  background-position: center;
+}
+
+#pic2-9:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-010-B.jpg);
+}
+
+#pic2-10 {
+  background-image: url(../img/07-裝備列表/防禦/防禦011.png);
+  background-position: center;
+}
+
+#pic2-10:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-011-B.jpg);
+}
+
+#pic2-11 {
+  background-image: url(../img/07-裝備列表/防禦/防禦012.png);
+  background-position: center;
+}
+
+#pic2-11:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-012-B.jpg);
+}
+
+#pic2-12 {
+  background-image: url(../img/07-裝備列表/防禦/防禦013.png);
+  background-position: center;
+}
+
+#pic2-12:hover {
+  background-image: url(../img/07-裝備列表/防禦-黑白/防禦-013-B.jpg);
+}
+
+#pic3-1 {
+  background-image: url(../img/07-裝備列表/移動/移動002.png);
+}
+
+#pic3-1:hover {
+  background-image: url(../img/07-裝備列表/移動-黑白/移動-002-B.jpg);
+}
+
+#pic3-2 {
+  background-image: url(../img/07-裝備列表/移動/移動003.png);
+  background-position: center;
+}
+
+#pic3-2:hover {
+  background-image: url(../img/07-裝備列表/移動-黑白/移動-003-B.jpg);
+}
+
+#pic3-3 {
+  background-image: url(../img/07-裝備列表/移動/移動004.png);
+  background-position: center;
+}
+
+#pic3-3:hover {
+  background-image: url(../img/07-裝備列表/移動-黑白/移動-004.jpg);
+}
+
+#pic3-4 {
+  background-image: url(../img/07-裝備列表/移動/移動005.png);
+  background-position: center;
+}
+
+#pic3-4:hover {
+  background-image: url(../img/07-裝備列表/移動-黑白/移動-005-B.jpg);
+}
+
+#pic3-5 {
+  background-image: url(../img/07-裝備列表/移動/移動006.png);
+  background-position: center;
+}
+
+#pic3-5:hover {
+  background-image: url(../img/07-裝備列表/移動-黑白/移動-006-B.jpg);
+}
+
+#pic3-6 {
+  background-image: url(../img/07-裝備列表/移動/移動007.png);
+  background-position: center;
+}
+
+#pic3-6:hover {
+  background-image: url(../img/07-裝備列表/移動-黑白/移動-007-B.jpg);
+}
+
+#pic4-1 {
+  background-image: url(../img/07-裝備列表/魔法/魔法001.png);
+}
+
+#pic4-1:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-001-B.jpg);
+}
+
+#pic4-2 {
+  background-image: url(../img/07-裝備列表/魔法/魔法002.png);
+  background-position: center;
+}
+
+#pic4-2:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-002-B.jpg);
+}
+
+#pic4-3 {
+  background-image: url(../img/07-裝備列表/魔法/魔法003.png);
+  background-position: center;
+}
+
+#pic4-3:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-003-B.jpg);
+}
+
+#pic4-4 {
+  background-image: url(../img/07-裝備列表/魔法/魔法004.png);
+  background-position: center;
+}
+
+#pic4-4:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-004-B.jpg);
+}
+
+#pic4-5 {
+  background-image: url(../img/07-裝備列表/魔法/魔法005.png);
+  background-position: center;
+}
+
+#pic4-5:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-005-B.jpg);
+}
+
+#pic4-6 {
+  background-image: url(../img/07-裝備列表/魔法/魔法006.png);
+  background-position: center;
+}
+
+#pic4-6:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-006-B.jpg);
+}
+
+#pic4-7 {
+  background-image: url(../img/07-裝備列表/魔法/魔法007.png);
+  background-position: center;
+}
+
+#pic4-7:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-007-B.jpg);
+}
+
+#pic4-8 {
+  background-image: url(../img/07-裝備列表/魔法/魔法012.png);
+  background-position: center;
+}
+
+#pic4-8:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-012-B.jpg);
+}
+
+#pic4-9 {
+  background-image: url(../img/07-裝備列表/魔法/魔法014.png);
+  background-position: center;
+}
+
+#pic4-9:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-014-B.jpg);
+}
+
+#pic4-10 {
+  background-image: url(../img/07-裝備列表/魔法/魔法016.png);
+  background-position: center;
+}
+
+#pic4-10:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-016-B.jpg);
+}
+
+#pic4-11 {
+  background-image: url(../img/07-裝備列表/魔法/魔法017.png);
+  background-position: center;
+}
+
+#pic4-11:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-017-B.jpg);
+}
+
+#pic4-12 {
+  background-image: url(../img/07-裝備列表/魔法/魔法027.png);
+  background-position: center;
+}
+
+#pic4-12:hover {
+  background-image: url(../img/07-裝備列表/魔法-黑白/魔法-027-B.jpg);
+}
+
+#pic5-1 {
+  background-image: url(../img/07-裝備列表/打野/打野004.png);
+}
+
+#pic5-1:hover {
+  background-image: url(../img/07-裝備列表/打野-黑白/打野-004-B.jpg);
+}
+
+#pic5-2 {
+  background-image: url(../img/07-裝備列表/打野/打野005.png);
+  background-position: center;
+}
+
+#pic5-2:hover {
+  background-image: url(../img/07-裝備列表/打野-黑白/打野-005-B.jpg);
+}
+
+#pic5-3 {
+  background-image: url(../img/07-裝備列表/打野/打野006.png);
+  background-position: center;
+}
+
+#pic5-3:hover {
+  background-image: url(../img/07-裝備列表/打野-黑白/打野-006-B.jpg);
+}
+
+#pic5-4 {
+  background-image: url(../img/07-裝備列表/打野/打野007.png);
+  background-position: center;
+}
+
+#pic5-4:hover {
+  background-image: url(../img/07-裝備列表/打野-黑白/打野-007-B.jpg);
+}
+
+#pic5-5 {
+  background-image: url(../img/07-裝備列表/打野/打野008.png);
+  background-position: center;
+}
+
+#pic5-5:hover {
+  background-image: url(../img/07-裝備列表/打野-黑白/打野-008-B.jpg);
+}
+
+#pic5-6 {
+  background-image: url(../img/07-裝備列表/打野/打野009.png);
+  background-position: center;
+}
+
+#pic5-6:hover {
+  background-image: url(../img/07-裝備列表/打野-黑白/打野-009-B.jpg);
+}
+/*# sourceMappingURL=裝備介紹.css.map */
