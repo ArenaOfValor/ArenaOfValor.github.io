@@ -71,7 +71,7 @@ a {
     z-index: 3;
 }
 
-#player {
+#opengif {
     width: 100%;
     height: 100%;
     animation-name: fadeout;
@@ -83,7 +83,22 @@ a {
     left: 0;
     z-index: 2;
     pointer-events: none;
+    background-image: url(../img/01-入場畫面/靈靈-gif.gif);
 }
+
+// #player {
+//     width: 100%;
+//     height: 100%;
+//     animation-name: fadeout;
+//     animation-duration: 2s;
+//     animation-delay: 3s;
+//     animation-fill-mode: forwards;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 2;
+//     pointer-events: none;
+// }
 
 .pic {
     width: 100%;

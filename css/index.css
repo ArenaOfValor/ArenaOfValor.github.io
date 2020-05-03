@@ -89,7 +89,7 @@ a {
   z-index: 3;
 }
 
-#player {
+#opengif {
   width: 100%;
   height: 100%;
   -webkit-animation-name: fadeout;
@@ -105,6 +105,7 @@ a {
   left: 0;
   z-index: 2;
   pointer-events: none;
+  background-image: url(../img/01-入場畫面/靈靈-gif.gif);
 }
 
 .pic {
