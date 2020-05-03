@@ -48,7 +48,7 @@ a {
 
 .mask {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     z-index: 4;
     opacity: 0.8;
@@ -73,7 +73,7 @@ a {
 
 #opengif {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     animation-name: fadeout;
     animation-duration: 2s;
     animation-delay: 3s;
@@ -84,6 +84,9 @@ a {
     z-index: 2;
     pointer-events: none;
     background-image: url(../img/01-入場畫面/靈靈-gif.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 // #player {
@@ -103,7 +106,7 @@ a {
 .pic {
     width: 100%;
     height: 100%;
-    background-image: url("img/01-入場畫面/open-background.jpg.jpg");
+    background-image: url(../img/01-入場畫面/openpic.jpg);
     /* 之後問老師怎麼換照片，再改回 */
     background-position: center;
     /* 原cover暫用contain */
@@ -118,6 +121,15 @@ a {
     z-index: 1;
     opacity: 0;
     animation-fill-mode: forwards;
+
+    @media (max-width:1900px){
+        background-image: url(../img/01-入場畫面/opentest.png);
+    }
+
+    @media (max-width:576px){
+        // background-image: url(../img/01-入場畫面/opentest.png);
+        // 5/4裁切一個手機版的，讓配對成功在正中間即可，還有scroll也直接在中間即可？或是跟著button一起就好
+    }
 }
 
 .pic #number {
@@ -128,11 +140,17 @@ a {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -200%);
+    @media (max-width:1900px){
+        display: none;
+    }
 }
 
 .fullpage {
     width: 100%;
     height: 100%;
+    @media (max-width:1900px){
+        display: none;
+    }
 }
 
 #scene {
