@@ -1,3 +1,19 @@
+*{
+    font-family: 微軟正黑體;
+}
+a{
+    color: unset;
+}
+a:hover{
+    color: orange;
+}
+.breadcrumb-item.active{
+    color: orange;
+}
+
+
+
+
 .backgroundpic{
     width: 100%;
     height: 100vh;
@@ -5,7 +21,7 @@
     background-position: center;
     background-size: cover;
     filter: blur(5px);
-    float: left;
+
 }
 .backgroundpic::before{
     content:'';
@@ -22,49 +38,64 @@
     height: 45vh;
     background-image: url(../img/07-裝備列表/刀鋒寶貝-01.jpg);
     position: absolute;
-    left: 0;
-    top: 48px;
+    top: 0;
 
 }
 
 .container{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 47%;
     transform: translate(-50%, -1%);
 }
 
 
 #section1-1_toggle {
     height: 100px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1)0%, rgba(255, 255, 255, 1)100%);
+    background-color: rgba(0, 0, 0, .7);
     margin: 0;
 }
 
 .button {
-    width: 80px;
-    height: 80px;
-    background-color: rgba(146, 122, 110, 0.65);
+    width: 18%;
+    background-color: rgba(58, 56, 55, 0.65);
     text-align: center;
-    line-height: 80px;
-    font-size: 18px;
+    line-height: 70px;
+    padding: 10px;
+    font-size: 25px;
     font-weight: 600;
     color: white;
     transition: 0.3s;
+    cursor: pointer;
 }
+
 
 .button.active {
-    background-color: rgba(66, 55, 50, 0.65);
+    background-color: rgba(0, 0, 0, .7);
     color: sandybrown;
-    width: 80px;
-    border-radius: 50px;
+    width: 28%;
+}
+.button:hover{
+    background-color: brown;
 }
 
+.breadcrumb-style{
+    background-color: rgba(0, 0, 0, .7) !important;
+}
+
+.color-white{
+    color: white;
+    font-size: 20px;
+}
+.items-text{
+    font-size: 18px;
+}
 
 .section1-1_content {
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.815)0%, rgba(255, 255, 255, 1)100%);
+    background-color: rgba(0, 0, 0, .8);
     width: 100%;
     padding: 15px;
+    height: 36vh;
 }
 
 
@@ -93,6 +124,7 @@
 .pic_text{
     width: 145px;
     height: 50px;
+    letter-spacing: 1px;
 
 }
 .pic{
