@@ -12,7 +12,7 @@
   width: 100%;
   height: 100%;
   background-color: white;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 #section1-1 .slides .swiper {
@@ -65,34 +65,36 @@
 
 #section1-1_toggle {
   height: 100px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(white));
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, white 100%);
+  background-color: rgba(0, 0, 0, 0.7);
   margin: 0;
 }
 
 .button {
-  width: 80px;
-  height: 80px;
-  background-color: rgba(146, 122, 110, 0.65);
+  width: 15%;
+  background-color: rgba(58, 56, 55, 0.65);
   text-align: center;
-  line-height: 80px;
-  font-size: 18px;
+  line-height: 70px;
+  padding: 10px;
+  font-size: 25px;
   font-weight: 600;
   color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: brown;
 }
 
 .button.active {
-  background-color: rgba(66, 55, 50, 0.65);
+  background-color: rgba(0, 0, 0, 0.7);
   color: sandybrown;
-  width: 80px;
-  border-radius: 50px;
+  width: 25%;
 }
 
 .section1-1_content {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.815)), to(white));
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.815) 0%, white 100%);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   padding: 15px;
 }
