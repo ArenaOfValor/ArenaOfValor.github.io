@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .xx {
@@ -1264,7 +1264,7 @@ button {
 }
 
 .buttons {
-    padding: 70px 20%;
+    padding: 4.5% 20%;
     display: flex;
     justify-content: space-evenly;
 }
