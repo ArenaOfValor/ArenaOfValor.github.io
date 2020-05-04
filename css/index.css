@@ -13,6 +13,12 @@ body {
 
 a {
   text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+  text-decoration: none;
 }
 
 #section1 {
@@ -118,8 +124,8 @@ a {
   /* 之後問老師怎麼換照片，再改回 */
   background-position: center;
   /* 原cover暫用contain */
-  background-size: cover;
-  /* background-repeat: no-repeat; */
+  background-size: contain;
+  background-repeat: no-repeat;
   -webkit-animation-name: showit;
           animation-name: showit;
   -webkit-animation-duration: 2s;
@@ -138,6 +144,18 @@ a {
 @media (max-width: 1900px) {
   .pic {
     background-image: url(../img/01-入場畫面/opentest.png);
+  }
+}
+
+@media (max-width: 1350px) {
+  .pic {
+    background-image: url(../img/01-入場畫面/background-pad.jpg);
+  }
+}
+
+@media (max-width: 765px) {
+  .pic {
+    background-image: url(../img/01-入場畫面/background-phone.jpg);
   }
 }
 
@@ -174,13 +192,10 @@ a {
 }
 
 #scroll {
-  color: white;
-  font-family: "Franklin Gothic Heavy";
-  font-size: 30px;
-  font-weight: 900;
-  padding: 4px;
-  position: relative;
-  left: 48%;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 40px);
+  z-index: 99;
   -webkit-animation-name: srollDown;
           animation-name: srollDown;
   -webkit-animation-duration: 3s;
@@ -189,50 +204,195 @@ a {
           animation-delay: 9s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  background-image: url(../img/01-入場畫面/scrolldown.png);
+  background-size: cover;
+  background-position: center;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
 }
 
-#scroll::before {
-  content: ' ';
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  position: absolute;
-  top: 50px;
-  left: 15px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+@media (max-width: 1600px) {
+  #scroll {
+    -webkit-animation-name: srollDown-1600;
+            animation-name: srollDown-1600;
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+  }
 }
 
-#scroll::after {
-  content: ' ';
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  position: absolute;
-  top: 50px;
-  right: 15px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+@media (max-width: 1480px) {
+  #scroll {
+    -webkit-animation-name: srollDown-1480;
+            animation-name: srollDown-1480;
+  }
+}
+
+@media (max-width: 1350px) {
+  #scroll {
+    -webkit-animation-name: srollDown;
+            animation-name: srollDown;
+  }
+}
+
+@media (max-width: 1120px) {
+  #scroll {
+    -webkit-animation-name: srollDown-1600;
+            animation-name: srollDown-1600;
+  }
+}
+
+@media (max-width: 1050px) {
+  #scroll {
+    -webkit-animation-name: srollDown-1480;
+            animation-name: srollDown-1480;
+  }
+}
+
+@media (max-width: 920px) {
+  #scroll {
+    -webkit-animation-name: srollDown-920;
+            animation-name: srollDown-920;
+  }
+}
+
+@media (max-width: 800px) {
+  #scroll {
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 30px);
+    -webkit-animation-name: srollDown-800;
+            animation-name: srollDown-800;
+  }
+}
+
+@media (max-width: 765px) {
+  #scroll {
+    -webkit-animation-name: srollDown-1600;
+            animation-name: srollDown-1600;
+  }
+}
+
+@media (max-width: 585px) {
+  #scroll {
+    -webkit-animation-name: srollDown-1480;
+            animation-name: srollDown-1480;
+  }
+}
+
+@media (max-width: 530px) {
+  #scroll {
+    -webkit-animation-name: srollDown-920;
+            animation-name: srollDown-920;
+  }
 }
 
 @-webkit-keyframes srollDown {
   from {
-    top: 810px;
+    top: 780px;
     opacity: 1;
   }
   to {
-    top: 840px;
+    top: 820px;
     opacity: 0;
   }
 }
 
 @keyframes srollDown {
   from {
-    top: 810px;
+    top: 780px;
     opacity: 1;
   }
   to {
-    top: 840px;
+    top: 820px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes srollDown-1600 {
+  from {
+    top: 760px;
+    opacity: 1;
+  }
+  to {
+    top: 800px;
+    opacity: 0;
+  }
+}
+
+@keyframes srollDown-1600 {
+  from {
+    top: 760px;
+    opacity: 1;
+  }
+  to {
+    top: 800px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes srollDown-1480 {
+  from {
+    top: 730px;
+    opacity: 1;
+  }
+  to {
+    top: 760px;
+    opacity: 0;
+  }
+}
+
+@keyframes srollDown-1480 {
+  from {
+    top: 730px;
+    opacity: 1;
+  }
+  to {
+    top: 760px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes srollDown-920 {
+  from {
+    top: 700px;
+    opacity: 1;
+  }
+  to {
+    top: 730px;
+    opacity: 0;
+  }
+}
+
+@keyframes srollDown-920 {
+  from {
+    top: 700px;
+    opacity: 1;
+  }
+  to {
+    top: 730px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes srollDown-800 {
+  from {
+    top: 670px;
+    opacity: 1;
+  }
+  to {
+    top: 700px;
+    opacity: 0;
+  }
+}
+
+@keyframes srollDown-800 {
+  from {
+    top: 670px;
+    opacity: 1;
+  }
+  to {
+    top: 700px;
     opacity: 0;
   }
 }

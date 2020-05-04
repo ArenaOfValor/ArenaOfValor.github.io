@@ -7,14 +7,17 @@ body {
 
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif, 微軟正黑體;  
-    // scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif, 微軟正黑體;
 }
 
 a {
     text-decoration: none;
+    color: unset ;
 }
-
+a:hover {
+    color: unset;
+    text-decoration: none ;
+}
 
 #section1 {
     width: 100%;
@@ -112,8 +115,8 @@ a {
     /* 之後問老師怎麼換照片，再改回 */
     background-position: center;
     /* 原cover暫用contain */
-    background-size: cover;
-    /* background-repeat: no-repeat; */
+    background-size: contain;
+    background-repeat: no-repeat;
     animation-name: showit;
     animation-duration: 2s;
     animation-delay: 6s;
@@ -128,9 +131,12 @@ a {
         background-image: url(../img/01-入場畫面/opentest.png);
     }
 
-    @media (max-width:576px){
-        // background-image: url(../img/01-入場畫面/opentest.png);
-        // 5/4裁切一個手機版的，讓配對成功在正中間即可，還有scroll也直接在中間即可？或是跟著button一起就好
+    @media (max-width:1350px){
+        background-image: url(../img/01-入場畫面/background-pad.jpg);
+    }
+
+    @media (max-width:765px){
+        background-image: url(../img/01-入場畫面/background-phone.jpg);
     }
 }
 
@@ -160,56 +166,145 @@ a {
 }
 
 #scroll {
-    color: white;
-    font-family: "Franklin Gothic Heavy";
-    font-size: 30px;
-    font-weight: 900;
-    padding: 4px;
-    position: relative;
-    left: 48%;
+    // color: white;
+    // font-family: "Franklin Gothic Heavy";
+    // font-size: 30px;
+    // font-weight: 900;
+    // padding: 4px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 40px);
+    z-index: 99;
     animation-name: srollDown;
     animation-duration: 3s;
     animation-delay: 9s;
     animation-iteration-count: infinite;
+
+    background-image: url(../img/01-入場畫面/scrolldown.png);
+    background-size: cover;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+
+    @media (max-width:1600px) {
+        animation-name: srollDown-1600;
+        animation-delay: 8s;
+    }
+    @media (max-width:1480px) {
+        animation-name: srollDown-1480;
+    }
+    @media (max-width:1350px) {
+        animation-name: srollDown;
+    }
+    @media (max-width:1120px) {
+        animation-name: srollDown-1600;
+    }
+    @media (max-width:1050px) {
+        animation-name: srollDown-1480;
+    }
+    @media (max-width:920px) {
+        animation-name: srollDown-920;
+    }
+    @media (max-width:800px) {
+        width: 60px;
+        height: 60px;
+        left: calc(50% - 30px);
+        animation-name: srollDown-800;
+    }
+    @media (max-width:765px) {
+        animation-name: srollDown-1600;
+    }
+    @media (max-width:585px) {
+        animation-name: srollDown-1480;
+    }
+    @media (max-width:530px) {
+        animation-name: srollDown-920;
+    }
+
 }
 
-#scroll::before {
-    content: ' ';
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    position: absolute;
-    top: 50px;
-    left: 15px;
+// #scroll::before {
+//     content: ' ';
+//     width: 35px;
+//     height: 5px;
+//     background-color: white;
+//     position: absolute;
+//     top: 50px;
+//     left: 15px;
 
-    transform: rotate(45deg);
-}
+//     transform: rotate(45deg);
+// }
 
-#scroll::after {
-    content: ' ';
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    position: absolute;
-    top: 50px;
-    right: 15px;
+// #scroll::after {
+//     content: ' ';
+//     width: 35px;
+//     height: 5px;
+//     background-color: white;
+//     position: absolute;
+//     top: 50px;
+//     right: 15px;
 
-    transform: rotate(-45deg);
+//     transform: rotate(-45deg);
 
-}
+// }
 
 
 @keyframes srollDown {
     from {
-        top: 810px;
+        top: 780px;
         opacity: 1;
     }
 
     to {
-        top: 840px;
+        top: 820px;
         opacity: 0;
     }
 }
+
+@keyframes srollDown-1600 {
+    from {
+        top: 760px;
+        opacity: 1;
+    }
+    to {
+        top: 800px;
+        opacity: 0;
+    }
+}
+@keyframes srollDown-1480 {
+    from {
+        top: 730px;
+        opacity: 1;
+    }
+    to {
+        top: 760px;
+        opacity: 0;
+    }
+}
+@keyframes srollDown-920 {
+    from {
+        top: 700px;
+        opacity: 1;
+    }
+    to {
+        top: 730px;
+        opacity: 0;
+    }
+}
+@keyframes srollDown-800 {
+    from {
+        top: 670px;
+        opacity: 1;
+    }
+    to {
+        top: 700px;
+        opacity: 0;
+    }
+}
+
+
+
 
 @media (max-width:768px) {
     .pic {
