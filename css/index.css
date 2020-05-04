@@ -13,6 +13,12 @@ body {
 
 a {
   text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+  text-decoration: none;
 }
 
 #section1 {
