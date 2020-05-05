@@ -684,16 +684,30 @@ button {
   z-index: 3;
 }
 
-.fort-blue-ab {
+.fort-red-ab {
   position: absolute;
   top: 110px;
   right: 165px;
 }
 
-.fort-red-ab {
+@media (max-width: 1440px) {
+  .fort-red-ab {
+    top: 145px;
+    right: 115px;
+  }
+}
+
+.fort-blue-ab {
   position: absolute;
   top: 650px;
   left: 195px;
+}
+
+@media (max-width: 1440px) {
+  .fort-blue-ab {
+    top: 570px;
+    left: 140px;
+  }
 }
 
 .red-team-ab {
@@ -702,10 +716,24 @@ button {
   right: 160px;
 }
 
+@media (max-width: 1440px) {
+  .red-team-ab {
+    top: 135px;
+    right: 125px;
+  }
+}
+
 .blue-team-ab {
   position: absolute;
   top: 130px;
   left: 180px;
+}
+
+@media (max-width: 1440px) {
+  .blue-team-ab {
+    top: 170px;
+    left: 150px;
+  }
 }
 
 .vs-description-style {
@@ -721,10 +749,24 @@ button {
   left: 600px;
 }
 
+@media (max-width: 1440px) {
+  .vs-description-ab {
+    top: 660px;
+    left: 370px;
+  }
+}
+
 .red-tower-left {
   position: absolute;
   top: 75px;
   right: 330px;
+}
+
+@media (max-width: 1440px) {
+  .red-tower-left {
+    top: 115px;
+    right: 245px;
+  }
 }
 
 .red-tower-middle {
@@ -733,10 +775,24 @@ button {
   right: 265px;
 }
 
+@media (max-width: 1440px) {
+  .red-tower-middle {
+    top: 195px;
+    right: 190px;
+  }
+}
+
 .red-tower-right {
   position: absolute;
   top: 220px;
   right: 112px;
+}
+
+@media (max-width: 1440px) {
+  .red-tower-right {
+    top: 230px;
+    right: 73px;
+  }
 }
 
 .blue-tower-left {
@@ -745,10 +801,24 @@ button {
   left: 140px;
 }
 
+@media (max-width: 1440px) {
+  .blue-tower-left {
+    bottom: 190px;
+    left: 95px;
+  }
+}
+
 .blue-tower-middle {
   position: absolute;
   bottom: 125px;
   left: 290px;
+}
+
+@media (max-width: 1440px) {
+  .blue-tower-middle {
+    bottom: 155px;
+    left: 210px;
+  }
 }
 
 .blue-tower-right {
@@ -757,16 +827,37 @@ button {
   left: 360px;
 }
 
+@media (max-width: 1440px) {
+  .blue-tower-right {
+    bottom: 75px;
+    left: 265px;
+  }
+}
+
 .blue-tower-middle-text {
   position: absolute;
   bottom: 140px;
   left: 280px;
 }
 
+@media (max-width: 1440px) {
+  .blue-tower-middle-text {
+    bottom: 168px;
+    left: 200px;
+  }
+}
+
 .red-tower-middle-text {
   position: absolute;
   top: 193px;
   right: 250px;
+}
+
+@media (max-width: 1440px) {
+  .red-tower-middle-text {
+    top: 205px;
+    right: 180px;
+  }
 }
 
 .tower-intro {
@@ -786,10 +877,24 @@ button {
   top: 430px;
 }
 
+@media (max-width: 1440px) {
+  .defender-blue-left-ab {
+    left: 90px;
+    top: 400px;
+  }
+}
+
 .defender-blue-middle-ab {
   position: absolute;
   left: 412px;
   top: 535px;
+}
+
+@media (max-width: 1440px) {
+  .defender-blue-middle-ab {
+    left: 305px;
+    top: 480px;
+  }
 }
 
 .defender-blue-right-ab {
@@ -798,10 +903,24 @@ button {
   top: 700px;
 }
 
+@media (max-width: 1440px) {
+  .defender-blue-right-ab {
+    left: 405px;
+    top: 610px;
+  }
+}
+
 .defender-blue-left-outside-ab {
   position: absolute;
   left: 135px;
   top: 240px;
+}
+
+@media (max-width: 1440px) {
+  .defender-blue-left-outside-ab {
+    left: 90px;
+    top: 240px;
+  }
 }
 
 .defender-blue-middle-outside-ab {
@@ -810,10 +929,24 @@ button {
   top: 450px;
 }
 
+@media (max-width: 1440px) {
+  .defender-blue-middle-outside-ab {
+    left: 370px;
+    top: 410px;
+  }
+}
+
 .defender-blue-right-outside-ab {
   position: absolute;
   left: 830px;
   top: 700px;
+}
+
+@media (max-width: 1440px) {
+  .defender-blue-right-outside-ab {
+    left: 640px;
+    top: 610px;
+  }
 }
 
 .defender-red-left-ab {
@@ -822,10 +955,24 @@ button {
   top: 75px;
 }
 
+@media (max-width: 1440px) {
+  .defender-red-left-ab {
+    right: 385px;
+    top: 115px;
+  }
+}
+
 .defender-red-middle-ab {
   position: absolute;
   right: 385px;
   top: 240px;
+}
+
+@media (max-width: 1440px) {
+  .defender-red-middle-ab {
+    right: 285px;
+    top: 243px;
+  }
 }
 
 .defender-red-right-ab {
@@ -834,10 +981,24 @@ button {
   top: 340px;
 }
 
+@media (max-width: 1440px) {
+  .defender-red-right-ab {
+    right: 70px;
+    top: 320px;
+  }
+}
+
 .defender-red-left-outside-ab {
   position: absolute;
   right: 803px;
   top: 75px;
+}
+
+@media (max-width: 1440px) {
+  .defender-red-left-outside-ab {
+    right: 613px;
+    top: 117px;
+  }
 }
 
 .defender-red-middle-outside-ab {
@@ -846,10 +1007,24 @@ button {
   top: 330px;
 }
 
+@media (max-width: 1440px) {
+  .defender-red-middle-outside-ab {
+    right: 350px;
+    top: 315px;
+  }
+}
+
 .defender-red-right-outside-ab {
   position: absolute;
   right: 107px;
   top: 540px;
+}
+
+@media (max-width: 1440px) {
+  .defender-red-right-outside-ab {
+    right: 70px;
+    top: 480px;
+  }
 }
 
 .defender-text-blue {
@@ -858,10 +1033,24 @@ button {
   top: 465px;
 }
 
+@media (max-width: 1440px) {
+  .defender-text-blue {
+    left: 370px;
+    top: 410px;
+  }
+}
+
 .defender-text-red {
   position: absolute;
   right: 465px;
   top: 345px;
+}
+
+@media (max-width: 1440px) {
+  .defender-text-red {
+    right: 350px;
+    top: 315px;
+  }
 }
 
 .defender-intro {
@@ -874,10 +1063,23 @@ button {
   text-align: center;
 }
 
+@media (max-width: 1440px) {
+  .defender-intro {
+    top: 5%;
+  }
+}
+
 .bone-ab {
   position: absolute;
   left: 460px;
   top: 220px;
+}
+
+@media (max-width: 1440px) {
+  .bone-ab {
+    left: 340px;
+    top: 230px;
+  }
 }
 
 .bone-text {
@@ -887,10 +1089,24 @@ button {
   z-index: 2;
 }
 
+@media (max-width: 1440px) {
+  .bone-text {
+    left: 340px;
+    top: 230px;
+  }
+}
+
 .caesar-ab {
   position: absolute;
   left: 335px;
   top: 270px;
+}
+
+@media (max-width: 1440px) {
+  .caesar-ab {
+    left: 240px;
+    top: 260px;
+  }
 }
 
 .caesar-text {
@@ -900,10 +1116,24 @@ button {
   z-index: 2;
 }
 
+@media (max-width: 1440px) {
+  .caesar-text {
+    left: 240px;
+    top: 260px;
+  }
+}
+
 .magic-ab {
   position: absolute;
   right: 300px;
   top: 480px;
+}
+
+@media (max-width: 1440px) {
+  .magic-ab {
+    right: 220px;
+    top: 435px;
+  }
 }
 
 .magic-text {
@@ -911,6 +1141,13 @@ button {
   right: 318px;
   top: 540px;
   z-index: 2;
+}
+
+@media (max-width: 1440px) {
+  .magic-text {
+    right: 220px;
+    top: 435px;
+  }
 }
 
 .bone-intro {
@@ -923,6 +1160,12 @@ button {
   text-align: center;
 }
 
+@media (max-width: 1440px) {
+  .bone-intro {
+    top: 20%;
+  }
+}
+
 .caesar-intro {
   background-color: rgba(255, 246, 115, 0.8);
   padding: 10px;
@@ -931,6 +1174,12 @@ button {
   left: -20px;
   top: 48%;
   text-align: center;
+}
+
+@media (max-width: 1440px) {
+  .caesar-intro {
+    left: 0;
+  }
 }
 
 .magic-intro {
@@ -949,10 +1198,24 @@ button {
   top: 180px;
 }
 
+@media (max-width: 1440px) {
+  .soul-left-ab {
+    left: 228px;
+    top: 195px;
+  }
+}
+
 .soul-right-ab {
   position: absolute;
   right: 260px;
   top: 617px;
+}
+
+@media (max-width: 1440px) {
+  .soul-right-ab {
+    right: 185px;
+    top: 540px;
+  }
 }
 
 .soul-left-text {
@@ -962,11 +1225,25 @@ button {
   z-index: 2;
 }
 
+@media (max-width: 1440px) {
+  .soul-left-text {
+    left: 215px;
+    top: 170px;
+  }
+}
+
 .soul-right-text {
   position: absolute;
   right: 240px;
   top: 657px;
   z-index: 2;
+}
+
+@media (max-width: 1440px) {
+  .soul-right-text {
+    right: 170px;
+    top: 580px;
+  }
 }
 
 .soul-intro {
