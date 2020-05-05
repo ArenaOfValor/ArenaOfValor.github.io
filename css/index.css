@@ -139,13 +139,7 @@ a:hover {
           animation-fill-mode: forwards;
 }
 
-@media (max-width: 1350px) {
-  .pic {
-    background-image: url(../img/01-入場畫面/background-pad.jpg);
-  }
-}
-
-@media (max-width: 765px) {
+@media (max-width: 768px) {
   .pic {
     background-image: url(../img/01-入場畫面/background-phone.jpg);
   }
@@ -160,6 +154,12 @@ a:hover {
   top: 50%;
   -webkit-transform: translate(-50%, -200%);
           transform: translate(-50%, -200%);
+}
+
+@media (max-width: 1900px) {
+  .pic #number {
+    display: none;
+  }
 }
 
 .fullpage {
@@ -183,40 +183,100 @@ a:hover {
   background-image: url(../img/01-入場畫面/avatar1.png);
 }
 
+@media (max-width: 768px) {
+  #avatar1 {
+    display: none !important;
+  }
+}
+
 #avatar2 {
   background-image: url(../img/01-入場畫面/avatar2.png);
+}
+
+@media (max-width: 768px) {
+  #avatar2 {
+    display: none !important;
+  }
 }
 
 #avatar3 {
   background-image: url(../img/01-入場畫面/avatar3.png);
 }
 
+@media (max-width: 768px) {
+  #avatar3 {
+    display: none !important;
+  }
+}
+
 #avatar4 {
   background-image: url(../img/01-入場畫面/avatar4.png);
+}
+
+@media (max-width: 768px) {
+  #avatar4 {
+    display: none !important;
+  }
 }
 
 #avatar5 {
   background-image: url(../img/01-入場畫面/avatar5.png);
 }
 
+@media (max-width: 768px) {
+  #avatar5 {
+    display: none !important;
+  }
+}
+
 #avatar6 {
   background-image: url(../img/01-入場畫面/avatar6.png);
+}
+
+@media (max-width: 768px) {
+  #avatar6 {
+    display: none !important;
+  }
 }
 
 #avatar7 {
   background-image: url(../img/01-入場畫面/avatar7.png);
 }
 
+@media (max-width: 768px) {
+  #avatar7 {
+    display: none !important;
+  }
+}
+
 #avatar8 {
   background-image: url(../img/01-入場畫面/avatar8.png);
+}
+
+@media (max-width: 768px) {
+  #avatar8 {
+    display: none !important;
+  }
 }
 
 #avatar9 {
   background-image: url(../img/01-入場畫面/avatar9.png);
 }
 
+@media (max-width: 768px) {
+  #avatar9 {
+    display: none !important;
+  }
+}
+
 #avatar10 {
   background-image: url(../img/01-入場畫面/avatar10.png);
+}
+
+@media (max-width: 768px) {
+  #avatar10 {
+    display: none !important;
+  }
 }
 
 #scroll {
@@ -240,15 +300,20 @@ a:hover {
   opacity: 0;
 }
 
+@media (max-width: 768px) {
+  #scroll {
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 30px);
+  }
+}
+
 @media (max-width: 470px) {
   #scroll {
     -webkit-animation-name: srollDown-470;
             animation-name: srollDown-470;
     -webkit-animation-delay: 8s;
             animation-delay: 8s;
-    width: 60px;
-    height: 60px;
-    left: calc(50% - 30px);
   }
 }
 
@@ -259,10 +324,10 @@ a:hover {
   }
 }
 
-@media (max-width: 365px) {
+@media (max-width: 375px) {
   #scroll {
-    -webkit-animation-name: srollDown-365;
-            animation-name: srollDown-365;
+    -webkit-animation-name: srollDown-470;
+            animation-name: srollDown-470;
   }
 }
 
@@ -332,60 +397,12 @@ a:hover {
   }
 }
 
-@-webkit-keyframes srollDown-365 {
-  from {
-    top: calc(70% - 30px);
-    opacity: 1;
-  }
-  to {
-    top: calc(73% - 30px);
-    opacity: 0;
-  }
-}
-
-@keyframes srollDown-365 {
-  from {
-    top: calc(70% - 30px);
-    opacity: 1;
-  }
-  to {
-    top: calc(73% - 30px);
-    opacity: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .pic {
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .pic #number {
-    font-size: 3rem;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -150%);
-            transform: translate(-50%, -150%);
-  }
-}
-
-@media (max-width: 576px) {
-  .pic #number {
-    font-size: 2rem;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -150%);
-            transform: translate(-50%, -150%);
-  }
-}
-
 #section2 {
   width: 100%;
   height: 100vh;
   background-image: url("../img/02-首頁/index.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 54% 100%;
 }
 
 .nav-menu-color {
