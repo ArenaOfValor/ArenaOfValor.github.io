@@ -112,9 +112,7 @@ a:hover {
     width: 100%;
     height: 100%;
     background-image: url(../img/01-入場畫面/openpic.jpg);
-    /* 之後問老師怎麼換照片，再改回 */
     background-position: center;
-    /* 原cover暫用contain */
     background-size: contain;
     background-repeat: no-repeat;
     animation-name: showit;
@@ -127,9 +125,9 @@ a:hover {
     opacity: 0;
     animation-fill-mode: forwards;
 
-    @media (max-width:1900px){
-        background-image: url(../img/01-入場畫面/opentest.png);
-    }
+    // @media (max-width:1900px){
+    //     background-image: url(../img/01-入場畫面/opentest.png);
+    // }
 
     @media (max-width:1350px){
         background-image: url(../img/01-入場畫面/background-pad.jpg);
@@ -148,22 +146,63 @@ a:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -200%);
-    @media (max-width:1900px){
-        display: none;
-    }
+    // @media (max-width:1900px){
+    //     display: none;
+    // }
 }
 
 .fullpage {
     width: 100%;
     height: 100%;
-    @media (max-width:1900px){
-        display: none;
-    }
+    // @media (max-width:1900px){
+    //     display: none;
+    // }
 }
 
 #scene {
     overflow: hidden;
 }
+
+.avatar{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#avatar1{
+    background-image: url(../img/01-入場畫面/avatar1.png);
+}
+#avatar2{
+    background-image: url(../img/01-入場畫面/avatar2.png);
+}
+#avatar3{
+    background-image: url(../img/01-入場畫面/avatar3.png);
+}
+#avatar4{
+    background-image: url(../img/01-入場畫面/avatar4.png);
+}
+#avatar5{
+    background-image: url(../img/01-入場畫面/avatar5.png);
+}
+#avatar6{
+    background-image: url(../img/01-入場畫面/avatar6.png);
+}
+#avatar7{
+    background-image: url(../img/01-入場畫面/avatar7.png);
+}
+#avatar8{
+    background-image: url(../img/01-入場畫面/avatar8.png);
+}
+#avatar9{
+    background-image: url(../img/01-入場畫面/avatar9.png);
+}
+#avatar10{
+    background-image: url(../img/01-入場畫面/avatar10.png);
+}
+
+
+
 
 #scroll {
     // color: white;
@@ -187,39 +226,18 @@ a:hover {
     height: 80px;
     opacity: 0;
 
-    @media (max-width:1600px) {
-        animation-name: srollDown-1600;
+    @media (max-width:470px) {
+        animation-name: srollDown-470;
         animation-delay: 8s;
-    }
-    @media (max-width:1480px) {
-        animation-name: srollDown-1480;
-    }
-    @media (max-width:1350px) {
-        animation-name: srollDown;
-    }
-    @media (max-width:1120px) {
-        animation-name: srollDown-1600;
-    }
-    @media (max-width:1050px) {
-        animation-name: srollDown-1480;
-    }
-    @media (max-width:920px) {
-        animation-name: srollDown-920;
-    }
-    @media (max-width:800px) {
         width: 60px;
         height: 60px;
         left: calc(50% - 30px);
-        animation-name: srollDown-800;
     }
-    @media (max-width:765px) {
-        animation-name: srollDown-1600;
+    @media (max-width:410px) {
+        animation-name: srollDown-410;
     }
-    @media (max-width:585px) {
-        animation-name: srollDown-1480;
-    }
-    @media (max-width:530px) {
-        animation-name: srollDown-920;
+    @media (max-width:365px) {
+        animation-name: srollDown-365;
     }
 
 }
@@ -252,57 +270,46 @@ a:hover {
 
 @keyframes srollDown {
     from {
-        top: 780px;
+        top: calc(83% - 40px);
         opacity: 1;
     }
 
     to {
-        top: 820px;
+        top: calc(87% - 40px);
         opacity: 0;
     }
 }
 
-@keyframes srollDown-1600 {
+@keyframes srollDown-470 {
     from {
-        top: 760px;
+        top: calc(75% - 30px);
         opacity: 1;
     }
     to {
-        top: 800px;
+        top: calc(80% - 30px);;
         opacity: 0;
     }
 }
-@keyframes srollDown-1480 {
+@keyframes srollDown-410 {
     from {
-        top: 730px;
+        top: calc(73% - 30px);
         opacity: 1;
     }
     to {
-        top: 760px;
+        top: calc(75% - 30px);
         opacity: 0;
     }
 }
-@keyframes srollDown-920 {
+@keyframes srollDown-365 {
     from {
-        top: 700px;
+        top: calc(70% - 30px);
         opacity: 1;
     }
     to {
-        top: 730px;
+        top: calc(73% - 30px);
         opacity: 0;
     }
 }
-@keyframes srollDown-800 {
-    from {
-        top: 670px;
-        opacity: 1;
-    }
-    to {
-        top: 700px;
-        opacity: 0;
-    }
-}
-
 
 
 
