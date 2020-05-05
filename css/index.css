@@ -692,8 +692,8 @@ button {
 
 @media (max-width: 1440px) {
   .fort-red-ab {
-    top: 145px;
-    right: 115px;
+    top: 115px;
+    right: 120px;
   }
 }
 
@@ -705,8 +705,8 @@ button {
 
 @media (max-width: 1440px) {
   .fort-blue-ab {
-    top: 570px;
-    left: 140px;
+    top: 515px;
+    left: 145px;
   }
 }
 
@@ -718,7 +718,7 @@ button {
 
 @media (max-width: 1440px) {
   .red-team-ab {
-    top: 135px;
+    top: 100px;
     right: 125px;
   }
 }
@@ -731,8 +731,8 @@ button {
 
 @media (max-width: 1440px) {
   .blue-team-ab {
-    top: 170px;
-    left: 150px;
+    top: 140px;
+    left: 160px;
   }
 }
 
@@ -751,8 +751,8 @@ button {
 
 @media (max-width: 1440px) {
   .vs-description-ab {
-    top: 660px;
-    left: 370px;
+    top: 640px;
+    left: 360px;
   }
 }
 
@@ -764,8 +764,8 @@ button {
 
 @media (max-width: 1440px) {
   .red-tower-left {
-    top: 115px;
-    right: 245px;
+    top: 85px;
+    right: 248px;
   }
 }
 
@@ -777,8 +777,8 @@ button {
 
 @media (max-width: 1440px) {
   .red-tower-middle {
-    top: 195px;
-    right: 190px;
+    top: 155px;
+    right: 195px;
   }
 }
 
@@ -790,8 +790,8 @@ button {
 
 @media (max-width: 1440px) {
   .red-tower-right {
-    top: 230px;
-    right: 73px;
+    top: 190px;
+    right: 85px;
   }
 }
 
@@ -803,8 +803,8 @@ button {
 
 @media (max-width: 1440px) {
   .blue-tower-left {
-    bottom: 190px;
-    left: 95px;
+    bottom: 153px;
+    left: 105px;
   }
 }
 
@@ -816,8 +816,8 @@ button {
 
 @media (max-width: 1440px) {
   .blue-tower-middle {
-    bottom: 155px;
-    left: 210px;
+    bottom: 120px;
+    left: 220px;
   }
 }
 
@@ -829,8 +829,8 @@ button {
 
 @media (max-width: 1440px) {
   .blue-tower-right {
-    bottom: 75px;
-    left: 265px;
+    bottom: 45px;
+    left: 268px;
   }
 }
 
@@ -843,7 +843,7 @@ button {
 @media (max-width: 1440px) {
   .blue-tower-middle-text {
     bottom: 168px;
-    left: 200px;
+    left: 208px;
   }
 }
 
@@ -855,8 +855,8 @@ button {
 
 @media (max-width: 1440px) {
   .red-tower-middle-text {
-    top: 205px;
-    right: 180px;
+    top: 202px;
+    right: 185px;
   }
 }
 
@@ -871,6 +871,12 @@ button {
   text-align: center;
 }
 
+@media (max-width: 1440px) {
+  .tower-intro {
+    top: 60%;
+  }
+}
+
 .defender-blue-left-ab {
   position: absolute;
   left: 135px;
@@ -879,8 +885,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-blue-left-ab {
-    left: 90px;
-    top: 400px;
+    left: 103px;
+    top: 350px;
   }
 }
 
@@ -892,8 +898,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-blue-middle-ab {
-    left: 305px;
-    top: 480px;
+    left: 308px;
+    top: 428px;
   }
 }
 
@@ -905,8 +911,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-blue-right-ab {
-    left: 405px;
-    top: 610px;
+    left: 403px;
+    top: 552px;
   }
 }
 
@@ -918,8 +924,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-blue-left-outside-ab {
-    left: 90px;
-    top: 240px;
+    left: 102px;
+    top: 205px;
   }
 }
 
@@ -932,7 +938,7 @@ button {
 @media (max-width: 1440px) {
   .defender-blue-middle-outside-ab {
     left: 370px;
-    top: 410px;
+    top: 360px;
   }
 }
 
@@ -944,8 +950,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-blue-right-outside-ab {
-    left: 640px;
-    top: 610px;
+    left: 623px;
+    top: 550px;
   }
 }
 
@@ -957,8 +963,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-red-left-ab {
-    right: 385px;
-    top: 115px;
+    right: 380px;
+    top: 80px;
   }
 }
 
@@ -970,8 +976,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-red-middle-ab {
-    right: 285px;
-    top: 243px;
+    right: 288px;
+    top: 210px;
   }
 }
 
@@ -983,8 +989,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-red-right-ab {
-    right: 70px;
-    top: 320px;
+    right: 80px;
+    top: 285px;
   }
 }
 
@@ -996,8 +1002,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-red-left-outside-ab {
-    right: 613px;
-    top: 117px;
+    right: 600px;
+    top: 83px;
   }
 }
 
@@ -1010,7 +1016,7 @@ button {
 @media (max-width: 1440px) {
   .defender-red-middle-outside-ab {
     right: 350px;
-    top: 315px;
+    top: 272px;
   }
 }
 
@@ -1022,8 +1028,8 @@ button {
 
 @media (max-width: 1440px) {
   .defender-red-right-outside-ab {
-    right: 70px;
-    top: 480px;
+    right: 82px;
+    top: 430px;
   }
 }
 
@@ -1036,7 +1042,7 @@ button {
 @media (max-width: 1440px) {
   .defender-text-blue {
     left: 370px;
-    top: 410px;
+    top: 345px;
   }
 }
 
@@ -1049,7 +1055,7 @@ button {
 @media (max-width: 1440px) {
   .defender-text-red {
     right: 350px;
-    top: 315px;
+    top: 309px;
   }
 }
 
@@ -1061,6 +1067,7 @@ button {
   left: 10px;
   top: 17%;
   text-align: center;
+  z-index: 20;
 }
 
 @media (max-width: 1440px) {
@@ -1077,8 +1084,8 @@ button {
 
 @media (max-width: 1440px) {
   .bone-ab {
-    left: 340px;
-    top: 230px;
+    left: 335px;
+    top: 195px;
   }
 }
 
@@ -1104,8 +1111,8 @@ button {
 
 @media (max-width: 1440px) {
   .caesar-ab {
-    left: 240px;
-    top: 260px;
+    left: 250px;
+    top: 220px;
   }
 }
 
@@ -1131,8 +1138,8 @@ button {
 
 @media (max-width: 1440px) {
   .magic-ab {
-    right: 220px;
-    top: 435px;
+    right: 230px;
+    top: 390px;
   }
 }
 
@@ -1192,6 +1199,12 @@ button {
   text-align: center;
 }
 
+@media (max-width: 1440px) {
+  .magic-intro {
+    top: 105%;
+  }
+}
+
 .soul-left-ab {
   position: absolute;
   left: 310px;
@@ -1200,8 +1213,8 @@ button {
 
 @media (max-width: 1440px) {
   .soul-left-ab {
-    left: 228px;
-    top: 195px;
+    left: 232px;
+    top: 160px;
   }
 }
 
@@ -1213,8 +1226,8 @@ button {
 
 @media (max-width: 1440px) {
   .soul-right-ab {
-    right: 185px;
-    top: 540px;
+    right: 193px;
+    top: 485px;
   }
 }
 
@@ -1228,7 +1241,7 @@ button {
 @media (max-width: 1440px) {
   .soul-left-text {
     left: 215px;
-    top: 170px;
+    top: 133px;
   }
 }
 
@@ -1241,8 +1254,8 @@ button {
 
 @media (max-width: 1440px) {
   .soul-right-text {
-    right: 170px;
-    top: 580px;
+    right: 177px;
+    top: 525px;
   }
 }
 
@@ -1259,10 +1272,24 @@ button {
   top: 370px;
 }
 
+@media (max-width: 1440px) {
+  .cp-1-ab {
+    left: 225px;
+    top: 305px;
+  }
+}
+
 .cp-2-ab {
   position: absolute;
   left: 310px;
   top: 450px;
+}
+
+@media (max-width: 1440px) {
+  .cp-2-ab {
+    left: 230px;
+    top: 370px;
+  }
 }
 
 .cp-3-ab {
@@ -1271,10 +1298,24 @@ button {
   top: 510px;
 }
 
+@media (max-width: 1440px) {
+  .cp-3-ab {
+    left: 420px;
+    top: 410px;
+  }
+}
+
 .cp-4-ab {
   position: absolute;
   left: 745px;
   top: 625px;
+}
+
+@media (max-width: 1440px) {
+  .cp-4-ab {
+    left: 470px;
+    top: 460px;
+  }
 }
 
 .cp-1-text {
@@ -1284,11 +1325,25 @@ button {
   z-index: 2;
 }
 
+@media (max-width: 1440px) {
+  .cp-1-text {
+    left: 225px;
+    top: 285px;
+  }
+}
+
 .cp-2-text {
   position: absolute;
   left: 252px;
   top: 465px;
   z-index: 2;
+}
+
+@media (max-width: 1440px) {
+  .cp-2-text {
+    left: 230px;
+    top: 415px;
+  }
 }
 
 .cp-3-text {
@@ -1298,11 +1353,25 @@ button {
   z-index: 2;
 }
 
+@media (max-width: 1440px) {
+  .cp-3-text {
+    left: 420px;
+    top: 390px;
+  }
+}
+
 .cp-4-text {
   position: absolute;
   left: 800px;
   top: 642px;
   z-index: 2;
+}
+
+@media (max-width: 1440px) {
+  .cp-4-text {
+    left: 470px;
+    top: 504px;
+  }
 }
 
 .cs-ab {
@@ -1311,11 +1380,25 @@ button {
   top: 470px;
 }
 
+@media (max-width: 1440px) {
+  .cs-ab {
+    left: 320px;
+    top: 375px;
+  }
+}
+
 .cs-text {
   position: absolute;
   left: 420px;
   top: 550px;
   z-index: 2;
+}
+
+@media (max-width: 1440px) {
+  .cs-text {
+    left: 320px;
+    top: 375px;
+  }
 }
 
 .cs-intro {
@@ -1326,6 +1409,13 @@ button {
   position: absolute;
   top: 800px;
   left: 100px;
+}
+
+@media (max-width: 1440px) {
+  .cs-intro {
+    left: 50px;
+    top: 680px;
+  }
 }
 
 .cp-intro {
