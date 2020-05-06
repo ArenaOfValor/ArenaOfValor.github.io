@@ -1572,6 +1572,12 @@ button {
   text-align: center;
 }
 
+@media (max-width: 1440px) {
+  .skw-page__heading {
+    font-size: 20px;
+  }
+}
+
 .skw-page__description {
   font-size: 18px;
   text-align: center;
@@ -1651,16 +1657,52 @@ button {
   font-weight: bold;
 }
 
+@media (max-width: 1440px) {
+  .skw-page-1 .skw-page__heading {
+    width: 600px;
+    position: relative;
+    left: -250px;
+  }
+}
+
 .skw-page-2 .skw-page__heading {
   width: 600px;
   position: relative;
   left: 20px;
 }
 
+@media (max-width: 1440px) {
+  .skw-page-2 .skw-page__heading {
+    left: 50px;
+  }
+}
+
 .skw-page-3 .skw-page__heading {
   width: 600px;
   position: relative;
   right: 50px;
+}
+
+@media (max-width: 1440px) {
+  .skw-page-3 .skw-page__heading {
+    right: 200px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .skw-page-4 .skw-page__heading {
+    width: 600px;
+    position: relative;
+    left: calc(60% - 300px);
+  }
+}
+
+@media (max-width: 1440px) {
+  .skw-page-5 .skw-page__heading {
+    width: 600px;
+    position: relative;
+    left: -160px;
+  }
 }
 
 .skw-page-3 .text-style {
@@ -1715,6 +1757,12 @@ button {
   -webkit-filter: opacity(90%);
           filter: opacity(90%);
   position: relative;
+}
+
+@media (max-width: 1440px) {
+  #section5 .slides .swiper .swiper-container .swiper-slide {
+    height: 15rem;
+  }
 }
 
 #section5 .slides .swiper .swiper-container .swiper-slide:hover {
@@ -1788,6 +1836,12 @@ button {
           justify-content: space-evenly;
 }
 
+@media (max-width: 1440px) {
+  .buttons {
+    padding: 2.5% 20%;
+  }
+}
+
 #outside_btn {
   width: 250px;
   height: 100%;
@@ -1799,6 +1853,12 @@ button {
   border-radius: 10px;
   -webkit-box-shadow: 0 0 2em #ff270a;
           box-shadow: 0 0 2em #ff270a;
+}
+
+@media (max-width: 1440px) {
+  #outside_btn {
+    font-size: 25px;
+  }
 }
 
 #modal1_background {
