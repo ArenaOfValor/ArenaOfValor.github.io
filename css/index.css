@@ -182,6 +182,38 @@ a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .pic #number {
+    font-size: 4rem;
+    -webkit-transform: translate(-50%, -220%);
+            transform: translate(-50%, -220%);
+  }
+}
+
+@media (max-width: 470px) {
+  .pic #number {
+    font-size: 3rem;
+    -webkit-transform: translate(-50%, -180%);
+            transform: translate(-50%, -180%);
+  }
+}
+
+@media (max-width: 410px) {
+  .pic #number {
+    font-size: 2.5rem;
+    -webkit-transform: translate(-50%, -175%);
+            transform: translate(-50%, -175%);
+  }
+}
+
+@media (max-width: 360px) {
+  .pic #number {
+    font-size: 2rem;
+    -webkit-transform: translate(-50%, -190%);
+            transform: translate(-50%, -190%);
+  }
+}
+
 .fullpage {
   width: 100%;
   height: 100%;
@@ -328,8 +360,19 @@ a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  #scroll {
+    width: 80px;
+    height: 80px;
+    left: calc(50% - 40px);
+  }
+}
+
 @media (max-width: 470px) {
   #scroll {
+    width: 50px;
+    height: 50px;
+    left: calc(50% - 25px);
     -webkit-animation-name: srollDown-470;
             animation-name: srollDown-470;
     -webkit-animation-delay: 8s;

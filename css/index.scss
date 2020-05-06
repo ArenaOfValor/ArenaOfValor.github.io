@@ -159,6 +159,22 @@ a:hover {
     @media (max-width:1024px){
         font-size: 3.5rem;
     }
+    @media (max-width:768px){
+        font-size: 4rem;
+        transform: translate(-50%, -220%);
+    }
+    @media (max-width:470px){
+        font-size: 3rem;
+        transform: translate(-50%, -180%);
+    }
+    @media (max-width:410px){
+        font-size: 2.5rem;
+        transform: translate(-50%, -175%);
+    }
+    @media (max-width:360px){
+        font-size: 2rem;
+        transform: translate(-50%, -190%);
+    }
 }
 
 .fullpage {
@@ -264,7 +280,16 @@ a:hover {
         left: calc(50% - 30px);
     }
 
+    @media (max-width:768px){
+        width: 80px;
+        height: 80px;
+        left: calc(50% - 40px);
+    }
+
     @media (max-width:470px) {
+        width: 50px;
+        height: 50px;
+        left: calc(50% - 25px);
         animation-name: srollDown-470;
         animation-delay: 8s;
     }
