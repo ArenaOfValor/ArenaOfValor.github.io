@@ -2291,6 +2291,9 @@ $scrollTime: 1s;
         position: relative;
         left: -250px;
     }
+    @media (max-width:1440px){
+        left: -200px;
+    }
 }
 
 
@@ -2300,6 +2303,9 @@ $scrollTime: 1s;
     left: 20px;
     @media (max-width:1600px){
         left: 50px;
+    }
+    @media (max-width:1440px){
+        left: 60px;
     }
     @media (max-width:1024px){
         left: -70px;
@@ -2313,6 +2319,9 @@ $scrollTime: 1s;
     @media (max-width:1600px){
         right: 200px;
     }
+    @media (max-width:1440px){
+        right: 170px;
+    }
     @media (max-width:1024px){
         right: 240px;
     }
@@ -2325,6 +2334,9 @@ $scrollTime: 1s;
         position: relative;
         left: -50px;
     }
+    @media (max-width:1440px){
+        left: -30px;
+    }
     @media (max-width:1024px){
         left: -120px;
     }
@@ -2334,7 +2346,7 @@ $scrollTime: 1s;
     @media (max-width:1440px){
         width: 600px;
         position: relative;
-        left: -120px;
+        left: -110px;
     }
     @media (max-width:1280px){
         left: -160px;

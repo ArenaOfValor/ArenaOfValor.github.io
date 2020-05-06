@@ -3191,6 +3191,12 @@ button {
   }
 }
 
+@media (max-width: 1440px) {
+  .skw-page-1 .skw-page__heading {
+    left: -200px;
+  }
+}
+
 .skw-page-2 .skw-page__heading {
   width: 600px;
   position: relative;
@@ -3200,6 +3206,12 @@ button {
 @media (max-width: 1600px) {
   .skw-page-2 .skw-page__heading {
     left: 50px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .skw-page-2 .skw-page__heading {
+    left: 60px;
   }
 }
 
@@ -3221,6 +3233,12 @@ button {
   }
 }
 
+@media (max-width: 1440px) {
+  .skw-page-3 .skw-page__heading {
+    right: 170px;
+  }
+}
+
 @media (max-width: 1024px) {
   .skw-page-3 .skw-page__heading {
     right: 240px;
@@ -3235,6 +3253,12 @@ button {
   }
 }
 
+@media (max-width: 1440px) {
+  .skw-page-4 .skw-page__heading {
+    left: -30px;
+  }
+}
+
 @media (max-width: 1024px) {
   .skw-page-4 .skw-page__heading {
     left: -120px;
@@ -3245,7 +3269,7 @@ button {
   .skw-page-5 .skw-page__heading {
     width: 600px;
     position: relative;
-    left: -120px;
+    left: -110px;
   }
 }
 
