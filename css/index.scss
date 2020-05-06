@@ -633,10 +633,6 @@ button {
         top: 115px;
         right: 120px;
     }
-    // @media (max-width:1280px){
-    //     top: 50px;
-    //     right: 120px;
-    // }
 }
 
 .fort-blue-ab {
@@ -1462,7 +1458,7 @@ $scrollTime: 1s;
     .skw-page-4 .skw-page__heading{
         width: 600px;
         position: relative;
-        left: -30px;
+        left: calc(60% - 300px);
     }
 }
 

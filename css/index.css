@@ -1693,7 +1693,7 @@ button {
   .skw-page-4 .skw-page__heading {
     width: 600px;
     position: relative;
-    left: -30px;
+    left: calc(60% - 300px);
   }
 }
 
