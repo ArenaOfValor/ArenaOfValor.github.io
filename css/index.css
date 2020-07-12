@@ -152,8 +152,8 @@ a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -200%);
-          transform: translate(-50%, -200%);
+  -webkit-transform: translate(-50%, -170%);
+          transform: translate(-50%, -170%);
 }
 
 @media (max-width: 1600px) {
@@ -553,11 +553,6 @@ nav {
 
 .h4 {
   padding: 10px;
-}
-
-.navbar-toggler-icon {
-  width: 3em;
-  height: 3em;
 }
 
 button {
