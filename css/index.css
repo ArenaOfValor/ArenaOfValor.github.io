@@ -749,6 +749,12 @@ button {
   height: calc(100vh + 13000px);
 }
 
+@media (max-width: 1000px) {
+  #section3 {
+    display: none;
+  }
+}
+
 .game-intro-title {
   font-size: 48px;
   border: white 2px solid;
@@ -2927,6 +2933,12 @@ button {
   height: 6500px;
 }
 
+@media (max-width: 1000px) {
+  #section4 {
+    display: none;
+  }
+}
+
 .skw-pages {
   overflow: hidden;
   position: relative;
@@ -3298,6 +3310,20 @@ button {
   letter-spacing: 2px;
   text-shadow: #99f801 0em 0em 0.5em;
   font-weight: bold;
+}
+
+#section3and4 {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  #section3and4 {
+    display: block;
+  }
+  #section3and4 img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 #section5 {
