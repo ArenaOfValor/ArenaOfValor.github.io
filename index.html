@@ -72,9 +72,9 @@
     <div class="d-flex justify-content-end positionFixed">
         <div class="nav-click navbar-dark d-none" data-toggle="collapse" data-target="#navbarToggleExternalContent"
             id="nav-btn" title="navbar">
-            <button class="navbar-toggler border-none" type="button">
+            <!-- <button class="navbar-toggler border-none" type="button"> -->
                 <img src="./img/nav.png" alt="">
-            </button>
+            <!-- </button> -->
         </div>
         <nav>
             <div class="collapse" id="navbarToggleExternalContent">
@@ -468,8 +468,8 @@
         <img src="./img/手機板圖/遊戲玩法手機板-06.jpg" alt="">
 
         <img src="./img/04-熱門英雄介紹/弗洛倫.jpg" alt="">
-        <img src="./img/04-熱門英雄介紹/狄拉克.jpg" alt="">
         <img src="./img/04-熱門英雄介紹/亥犽.jpg" alt="">
+        <img src="./img/04-熱門英雄介紹/狄拉克.jpg" alt="">
         <img src="./img/04-熱門英雄介紹/刀鋒寶貝.jpg" alt="">
         <img src="./img/04-熱門英雄介紹/皮皮.jpg" alt="">
     </section>
@@ -534,21 +534,21 @@
                         </div>
                         <div class="modal-body d-flex jus">
 
-                            <div class="container justify-content-center align-items-center">
+                            <div class="container justify-content-center align-items-center" id="phoneuse">
                                 <div class="row mb-5">
                                     <div class="col-2"></div>
-                                    <div class="col-2 d-flex justify-content-end">
+                                    <div class="col-2 d-flex justify-content-end phonenopadding">
                                         <div class="modal_text1">
                                             帳號：
                                         </div>
                                     </div>
-                                    <div class="col d-flex align-items-center justify-content-start">
+                                    <div class="col-1 d-flex align-items-center justify-content-start">
                                         <form><input type="text" name="account" class="text-black-50"></form>
                                     </div>
                                 </div>
                                 <div class="row mb-5">
                                     <div class="col-2"></div>
-                                    <div class="col-2 d-flex justify-content-end">
+                                    <div class="col-2 d-flex justify-content-end phonenopadding">
                                         <div class="modal_text1">
                                             密碼：
                                         </div>
@@ -559,7 +559,7 @@
                                 </div>
                                 <div class="row mb-4">
                                     <div class="col-2"></div>
-                                    <div class="col-2 d-flex justify-content-end">
+                                    <div class="col-2 d-flex justify-content-end phonenopadding">
                                         <div class="modal_text1">
                                             信箱：
                                         </div>
@@ -574,12 +574,12 @@
                                 <!-- check input text -->
                                 <div class="row mb-2">
                                     <div class="col-3"></div>
-                                    <div class="col-2">
+                                    <div class="col-3 phonenopadding">
                                         <div class="modal_text2">
                                             <input type="checkbox">記住帳號
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4 phonenopadding">
                                         <div class="modal_text2">
                                             <input type="checkbox">保持登入狀態
                                         </div>
@@ -587,7 +587,7 @@
                                 </div>
 
                                 <!-- 登入 取消 -->
-                                <div class="row d-flex justify-content-left mb-3">
+                                <div class="row d-flex justify-content-left mb-3 phone-mr-use">
                                     <div class="col-3"></div>
                                     <div class="col-2">
                                         <button type="button" class="btn btn-primary mid_btn" data-toggle="modal"
@@ -608,7 +608,7 @@
                                                         登入從footer可進官網
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" id="close-window"
+                                                        <button type="button"
                                                             class="btn btn-secondary"
                                                             data-dismiss="modal">Close</button>
                                                     </div>
@@ -621,7 +621,6 @@
                                         <button type="button" class="btn btn-primary mid_btn" data-dismiss="modal">
                                             取消
                                         </button>
-
                                     </div>
                                 </div>
 
@@ -671,14 +670,14 @@
 
     <footer>
         <a href="https://moba.garena.tw/" target="_blank">
-            <div class="logo mr-3"><img src="img/08-登入頁面/GGC-LOGO.jpg" alt="" width="50" height="50"></div>
+            <div class="logo-ggc mr-3"><img src="img/08-登入頁面/GGC-LOGO.jpg" alt="" width="50" height="50"></div>
         </a>
 
-        <div class="mr-5">
+        <div class="mr-5 GGC-mr">
             <p>Copyright © ArenaOfValor. All rights reserved</p>
         </div>
 
-        <div id="footer_text" class="mr-3 d-flex flex-wrap">
+        <div id="footer_text" class="mr-3 fb-mr d-flex flex-wrap">
             <p>本網頁僅供教學及練習使用，若有冒犯請歡迎組隊PK</p>
             <p>請注意遊戲時間，避免沉迷</p>
             <p>本遊戲服務區域為台灣、香港、澳門</p>
@@ -686,7 +685,7 @@
 
 
         <a href="https://www.facebook.com/AoVTW/" target="_blank">
-            <div class="logo"><img src="img/08-登入頁面/facebook-logo.jpg" alt="" width="30" height="30"></div>
+            <div class="logo-fb"><img src="img/08-登入頁面/facebook-logo.jpg" alt="" width="30" height="30"></div>
         </a>
 
     </footer>
@@ -904,12 +903,6 @@
             loopAdditionalSlides: 4,
             slidesPerView: 3,
         });
-
-        var close_window = document.querySelector("#close-window")
-
-        close_window.onclick = function () {
-            $('#close-window').modal('toggle')
-        }
 
     </script>
 </body>
