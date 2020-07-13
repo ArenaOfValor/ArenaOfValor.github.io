@@ -48,10 +48,40 @@ a:hover{
     background-color: #999999;
     filter: opacity(90%);
     position: relative;
+    @media (max-width:1600px) {
+        height: 16rem;
+    }
+    @media (max-width:1366px) {
+        height: 12rem;
+    }
+    @media (max-width:768px) {
+        height: 18rem;
+    }
+    @media (max-width:576px) {
+        height: 10rem;
+    }
 }
 
 #section1-1 .slides .swiper .swiper-container .swiper-slide:hover {
     filter: opacity(100%);
+}
+
+.slides.mb-5{
+    @media (max-width:1600px) {
+        margin-bottom: 30px !important;
+    }
+    @media (max-width:1366px) {
+        margin-bottom: 20px !important;
+    }
+    @media (max-width:768px) {
+        margin-bottom: 48px !important;
+    }
+    @media (max-width:576px) {
+        margin-bottom:20px !important;
+    }
+    @media (max-width:375px) {
+        margin-bottom: 48px !important;
+    }
 }
 
 
@@ -59,14 +89,17 @@ a:hover{
 .pic1 {
     background: url("../img/05-全英雄/英雄輪播圖-01.jpg") no-repeat center center;
     background-size: cover;
+    background-position: top;
 }
 .pic2 {
     background: url("../img/05-全英雄/英雄輪播圖-02.jpg") no-repeat center center;
     background-size: cover;
+    background-position: top;
 }
 .pic3 {
     background: url("../img/05-全英雄/英雄輪播圖-03.jpg") no-repeat center center;
     background-size: cover;
+    background-position: top;
 }
 
 #relative{
@@ -82,12 +115,40 @@ a:hover{
 }
 .hero-text{
     font-size: 18px;
+    @media (max-width:1366px) {
+        font-size: 16px;
+    }
+    @media (max-width:768px) {
+        font-size: 18px;
+    }
+    @media (max-width:576px) {
+        font-size: 12px;
+    }
+    @media (max-width:414px) {
+        font-size: 12px;
+        padding: 0 15px;
+    }
 }
 
 #section1-1_toggle {
     height: 100px;
     background-color: rgba(0, 0, 0, .7);
     margin: 0;
+    @media (max-width:1600px) {
+        height: 80px;
+    }
+    @media (max-width:1366px) {
+        height: 70px;
+    }
+    @media (max-width:768px) {
+        height: 100px;
+    }
+    @media (max-width:576px) {
+        height: 70px;
+    }
+    @media (max-width:375px) {
+        height: 50px;
+    }
 }
 
 .button {
@@ -101,6 +162,24 @@ a:hover{
     color: white;
     transition: 0.3s;
     cursor: pointer;
+    @media (max-width:1600px) {
+        line-height: 60px;
+    }
+    @media (max-width:1366px) {
+        line-height: 50px;
+        font-size: 22px;
+    }
+    @media (max-width:768px) {
+        line-height: 70px;
+    }
+    @media (max-width:576px) {
+        line-height: 50px;
+        font-size: 18px;
+    }
+    @media (max-width:375px) {
+        line-height: 30px;
+        font-size: 15px;
+    }
 }
 .button:hover{
     background-color: brown;
@@ -117,6 +196,21 @@ a:hover{
     background-color: rgba(0, 0, 0, .8);
     width: 100%;
     padding: 15px;
+    @media (max-width:1600px) {
+        padding: 0 15px 110px 15px;
+    }
+    @media (max-width:1366px) {
+        padding: 0 15px 190px 15px;
+    }
+    @media (max-width:768px) {
+        padding: 15px;
+    }
+    @media (max-width:576px) {
+        padding: 0 5px 220px 5px;
+    }
+    @media (max-width:375px) {
+        padding: 0 5px 215px 5px;
+    }
 }
 
 
@@ -128,6 +222,36 @@ a:hover{
     text-shadow: 0px 0px 6px rgba(248, 222, 182, 0.562), 0px 0px 15px #fff, 0px 0px 20px #fff;
     font-weight: 900;
     padding: 20px 30px;
+    @media (max-width:1600px) {
+        padding: 10px 30px;
+    }
+    @media (max-width:1366px) {
+        padding: 1px 30px;
+    }
+    @media (max-width:768px) {
+        padding: 20px 10px;
+    }
+    @media (max-width:576px) {
+        padding: 1px 5px;
+    }
+    @media (max-width:414px) {
+        padding: 30px 1px;
+    }
+    @media (max-width:375px) {
+        padding: 20px 1px;
+    }
+
+    & .p-3.mt-3{
+        @media (max-width:1366px) {
+            margin-top: 0 !important;
+        }
+        @media (max-width:768px) {
+            margin-top: 30px !important;
+        }
+        @media (max-width:576px) {
+            margin-top: 0 !important;
+        }
+    }
 }
 
 .section1-1_text.active {
@@ -146,7 +270,24 @@ a:hover{
     width: 145px;
     height: 50px;
     letter-spacing: 1px;
-
+    @media (max-width:1366px) {
+        height: 30px;
+    }
+    @media (max-width:768px) {
+        width: 110px;
+        height: 80px;
+    }
+    @media (max-width:576px) {
+        width: 85px;
+        height: 35px;
+    }
+    @media (max-width:414px) {
+        width: 55px;
+        height: 50px;
+    }
+    @media (max-width:375px) {
+        height: 30px;
+    }
 }
 .pic{
     width: 90px;
@@ -154,6 +295,14 @@ a:hover{
     background-position: center;
     background-repeat: no-repeat;
     transition: 1s;
+    @media (max-width:576px) {
+        width: 80px;
+        height: 80px;
+    }
+    @media (max-width:414px) {
+        width: 60px;
+        height: 90px;
+    }
 }
 
 // <!-- 刺客 -->

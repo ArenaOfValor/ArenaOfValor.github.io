@@ -55,24 +55,81 @@ a:hover {
   position: relative;
 }
 
+@media (max-width: 1600px) {
+  #section1-1 .slides .swiper .swiper-container .swiper-slide {
+    height: 16rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  #section1-1 .slides .swiper .swiper-container .swiper-slide {
+    height: 12rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #section1-1 .slides .swiper .swiper-container .swiper-slide {
+    height: 18rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #section1-1 .slides .swiper .swiper-container .swiper-slide {
+    height: 10rem;
+  }
+}
+
 #section1-1 .slides .swiper .swiper-container .swiper-slide:hover {
   -webkit-filter: opacity(100%);
           filter: opacity(100%);
 }
 
+@media (max-width: 1600px) {
+  .slides.mb-5 {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .slides.mb-5 {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slides.mb-5 {
+    margin-bottom: 48px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .slides.mb-5 {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .slides.mb-5 {
+    margin-bottom: 48px !important;
+  }
+}
+
 .pic1 {
   background: url("../img/05-全英雄/英雄輪播圖-01.jpg") no-repeat center center;
   background-size: cover;
+  background-position: top;
 }
 
 .pic2 {
   background: url("../img/05-全英雄/英雄輪播圖-02.jpg") no-repeat center center;
   background-size: cover;
+  background-position: top;
 }
 
 .pic3 {
   background: url("../img/05-全英雄/英雄輪播圖-03.jpg") no-repeat center center;
   background-size: cover;
+  background-position: top;
 }
 
 #relative {
@@ -92,10 +149,65 @@ a:hover {
   font-size: 18px;
 }
 
+@media (max-width: 1366px) {
+  .hero-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 414px) {
+  .hero-text {
+    font-size: 12px;
+    padding: 0 15px;
+  }
+}
+
 #section1-1_toggle {
   height: 100px;
   background-color: rgba(0, 0, 0, 0.7);
   margin: 0;
+}
+
+@media (max-width: 1600px) {
+  #section1-1_toggle {
+    height: 80px;
+  }
+}
+
+@media (max-width: 1366px) {
+  #section1-1_toggle {
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  #section1-1_toggle {
+    height: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  #section1-1_toggle {
+    height: 70px;
+  }
+}
+
+@media (max-width: 375px) {
+  #section1-1_toggle {
+    height: 50px;
+  }
 }
 
 .button {
@@ -110,6 +222,39 @@ a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .button {
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .button {
+    line-height: 50px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .button {
+    line-height: 50px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .button {
+    line-height: 30px;
+    font-size: 15px;
+  }
 }
 
 .button:hover {
@@ -128,6 +273,36 @@ a:hover {
   padding: 15px;
 }
 
+@media (max-width: 1600px) {
+  .section1-1_content {
+    padding: 0 15px 110px 15px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .section1-1_content {
+    padding: 0 15px 190px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section1-1_content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section1-1_content {
+    padding: 0 5px 220px 5px;
+  }
+}
+
+@media (max-width: 375px) {
+  .section1-1_content {
+    padding: 0 5px 215px 5px;
+  }
+}
+
 .section1-1_text {
   width: 100%;
   display: none;
@@ -136,6 +311,60 @@ a:hover {
   text-shadow: 0px 0px 6px rgba(248, 222, 182, 0.562), 0px 0px 15px #fff, 0px 0px 20px #fff;
   font-weight: 900;
   padding: 20px 30px;
+}
+
+@media (max-width: 1600px) {
+  .section1-1_text {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .section1-1_text {
+    padding: 1px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section1-1_text {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section1-1_text {
+    padding: 1px 5px;
+  }
+}
+
+@media (max-width: 414px) {
+  .section1-1_text {
+    padding: 30px 1px;
+  }
+}
+
+@media (max-width: 375px) {
+  .section1-1_text {
+    padding: 20px 1px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .section1-1_text .p-3.mt-3 {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section1-1_text .p-3.mt-3 {
+    margin-top: 30px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .section1-1_text .p-3.mt-3 {
+    margin-top: 0 !important;
+  }
 }
 
 .section1-1_text.active {
@@ -155,6 +384,39 @@ a:hover {
   letter-spacing: 1px;
 }
 
+@media (max-width: 1366px) {
+  .pic_text {
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pic_text {
+    width: 110px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pic_text {
+    width: 85px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 414px) {
+  .pic_text {
+    width: 55px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .pic_text {
+    height: 30px;
+  }
+}
+
 .pic {
   width: 90px;
   height: 90px;
@@ -162,6 +424,20 @@ a:hover {
   background-repeat: no-repeat;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+@media (max-width: 576px) {
+  .pic {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 414px) {
+  .pic {
+    width: 60px;
+    height: 90px;
+  }
 }
 
 #pic1-1 {
