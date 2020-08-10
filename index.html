@@ -892,12 +892,22 @@
             loopAdditionalSlides: 4,
             slidesPerView: 3,
         });
+        // 2020.8.10未解BUG：若用reverseDirection第二行輪播會自動加速！
+        // var swiper2 = new Swiper("#reverse", {
+        //     speed: 15000,
+        //     roundLengths: true,
+        //     autoplay: {
+        //         delay: 0,
+        //         reverseDirection: true,
+        //     },
+        //     loop: true,
+        //     loopAdditionalSlides: 4,
+        //     slidesPerView: 3,
+        // });
         var swiper2 = new Swiper("#reverse", {
             speed: 15000,
-            roundLengths: true,
             autoplay: {
                 delay: 0,
-                reverseDirection: true,
             },
             loop: true,
             loopAdditionalSlides: 4,
