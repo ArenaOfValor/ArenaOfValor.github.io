@@ -516,6 +516,10 @@ a:hover {
   width: 15% !important;
 }
 
+.border-none {
+  border: none !important;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -547,28 +551,6 @@ nav {
   }
 }
 
-.nav-click img {
-  position: absolute;
-  right: -170px;
-  top: 25px;
-  z-index: 9;
-}
-
-@media (max-width: 768px) {
-  .nav-click img {
-    right: -130px;
-  }
-}
-
-@media (max-width: 576px) {
-  .nav-click img {
-    width: 25px;
-    height: 25px;
-    right: -85px;
-    top: 20px;
-  }
-}
-
 .opacity-0 {
   opacity: 0;
   -webkit-transition: 0.3s;
@@ -577,6 +559,12 @@ nav {
 
 .fl-r {
   float: right;
+}
+
+.navbar-toggler {
+  right: -100px;
+  top: 25px;
+  z-index: 9;
 }
 
 .h-100 {
